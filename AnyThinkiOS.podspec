@@ -21,7 +21,7 @@ Pod::Spec.new do |spec|
 
   spec.subspec 'AnyThinkSDK' do |ss|
      ss.ios.deployment_target = '8.0'
-     ss.vendored_frameworks = 'AnyThinkiOS/AnyThink{Banner,Splash,SDK,RewardedVideo,Interstitial,HeaderBidding,Native,MyOffer,MyOfferInterstitialAdapter,MyOfferRewardedVideoAdapter}.framework','AnyThinkiOS/TraminiSDK.framework'
+     ss.vendored_frameworks = 'AnyThinkiOS/AnyThink{Banner,Splash,SDK,RewardedVideo,Interstitial,HeaderBidding,Native,MyOffer}.framework','AnyThinkiOS/TraminiSDK.framework','AnyThinkiOS/AnyThinkMyOfferInterstitialAdapter.framework','AnyThinkiOS/AnyThinkMyOfferRewardedVideoAdapter.framework'
      ss.resource = 'AnyThinkiOS/AnyThinkSDK.bundle'
   end
 
