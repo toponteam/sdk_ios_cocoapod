@@ -2,7 +2,7 @@
 //  AnyThinkStartAppBannerAdapter.h
 //  AnyThinkStartAppBannerAdapter
 //
-//  Created by 张健明 on 2020/6/3.
+//  Created by Martin Lau on 2020/5/29.
 //  Copyright © 2020 AnyThink. All rights reserved.
 //
 
