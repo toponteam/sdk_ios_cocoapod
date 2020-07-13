@@ -49,6 +49,8 @@ extern NSInteger const ATADLoadingErrorCodePlacementAdDeliverySwitchOff;
 extern NSInteger const ATADLoadingErrorCodePreviousLoadNotFinished;
 extern NSInteger const ATADLoadingErrorCodeNoUnitGroupsFoundInPlacement;
 extern NSInteger const ATADLoadingErrorCodeUnitGroupsFilteredOut;
+extern NSInteger const ATADLoadingErrorCodeFailureTooFrequent;
+extern NSInteger const ATADLoadingErrorCodeLoadCapsExceeded;
 
 extern NSString *const ATSDKInitErrorDomain;
 extern NSInteger const ATSDKInitErrorCodeDataConsentNotSet;
