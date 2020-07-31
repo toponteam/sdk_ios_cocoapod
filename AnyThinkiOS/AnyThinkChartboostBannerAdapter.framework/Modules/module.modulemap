@@ -1,0 +1,6 @@
+framework module AnyThinkChartboostBannerAdapter {
+  umbrella header "AnyThinkChartboostBannerAdapter.h"
+
+  export *
+  module * { export * }
+}
