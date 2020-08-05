@@ -37,7 +37,6 @@ Pod::Spec.new do |spec|
      ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkFacebook*.framework'
   end
   
-  
   spec.subspec 'AnyThinkAdmobAdapter' do |ss|
      ss.dependency 'AnyThinkiOS/AnyThinkSDK'
      ss.ios.deployment_target = '8.0'
