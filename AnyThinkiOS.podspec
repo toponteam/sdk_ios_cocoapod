@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "AnyThinkiOS"
-  spec.version      = "5.6.5"
+  spec.version      = "5.6.6"
   spec.summary      = "A short description of AnyThink SDK for iOS."
   spec.description  = <<-DESC
             TopOn SDK for developer
@@ -21,7 +21,7 @@ Pod::Spec.new do |spec|
 
   spec.subspec 'AnyThinkSDK' do |ss|
      ss.ios.deployment_target = '8.0'
-     ss.vendored_frameworks = 'AnyThinkiOS/AnyThink{Banner,Splash,SDK,RewardedVideo,Interstitial,HeaderBidding,Native,MyOffer}.framework','AnyThinkiOS/TraminiSDK.framework','AnyThinkiOS/AnyThinkMyOffer*.framework'
+     ss.vendored_frameworks = 'AnyThinkiOS/AnyThink{Banner,Splash,SDK,RewardedVideo,Interstitial,Native,MyOffer}.framework','AnyThinkiOS/TraminiSDK.framework'
      ss.resource = 'AnyThinkiOS/AnyThinkSDK.bundle'
   end
 
@@ -49,11 +49,11 @@ Pod::Spec.new do |spec|
      ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkInmobi*.framework'
   end
   
-  spec.subspec 'AnyThinkFlurryAdapter' do |ss|
-     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
-     ss.ios.deployment_target = '8.0'
-     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkFlurry*.framework'
-  end
+  # spec.subspec 'AnyThinkFlurryAdapter' do |ss|
+  #    ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+  #    ss.ios.deployment_target = '8.0'
+  #    ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkFlurry*.framework'
+  # end
   
   spec.subspec 'AnyThinkApplovinAdapter' do |ss|
      ss.dependency 'AnyThinkiOS/AnyThinkSDK'
@@ -81,11 +81,11 @@ Pod::Spec.new do |spec|
      ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkGDT*.framework'
   end
   
-  spec.subspec 'AnyThinkYeahmobiAdapter' do |ss|
-    ss.dependency 'AnyThinkiOS/AnyThinkSDK'
-    ss.ios.deployment_target = '8.0'
-    ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkYeahmobi*.framework'
-  end
+  # spec.subspec 'AnyThinkYeahmobiAdapter' do |ss|
+  #   ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+  #   ss.ios.deployment_target = '8.0'
+  #   ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkYeahmobi*.framework'
+  # end
   
   spec.subspec 'AnyThinkAppnextAdapter' do |ss|
      ss.dependency 'AnyThinkiOS/AnyThinkSDK'
@@ -131,11 +131,11 @@ Pod::Spec.new do |spec|
   
   #Tapjoy embedded framework not support
   
-  spec.subspec 'AnyThinkOnewayAdapter' do |ss|
-     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
-     ss.ios.deployment_target = '8.0'
-     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkOneway*.framework'
-  end
+  # spec.subspec 'AnyThinkOnewayAdapter' do |ss|
+  #    ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+  #    ss.ios.deployment_target = '8.0'
+  #    ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkOneway*.framework'
+  # end
   
   spec.subspec 'AnyThinkBaiduAdapter' do |ss|
      ss.dependency 'AnyThinkiOS/AnyThinkSDK'
