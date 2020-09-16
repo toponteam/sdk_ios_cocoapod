@@ -55,6 +55,8 @@ extern NSInteger const ATADLoadingErrorCodeUnitGroupsFilteredOut;
 extern NSInteger const ATADLoadingErrorCodeFailureTooFrequent;
 extern NSInteger const ATADLoadingErrorCodeLoadCapsExceeded;
 
+extern NSInteger const ATADLoadingADXFailedCode;
+
 extern NSString *const ATSDKInitErrorDomain;
 extern NSInteger const ATSDKInitErrorCodeDataConsentNotSet;
 extern NSInteger const ATSDKInitErrorCodeDataConsentForbidden;
@@ -88,6 +90,7 @@ extern NSString *const kNetworkNameMyOffer;
 extern NSString *const kNetworkNameKS;
 extern NSString *const kNetworkNameOgury;
 extern NSString *const kNetworkNameGoogleAdManager;
+extern NSString *const kNetworkNameADX;
 
 extern NSString *const kInmobiGDPRStringKey;
 extern NSString *const kInmobiConsentStringKey;
@@ -236,4 +239,9 @@ typedef NS_ENUM(NSInteger, ATDataConsentSet) {
 -(void) setCustomData:(NSDictionary *)customData forPlacementID:(NSString*)placementID;
 -(NSDictionary*) customDataForPlacementID:(NSString*)placementID;
 -(NSString*)version;
+/*
+set exlude appleid list for sdk to filter offers
+*/
+-(void) setExludeAppleIdArray:(NSArray *)appleIdArray;
+-(NSArray*) exludeAppleIdArray;
 @end
