@@ -96,7 +96,7 @@ Pod::Spec.new do |spec|
   spec.subspec 'AnyThinkChartboostAdapter' do |ss|
      ss.dependency 'AnyThinkiOS/AnyThinkSDK'
      ss.ios.deployment_target = '8.0'
-     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkChartboost*.framework','AnyThinkiOS/HeliumAdapterChartboost.framework'
+     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkChartboost*.framework'
   end
   
   spec.subspec 'AnyThinkIronSourceAdapter' do |ss|
