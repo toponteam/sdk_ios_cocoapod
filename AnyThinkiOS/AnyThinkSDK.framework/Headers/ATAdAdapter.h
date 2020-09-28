@@ -32,7 +32,6 @@ extern NSString *const kAdapterCustomInfoExtraKey;
 -(void) loadADWithInfo:(NSDictionary *)serverInfo localInfo:(NSDictionary *)localInfo completion:(void (^)(NSArray<NSDictionary*> *assets, NSError *error))completion;
 +(void) bidRequestWithPlacementModel:(ATPlacementModel*)placementModel unitGroupModel:(ATUnitGroupModel*)unitGroupModel info:(NSDictionary*)info completion:(void(^)(ATBidInfo *bidInfo, NSError *error))completion;
 @optional
-+(NSDictionary*)headerBiddingParametersWithUnitGroupModel:(ATUnitGroupModel*)model extra:(NSDictionary *)extra;
-+(NSString*) adsourceRemoteKeyWithContent:(NSDictionary*)content unitGroupModel:(ATUnitGroupModel *)unitGroupModel;
++(NSDictionary*)headerBiddingParametersWithUnitGroupModel:(ATUnitGroupModel*)model;
 @end
 #endif /* ATAdAdapter_h */
