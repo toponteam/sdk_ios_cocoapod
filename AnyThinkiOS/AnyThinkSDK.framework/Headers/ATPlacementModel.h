@@ -30,6 +30,12 @@ typedef NS_ENUM(NSInteger, ATAdFormat) {
     ATAdFormatInterstitial = 3,
     ATAdFormatSplash = 4
 };
+
+typedef NS_ENUM(NSInteger, ATRevenueToPlatform) {
+    ATRevenueToPlatformAdjust = 1,
+    ATRevenueToPlatformAppsflyer = 2,
+    ATRevenueToPlatformTenjin
+};
 extern NSString *const kPlacementModelCacheDateKey;
 extern NSString *const kPlacementModelCustomDataKey;
 @interface ATPlacementModelExtra:ATModel
@@ -40,6 +46,16 @@ extern NSString *const kPlacementModelCustomDataKey;
 @property(nonatomic, readonly) NSInteger countdown;
 @property(nonatomic, readonly) BOOL allowsSkip;
 @property(nonatomic, readonly) BOOL closeAfterCountdownElapsed;
+@end
+
+@interface ATPlatfromInfo : NSObject
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
+@property(nonatomic) ATRevenueToPlatform platform;
+@property(nonatomic) NSInteger dataType;
+@property(nonatomic, copy) NSString *token;
+
 @end
 
 @interface ATPlacementModel : ATModel
@@ -114,6 +130,11 @@ extern NSString *const kPlacementModelCustomDataKey;
 @property(nonatomic, readonly) NSDictionary* adxSettingDict;
 @property(nonatomic, readonly) NSArray<ATUnitGroupModel*>* adxUnitGroups;
 
+@property(nonatomic, readonly) NSDictionary* olApiSettingDict;
+@property(nonatomic, readonly) NSArray<ATUnitGroupModel*>* olApiUnitGroups;
 
 -(Class) adManagerClass;
+
+- (NSDictionary *)revenueToPlatforms;
+
 @end

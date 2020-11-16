@@ -8,6 +8,20 @@
 
 #import "ATModel.h"
 
+extern NSString *const kATOfferTrackerExtraLifeCircleID;
+extern NSString *const kATOfferTrackerExtraScene;
+
+extern NSString *const kATOfferTrackerGDTClickID;
+extern NSString *const kATOfferTrackerGDTWidth;
+extern NSString *const kATOfferTrackerGDTHeight;
+extern NSString *const kATOfferTrackerGDTDownX;
+extern NSString *const kATOfferTrackerGDTDownY;
+extern NSString *const kATOfferTrackerGDTUpX;
+extern NSString *const kATOfferTrackerGDTUpY;
+extern NSString *const kATOfferTrackerGDTRequestWidth;
+extern NSString *const kATOfferTrackerGDTRequestHeight;
+
+
 @interface ATOfferSetting : ATModel
 -(instancetype) initWithDictionary:(NSDictionary *)dictionary;
 
@@ -20,7 +34,20 @@
 @property(nonatomic, readwrite) BOOL unMute;
 @property(nonatomic, readwrite) NSTimeInterval closeButtonAppearanceInterval;
 @property(nonatomic, readwrite) ATLoadStorekitTime storekitTime;
+@property(nonatomic, readwrite) NSInteger lastOfferidsNum;
 
+//setting for banner
+@property(nonatomic, readwrite) NSString *bannerSize;
+@property(nonatomic, readwrite) BOOL showBannerCloseBtn;
+@property(nonatomic, readwrite) NSInteger splashCountDownTime;
+@property(nonatomic, readwrite) BOOL skipable;
+@property(nonatomic, readwrite) NSInteger splashOrientation;
+
+@property(nonatomic, readwrite) ATClickMode clickMode;
+@property(nonatomic, readwrite) ATLoadType loadType;
+@property(nonatomic, readwrite) ATUserAgentType impressionUAType;
+@property(nonatomic, readwrite) ATUserAgentType clickUAType;
+@property(nonatomic, readwrite) ATDeepLinkClickMode deeplinkClickMoment;
 
 
 @end

@@ -7,6 +7,12 @@
 //
 
 #import "ATModel.h"
+#import <UIKit/UIKit.h>
+
+extern NSString *const kATOfferBannerSize320_50;
+extern NSString *const kATOfferBannerSize320_90;
+extern NSString *const kATOfferBannerSize300_250;
+extern NSString *const kATOfferBannerSize728_90;
 
 @interface ATOfferModel : ATModel
 
@@ -18,7 +24,7 @@
 @property(nonatomic, readwrite) NSInteger rating;
 @property(nonatomic, readwrite) NSString *iconURL;
 @property(nonatomic, readwrite) NSString *fullScreenImageURL;
-@property(nonatomic, readwrite) ATInterstitialType interstitalType;//check the offer for video or image
+@property(nonatomic, readwrite) ATInterstitialType interstitialType;//check the offer for video or image
 @property(nonatomic, readwrite) NSString *logoURL;//adv_u
 @property(nonatomic, readwrite) NSString *CTA;
 @property(nonatomic, readwrite) NSString *videoURL;
@@ -28,6 +34,7 @@
 @property(nonatomic, readwrite) NSString *deeplinkUrl;
 @property(nonatomic, readwrite) NSString *localResourceID;
 @property(nonatomic, readwrite) ATOfferModelType offerModelType;
+@property(nonatomic, readwrite) ATOfferCrtType crtType;
 
 //banner(myoffer:5.6.6)
 @property(nonatomic, readwrite) NSString *bannerImageUrl;
@@ -37,6 +44,13 @@
 
 @property(nonatomic, readwrite) NSArray<NSString*>* resourceURLs;
 
+@property(nonatomic) NSInteger displayDuration;
+
+//to do
+@property(nonatomic) NSInteger videoCurrentTime;
+@property(nonatomic) NSInteger videoResumeTime;
+
+@property(nonatomic, copy) NSDictionary *tapInfoDict;
 @end
 
 
