@@ -61,14 +61,6 @@ Pod::Spec.new do |spec|
      ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkMintegral*.framework'
   end
   
-  spec.subspec 'AnyThinkMopubAdapter' do |ss|
-     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
-     ss.ios.deployment_target = '8.0'
-     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkMopub*.framework'
-  end
-  
-  #mopub is a dynamic framework cocoapod unsupported it
-  
   spec.subspec 'AnyThinkGDTAdapter' do |ss|
      ss.dependency 'AnyThinkiOS/AnyThinkSDK'
      ss.ios.deployment_target = '8.0'
