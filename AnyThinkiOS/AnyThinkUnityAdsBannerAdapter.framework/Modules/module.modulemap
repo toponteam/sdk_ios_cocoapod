@@ -1,6 +1,0 @@
-framework module AnyThinkUnityAdsBannerAdapter {
-  umbrella header "AnyThinkUnityAdsBannerAdapter.h"
-
-  export *
-  module * { export * }
-}

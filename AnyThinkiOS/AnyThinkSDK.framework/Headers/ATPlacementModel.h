@@ -133,8 +133,13 @@ extern NSString *const kPlacementModelCustomDataKey;
 @property(nonatomic, readonly) NSDictionary* olApiSettingDict;
 @property(nonatomic, readonly) NSArray<ATUnitGroupModel*>* olApiUnitGroups;
 
+@property(nonatomic, readonly) NSArray<ATUnitGroupModel*>* inhouseUnitGroups;
+
 -(Class) adManagerClass;
 
 - (NSDictionary *)revenueToPlatforms;
+
+//todo: just for in-house list. It's not a good solution.
+@property(nonatomic, copy) NSArray<ATUnitGroupModel*>* waterfallA;
 
 @end
