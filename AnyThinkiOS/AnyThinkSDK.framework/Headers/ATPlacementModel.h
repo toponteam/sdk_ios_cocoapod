@@ -127,6 +127,8 @@ extern NSString *const kPlacementModelCustomDataKey;
 //extra
 @property(nonatomic, readonly) NSDictionary *callback;
 
+@property(nonatomic, readonly) NSInteger FBHBTimeOut;
+
 @property(nonatomic, readonly) NSDictionary* adxSettingDict;
 @property(nonatomic, readonly) NSArray<ATUnitGroupModel*>* adxUnitGroups;
 
