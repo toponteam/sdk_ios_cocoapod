@@ -92,8 +92,6 @@ extern NSString *const kNetworkNameOgury;
 extern NSString *const kNetworkNameGoogleAdManager;
 extern NSString *const kNetworkNameADX;
 extern NSString *const kNetworkNameHelium;
-extern NSString *const kNetworkNameMintegralOnlineApi;
-extern NSString *const kNetworkNameGDTOnlineApi;
 
 
 extern NSString *const kInmobiGDPRStringKey;

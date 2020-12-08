@@ -58,36 +58,13 @@ typedef NS_ENUM(NSInteger, ATVideoClickable) {
 
 typedef NS_ENUM(NSInteger, ATNetworkFirmId) {
     ATNetworkFirmIdADX =  66,
-    ATNetworkFirmIdMyOffer = 35,
-    ATNetworkFirmIdGDTOnline = 42
+    ATNetworkFirmIdMyOffer = 35
 };
 
 typedef NS_ENUM(NSInteger, ATOfferModelType) {
-    ATOfferModelMyOffer = 1,
-    ATOfferModelADX =  2,
-    ATOfferModelOnlineApi =  3
+    ATOfferModelMyOffer = 0,
+    ATOfferModelADX =  1
 };
-
-typedef NS_ENUM(NSInteger, ATOfferCrtType) {
-    ATOfferCrtTypeOneImage = 1,
-    ATOfferCrtTypeImages = 2,
-    ATOfferCrtTypeOneImageWithText = 3,
-    ATOfferCrtTypeImagesWithText = 4,
-    ATOfferCrtTypeVideo = 5,
-    ATOfferCrtTypeXHTML = 6
-};
-
-typedef NS_ENUM(NSInteger, ATDeepLinkClickMode) {
-    ATDeepLinkModeNone = 1,
-    ATDeepLinkModePreClickUrl = 2,
-    ATDeepLinkModeLastClickUrl = 3
-};
-
-typedef NS_ENUM(NSInteger, ATClickType) {
-    ATClickTypeClickUrl = 1,
-    ATClickTypeDeepLinkUrl = 2
-};
-
 
 @interface ATModel : NSObject
 -(instancetype)initWithDictionary:(NSDictionary*)dictionary;

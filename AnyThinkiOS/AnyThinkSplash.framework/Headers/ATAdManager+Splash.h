@@ -15,7 +15,6 @@ extern NSString *const kATSplashExtraBackgroundColorKey;
 extern NSString *const kATSplashExtraSkipButtonCenterKey;
 extern NSString *const kATSplashExtraCustomSkipButtonKey;
 extern NSString *const kATSplashExtraCanClickFlagKey;
-extern NSString *const kATSplashExtraShowDirectionKey;//Supported by KS Splash, defaults to Vertical, 1 to Horizontal
 
 extern NSString *const kATSplashExtraPlacementIDKey;
 extern NSString *const kATSplashExtraNetworkFirmID;
@@ -32,7 +31,6 @@ extern NSString *const kATSplashExtraGDTUnitID;
 extern NSString *const kATSplashExtraAppID;
 extern NSString *const kATSplashExtraSlotID;
 extern NSString *const kATSplashExtraPersonalizedTemplateFlag;
-extern NSString *const kATSplashExtraZoomOutKey;
 #pragma mark - Baidu
 extern NSString *const kATSplashExtraBaiduAppID;
 extern NSString *const kATSplashExtraBaiduAdPlaceID;
@@ -44,11 +42,6 @@ extern NSString *const kATSplashExtraSigmobPlacementID;
 extern NSString *const kATSplashExtraAdmobAppID;
 extern NSString *const kATSplashExtraAdmobUnitID;
 extern NSString *const kATSplashExtraAdmobOrientation;
-#pragma mark - KuaiShou
-extern NSString *const kATSplashExtraKSAppID ;
-extern NSString *const kATSplashExtraKSPosID;
-
-extern NSString *const kATAdLoadingExtraSplashAdSizeKey;
 
 @protocol ATSplashDelegate;
 @interface ATAdManager (Splash)

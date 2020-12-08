@@ -7,12 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-
 #import <AnyThinkSDK/AnyThinkSDK.h>
-#import <AnyThinkInterstitial/ATAdManager+Interstitial.h>
-#import <AnyThinkInterstitial/ATInterstitialDelegate.h>
-#import <AnyThinkInterstitial/ATInterstitialCustomEvent.h>
-
+#import "ATAdManager+Interstitial.h"
+#import "ATInterstitialDelegate.h"
+#import "ATInterstitialCustomEvent.h"
 //! Project version number for AnyThinkInterstitial.
 FOUNDATION_EXPORT double AnyThinkInterstitialVersionNumber;
 

@@ -1,0 +1,6 @@
+framework module AnyThinkStartAppBannerAdapter {
+  umbrella header "AnyThinkStartAppBannerAdapter.h"
+
+  export *
+  module * { export * }
+}
