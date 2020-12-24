@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "AnyThinkiOS"
-  spec.version      = "5.7.3"
+  spec.version      = "5.7.7"
   spec.summary      = "A short description of AnyThink SDK for iOS."
   spec.description  = <<-DESC
             TopOn SDK for developer
@@ -73,7 +73,6 @@ Pod::Spec.new do |spec|
      ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkMopub*.framework'
   end
   
-  #mopub is a dynamic framework cocoapod unsupported it
   
   spec.subspec 'AnyThinkGDTAdapter' do |ss|
      ss.dependency 'AnyThinkiOS/AnyThinkSDK'

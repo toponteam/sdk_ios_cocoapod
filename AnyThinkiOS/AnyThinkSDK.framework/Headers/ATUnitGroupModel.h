@@ -18,6 +18,7 @@
 @property(nonatomic, readonly) NSInteger capByHour;
 @property(nonatomic, readonly) NSTimeInterval networkCacheTime;
 @property(nonatomic, readonly) NSInteger networkFirmID;
+@property(nonatomic, readonly) NSString *networkName;
 @property(nonatomic, readonly) NSInteger networkRequestNum;
 @property(nonatomic, readonly) NSTimeInterval networkDataTimeout; //  5.1.0 双回调数据超时
 @property(nonatomic, readonly) NSTimeInterval networkTimeout;
@@ -28,6 +29,7 @@
 @property(nonatomic, readonly) NSDictionary *content;
 @property(nonatomic, readonly) NSTimeInterval showingInterval;//minimum interval between previous request & last impression
 @property(nonatomic, readonly) CGSize adSize;
+@property(nonatomic, readonly) BOOL splashZoomOut;
 @property(nonatomic, readonly) NSString *price;
 @property(nonatomic, readonly) NSInteger ecpmLevel;
 @property(nonatomic, readonly) NSTimeInterval headerBiddingRequestTimeout;

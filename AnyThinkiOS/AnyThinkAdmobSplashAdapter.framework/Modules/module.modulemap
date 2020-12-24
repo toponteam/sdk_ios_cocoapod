@@ -1,6 +1,0 @@
-framework module AnyThinkAdmobSplashAdapter {
-  umbrella header "AnyThinkAdmobSplashAdapter.h"
-
-  export *
-  module * { export * }
-}

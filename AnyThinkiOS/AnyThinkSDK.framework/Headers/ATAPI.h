@@ -27,6 +27,10 @@ extern NSString *const kATADDelegateExtraScenarioRewardNameKey;
 extern NSString *const kATADDelegateExtraScenarioRewardNumberKey;
 extern NSString *const kATADDelegateExtraPlacementRewardNameKey;
 extern NSString *const kATADDelegateExtraPlacementRewardNumberKey;
+extern NSString *const kATADDelegateExtraExtInfoKey;
+extern NSString *const kATADDelegateExtraOfferIDKey;
+extern NSString *const kATADDelegateExtraCreativeIDKey;
+extern NSString *const kATADDelegateExtraIsDeeplinkKey;
 
 extern NSString *const ATADShowingErrorDomain;
 
@@ -92,6 +96,8 @@ extern NSString *const kNetworkNameOgury;
 extern NSString *const kNetworkNameGoogleAdManager;
 extern NSString *const kNetworkNameADX;
 extern NSString *const kNetworkNameHelium;
+extern NSString *const kNetworkNameMintegralOnlineApi;
+extern NSString *const kNetworkNameGDTOnlineApi;
 
 
 extern NSString *const kInmobiGDPRStringKey;
