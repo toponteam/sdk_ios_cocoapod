@@ -165,4 +165,16 @@ Pod::Spec.new do |spec|
      ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkFyber*.framework'
   end
 
+  spec.subspec 'AnyThinkKidozAdapter' do |ss|
+     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+     ss.ios.deployment_target = '8.0'
+     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkKidoz*.framework'
+  end
+
+  spec.subspec 'AnyThinkMyTargetAdapter' do |ss|
+     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+     ss.ios.deployment_target = '8.0'
+     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkMyTarget*.framework'
+  end
+
 end

@@ -25,6 +25,7 @@
 -(NSDictionary*)delegateExtra;
 -(instancetype) initWithInfo:(NSDictionary*)serverInfo localInfo:(NSDictionary*)localInfo;
 -(void) cleanup;
+-(void) removedFromWindow;
 /// Some ad SDKs do not call back after ads were displayed. Override it and return 'YES', a impression tracking will be sent. Same for the native ads (ATNativeADCustomEvent).
 - (BOOL)sendImpressionTrackingIfNeed;
 
