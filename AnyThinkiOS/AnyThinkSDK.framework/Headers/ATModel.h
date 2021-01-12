@@ -85,8 +85,7 @@ typedef NS_ENUM(NSInteger, ATDeepLinkClickMode) {
 
 typedef NS_ENUM(NSInteger, ATClickType) {
     ATClickTypeClickUrl = 1,
-    ATClickTypeDeepLinkUrl,
-    ATClickTypeClickJumpUrl
+    ATClickTypeDeepLinkUrl = 2
 };
 
 

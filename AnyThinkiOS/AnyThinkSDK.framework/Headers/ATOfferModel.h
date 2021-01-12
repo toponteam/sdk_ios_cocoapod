@@ -14,16 +14,6 @@ extern NSString *const kATOfferBannerSize320_90;
 extern NSString *const kATOfferBannerSize300_250;
 extern NSString *const kATOfferBannerSize728_90;
 
-@interface ATVideoPlayingTKItem : NSObject
-
-@property (nonatomic, copy) NSArray<NSString *> *urls;
-@property (nonatomic) NSInteger triggerTime;
-@property (nonatomic) BOOL sent;
-
-- (instancetype)initWithDict:(NSDictionary *)dict;
-
-@end
-
 @interface ATOfferModel : ATModel
 
 @property(nonatomic, readwrite) NSString *resourceID;
@@ -46,9 +36,6 @@ extern NSString *const kATOfferBannerSize728_90;
 @property(nonatomic, readwrite) ATOfferModelType offerModelType;
 @property(nonatomic, readwrite) ATOfferCrtType crtType;
 
-@property(nonatomic, copy) NSString *jumpUrl;
-@property(nonatomic) NSInteger offerFirmID;
-
 //banner(myoffer:5.6.6)
 @property(nonatomic, readwrite) NSString *bannerImageUrl;
 @property(nonatomic, readwrite) NSString *bannerBigImageUrl;
@@ -58,9 +45,6 @@ extern NSString *const kATOfferBannerSize728_90;
 @property(nonatomic, readwrite) NSArray<NSString*>* resourceURLs;
 
 @property(nonatomic) NSInteger displayDuration;
-
-@property(nonatomic, readwrite) NSArray<NSString*>* clickTKUrl;
-@property(nonatomic, readwrite) NSArray<NSString*>* openSchemeFailedTKUrl;
 
 //to do
 @property(nonatomic) NSInteger videoCurrentTime;

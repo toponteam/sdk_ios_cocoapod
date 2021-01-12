@@ -21,17 +21,6 @@ extern NSString *const kATOfferTrackerGDTUpY;
 extern NSString *const kATOfferTrackerGDTRequestWidth;
 extern NSString *const kATOfferTrackerGDTRequestHeight;
 
-// For v5.7.7+ onlineApi. Some relative coordinates.
-extern NSString *const kATOfferTrackerRelativeDownX;
-extern NSString *const kATOfferTrackerRelativeDownY;
-extern NSString *const kATOfferTrackerRelativeUpX;
-extern NSString *const kATOfferTrackerRelativeUpY;
-extern NSString *const kATOfferTrackerTimestamp;
-extern NSString *const kATOfferTrackerMilliTimestamp;
-extern NSString *const kATOfferTrackerEndTimestamp;
-extern NSString *const kATOfferTrackerEndMilliTimestamp;
-extern NSString *const kATOfferTrackerVideoTimePlayed;
-extern NSString *const kATOfferTrackerVideoMilliTimePlayed;
 
 @interface ATOfferSetting : ATModel
 -(instancetype) initWithDictionary:(NSDictionary *)dictionary;

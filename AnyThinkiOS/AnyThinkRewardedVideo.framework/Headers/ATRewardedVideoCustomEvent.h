@@ -21,7 +21,6 @@
 -(void) trackRewardedVideoAdLoadFailed:(NSError*)error;
 -(void) trackRewardedVideoAdLoaded:(id)adObject adExtra:(NSDictionary *)adExtra;
 -(void) trackRewardedVideoAdRewarded;
--(void) trackRewardedVideoAdDeeplinkOrJumpResult:(BOOL)success;
 
 -(NSDictionary*)delegateExtra;
 

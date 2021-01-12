@@ -27,10 +27,6 @@ extern NSString *const kATADDelegateExtraScenarioRewardNameKey;
 extern NSString *const kATADDelegateExtraScenarioRewardNumberKey;
 extern NSString *const kATADDelegateExtraPlacementRewardNameKey;
 extern NSString *const kATADDelegateExtraPlacementRewardNumberKey;
-extern NSString *const kATADDelegateExtraExtInfoKey;
-extern NSString *const kATADDelegateExtraOfferIDKey;
-extern NSString *const kATADDelegateExtraCreativeIDKey;
-extern NSString *const kATADDelegateExtraIsDeeplinkKey;
 
 extern NSString *const ATADShowingErrorDomain;
 
@@ -98,8 +94,7 @@ extern NSString *const kNetworkNameADX;
 extern NSString *const kNetworkNameHelium;
 extern NSString *const kNetworkNameMintegralOnlineApi;
 extern NSString *const kNetworkNameGDTOnlineApi;
-extern NSString *const kNetworkNameKidoz;
-extern NSString *const kNetworkNameMyTarget;
+
 
 extern NSString *const kInmobiGDPRStringKey;
 extern NSString *const kInmobiConsentStringKey;
@@ -171,11 +166,6 @@ typedef NS_ENUM(NSInteger, ATDataConsentSet) {
 +(instancetype)sharedInstance;
 +(BOOL) getMPisInit;
 +(void) setMPisInit:(BOOL)MPisInit;
-/*
- only for adx，onlineApi，MyOffer  banner&splash adLogo，NO by default
- */
-+(void) setAdLogoVisible:(BOOL)adLogoVisible;
-
 /**
  * Inspect the error parameter to see what's the matter.
  */
@@ -283,5 +273,4 @@ set denied Upload Info list for sdk to Control report
 -(void) setDeniedUploadInfoArray:(NSArray *)uploadInfoArray;
 -(NSArray*) deniedUploadInfoArray;
 -(BOOL) isContainsForDeniedUploadInfoArray:(NSString *)key;
-
 @end

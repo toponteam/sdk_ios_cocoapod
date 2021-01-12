@@ -51,7 +51,7 @@ typedef NS_ENUM(NSInteger, ATNativeADTrackType) {
     ATNativeADTrackTypeADRecalledSuccessfully = 2,
     //Send when the ad's failed to be downloaded.
     ATNativeADTrackTypeADRecallFailed = 3,
-    ATNativeADTrackTypeADShow = 4, // impression
+    ATNativeADTrackTypeADShow = 4,
     ATNativeADTrackTypeADRefreshShow = 5,
     ATNativeADTrackTypeADClicked = 6,
     ATNativeADTrackTypeVideoPlayed = 7,

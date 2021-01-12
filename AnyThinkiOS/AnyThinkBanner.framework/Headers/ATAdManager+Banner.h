@@ -18,7 +18,6 @@ extern NSString *const kATAdLoadingExtraAdmobAdSizeFlagsKey;//Admob AdSize flags
 @class ATBannerView;
 @interface ATAdManager (Banner)
 -(BOOL) bannerAdReadyForPlacementID:(NSString*)placementID;
--(BOOL) bannerAdReadyForPlacementID:(NSString*)placementID sendTK:(BOOL)send;
 /*
  nil will be returned if you try to show banner ad for the placementID if it's not ready.
  */
