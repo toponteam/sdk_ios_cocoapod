@@ -23,11 +23,17 @@
 /**
  *@para refresh: whether the show is trigered by a ad refresh.
  */
--(void) trackNativeAdShow:(BOOL)refresh;
--(void) trackNativeAdClick;
--(void) trackNativeAdVideoStart;
--(void) trackNativeAdVideoEnd;
--(void) trackNativeAdClosed;
+- (void)trackNativeAdShow:(BOOL)refresh;
+- (void)trackNativeAdClick;
+- (void)trackNativeAdVideoStart;
+- (void)trackNativeAdVideoEnd;
+- (void)trackNativeAdClosed;
+- (void)trackNativeAdImpression;
+-(void) trackNativeAdDeeplinkOrJumpResult:(BOOL)success;
+
+/// If it returns YES, then when sending the embedding points of "show", the embedding points of "impression" will be sent together. Otherwise, it will not be sent. Same for the banner ads (ATBannerCustomEvent.h).
+- (BOOL)sendImpressionTrackingIfNeed;
+
 -(NSDictionary*)delegateExtra;
 -(ATNativeADSourceType) sourceType;
 @property(nonatomic, copy) void(^requestCompletionBlock)(NSArray<NSDictionary*> *assets, NSError *error);
@@ -48,4 +54,6 @@
 -(void) notifyVideoEnterFullScreen;
 -(void) notifyVideoExitFullScreen;
 -(void) notifyCloseButtonTapped;
+-(void) notifyDeeplinkOrJumpResult:(BOOL)success;
+
 @end

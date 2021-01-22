@@ -52,7 +52,14 @@ extern NSString *const kATAdLoadingExtraSplashAdSizeKey;
 
 @protocol ATSplashDelegate;
 @interface ATAdManager (Splash)
--(void) loadADWithPlacementID:(NSString*)placementID extra:(NSDictionary*)extra customData:(NSDictionary*)customData delegate:(id<ATSplashDelegate>)delegate window:(UIWindow*)window containerView:(UIView*)containerView;
--(void) loadADWithPlacementID:(NSString*)placementID extra:(NSDictionary*)extra customData:(NSDictionary*)customData delegate:(id<ATSplashDelegate>)delegate window:(UIWindow*)window windowScene:(UIWindowScene *)windowScene containerView:(UIView*)containerView API_AVAILABLE(ios(13.0));
--(void) checkAdSourceList:(NSString*)placementID;
+- (void)loadADWithPlacementID:(NSString*)placementID extra:(NSDictionary*)extra customData:(NSDictionary*)customData delegate:(id<ATSplashDelegate>)delegate window:(UIWindow*)window containerView:(UIView*)containerView DEPRECATED_ATTRIBUTE;
+- (void)loadADWithPlacementID:(NSString*)placementID extra:(NSDictionary*)extra customData:(NSDictionary*)customData delegate:(id<ATSplashDelegate>)delegate window:(UIWindow*)window windowScene:(UIWindowScene *)windowScene containerView:(UIView*)containerView API_AVAILABLE(ios(13.0)) DEPRECATED_ATTRIBUTE;
+- (void)loadADWithPlacementID:(NSString *)placementID extra:(NSDictionary *)extra delegate:(id<ATSplashDelegate>)delegate containerView:(UIView *)containerView;
+- (void)checkAdSourceList:(NSString*)placementID;
+- (void)showSplashWithPlacementID:(NSString*)placementID window:(UIWindow*)window delegate:(id<ATSplashDelegate>)delegate;
+- (void)showSplashWithPlacementID:(NSString*)placementID window:(UIWindow*)window windowScene:(UIWindowScene *)windowScene delegate:(id<ATSplashDelegate>)delegate API_AVAILABLE(ios(13.0));
+- (BOOL)splashReadyForPlacementID:(NSString *)placementID;
+- (BOOL)splashReadyForPlacementID:(NSString *)placementID sendTK:(BOOL)send;
+
+- (ATCheckLoadModel*)checkSplashLoadStatusForPlacementID:(NSString *)placementID;
 @end
