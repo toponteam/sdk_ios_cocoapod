@@ -67,6 +67,9 @@ extern NSString *const kATOfferBannerSize728_90;
 @property(nonatomic) NSInteger videoResumeTime;
 
 @property(nonatomic, copy) NSDictionary *tapInfoDict;
+
+// If it is YES, it means that the feedback has been done.
+@property(nonatomic) BOOL feedback;
 @end
 
 
