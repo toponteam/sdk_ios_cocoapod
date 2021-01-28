@@ -45,12 +45,6 @@ extern NSString *const kATTrackerExtraASIDKey;
 extern NSString *const kATTrackerExtraFormatKey;
 extern NSString *const kATTrackerExtraRequestExpectedOfferNumberFlagKey;
 
-// ofm
-extern NSString *const kATTrackerExtraOFMTrafficIDKey;
-extern NSString *const kATTrackerExtraOFMSystemKey;
-extern NSString *const kATTrackerExtraOFMPreECPMKey;
-extern NSString *const kATTrackerExtraOFMKey;
-
 typedef NS_ENUM(NSInteger, ATNativeADTrackType) {
     ATNativeADTrackTypeADRequest = 1,
     //Send when the ad's been successfully downloaded.

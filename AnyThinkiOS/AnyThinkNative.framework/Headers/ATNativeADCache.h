@@ -49,7 +49,4 @@
 @property(nonatomic, readonly) NSString *bidId;
 @property(nonatomic, readonly, weak) ATWaterfall *finalWaterfall;
 @property(nonatomic, readonly) NSInteger autoReqType;
-
-@property(nonatomic, copy) NSString *scene;
-
 @end

@@ -60,12 +60,6 @@ extern NSString *const kATOfferTrackerVideoMilliTimePlayed;
 @property(nonatomic, readwrite) ATUserAgentType clickUAType;
 @property(nonatomic, readwrite) ATDeepLinkClickMode deeplinkClickMoment;
 
-/// The minimum value of the close button delayed display
-@property(nonatomic) NSInteger closeBtnDelayMinTime;
-/// The maximum value of the close button delayed display
-@property(nonatomic) NSInteger closeBtnDelayMaxTime;
-
-@property(nonatomic) NSInteger closeBtnDelayRate;
 
 @end
 
