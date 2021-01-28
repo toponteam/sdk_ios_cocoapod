@@ -22,7 +22,9 @@ extern NSString *const kATAdLoadingExtraAdmobAdSizeFlagsKey;//Admob AdSize flags
 /*
  nil will be returned if you try to show banner ad for the placementID if it's not ready.
  */
--(nullable ATBannerView*)retrieveBannerViewForPlacementID:(NSString*)placementID;
--(nullable ATBannerView*)retrieveBannerViewForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra DEPRECATED_ATTRIBUTE;
+- (nullable ATBannerView*)retrieveBannerViewForPlacementID:(NSString*)placementID;
+- (nullable ATBannerView*)retrieveBannerViewForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra DEPRECATED_ATTRIBUTE;
+- (nullable ATBannerView*)retrieveBannerViewForPlacementID:(NSString*)placementID scene:(NSString *)scene;
 
+- (ATCheckLoadModel*)checkBannerLoadStatusForPlacementID:(NSString*)placementID;
 @end

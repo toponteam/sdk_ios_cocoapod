@@ -137,9 +137,22 @@ extern NSString *const kPlacementModelCustomDataKey;
 
 @property(nonatomic, readonly) NSArray<ATUnitGroupModel*>* inhouseUnitGroups;
 
+@property(nonatomic, readonly) NSString *currency;
+@property(nonatomic, readonly) NSString *exchangeRate;
+
 -(Class) adManagerClass;
 
 - (NSDictionary *)revenueToPlatforms;
+
+/**
+ In order to solve the problem of inconsistency in legal tender. If the current ecpm currency is USD, this method returns NO.
+ */
+//- (BOOL)needConvertPrice;
+
+/**
+ If the current legal currency of ecpm is not USD, this method will calculate the corresponding price according to the latest exchange rate.
+ */
+//- (NSString *)convertedPrice:(NSString *)price;
 
 //todo: just for in-house list. It's not a good solution.
 @property(nonatomic, copy) NSArray<ATUnitGroupModel*>* waterfallA;
