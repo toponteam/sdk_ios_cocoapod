@@ -33,8 +33,6 @@
 @property(nonatomic, readonly) id customObject;
 @property(nonatomic, readonly) NSString *unitID;
 @property(nonatomic, readonly) NSString *appID;
-- (NSString *)ecpm;
-
 @optional
 -(BOOL) expired;
 -(BOOL) ready;
