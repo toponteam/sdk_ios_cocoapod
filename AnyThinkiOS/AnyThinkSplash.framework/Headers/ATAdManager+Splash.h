@@ -50,10 +50,16 @@ extern NSString *const kATSplashExtraKSPosID;
 
 extern NSString *const kATAdLoadingExtraSplashAdSizeKey;
 
+#pragma mark - Mobrain
+extern NSString *const kATSplashExtraMobrainAdnTypeKey;
+extern NSString *const kATSplashExtraMobrainAppKeyKey;
+extern NSString *const kATSplashExtraAppIDKey;
+extern NSString *const kATSplashExtraRIDKey;
+extern NSString *const kATSplashExtraRootViewControllerKey;
+
+
 @protocol ATSplashDelegate;
 @interface ATAdManager (Splash)
-- (void)loadADWithPlacementID:(NSString*)placementID extra:(NSDictionary*)extra customData:(NSDictionary*)customData delegate:(id<ATSplashDelegate>)delegate window:(UIWindow*)window containerView:(UIView*)containerView DEPRECATED_ATTRIBUTE;
-- (void)loadADWithPlacementID:(NSString*)placementID extra:(NSDictionary*)extra customData:(NSDictionary*)customData delegate:(id<ATSplashDelegate>)delegate window:(UIWindow*)window windowScene:(UIWindowScene *)windowScene containerView:(UIView*)containerView API_AVAILABLE(ios(13.0)) DEPRECATED_ATTRIBUTE;
 - (void)loadADWithPlacementID:(NSString *)placementID extra:(NSDictionary *)extra delegate:(id<ATSplashDelegate>)delegate containerView:(UIView *)containerView;
 - (void)checkAdSourceList:(NSString*)placementID;
 - (void)showSplashWithPlacementID:(NSString*)placementID window:(UIWindow*)window delegate:(id<ATSplashDelegate>)delegate;

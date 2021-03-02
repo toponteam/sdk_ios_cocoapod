@@ -31,6 +31,7 @@
 @property(nonatomic, readonly) CGSize adSize;
 @property(nonatomic, readonly) BOOL splashZoomOut;
 @property(nonatomic, readonly) NSString *price;
+@property(nonatomic, readonly) NSString *ecpmByCurrency;
 @property(nonatomic, readonly) NSInteger ecpmLevel;
 @property(nonatomic, readonly) NSTimeInterval headerBiddingRequestTimeout;
 @property(nonatomic, readwrite) NSString *bidPrice;
@@ -44,4 +45,6 @@
 @property(nonatomic, readonly) BOOL postsNotificationOnShow;
 @property(nonatomic, readonly) BOOL postsNotificationOnClick;
 @property(nonatomic, readonly) NSString *precision;
+@property(nonatomic, readonly) BOOL canAutoReady;
+
 @end

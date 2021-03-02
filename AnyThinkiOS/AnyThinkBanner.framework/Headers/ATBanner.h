@@ -33,4 +33,7 @@
 @property(nonatomic, readonly, weak) ATWaterfall *finalWaterfall;
 @property(nonatomic, readonly) NSInteger autoReqType;
 @property(nonatomic) BOOL defaultPlayIfRequired;
+
+@property(nonatomic, copy) NSString *scene;
+
 @end

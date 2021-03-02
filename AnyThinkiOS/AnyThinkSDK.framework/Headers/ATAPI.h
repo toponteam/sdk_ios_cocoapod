@@ -31,6 +31,7 @@ extern NSString *const kATADDelegateExtraExtInfoKey;
 extern NSString *const kATADDelegateExtraOfferIDKey;
 extern NSString *const kATADDelegateExtraCreativeIDKey;
 extern NSString *const kATADDelegateExtraIsDeeplinkKey;
+extern NSString *const kATADDelegateExtraRVUserCustomData;
 
 extern NSString *const ATADShowingErrorDomain;
 
@@ -100,6 +101,7 @@ extern NSString *const kNetworkNameMintegralOnlineApi;
 extern NSString *const kNetworkNameGDTOnlineApi;
 extern NSString *const kNetworkNameKidoz;
 extern NSString *const kNetworkNameMyTarget;
+extern NSString *const kNetworkNameMobrain;
 
 extern NSString *const kInmobiGDPRStringKey;
 extern NSString *const kInmobiConsentStringKey;
