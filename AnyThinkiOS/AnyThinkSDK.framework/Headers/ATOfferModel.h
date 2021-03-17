@@ -24,8 +24,16 @@ extern NSString *const kATOfferBannerSize728_90;
 
 @end
 
+// v5.7.24
+typedef NS_ENUM(NSInteger, ATOfferInterActableArea) {
+    ATOfferInterActableAreaAll,
+    ATOfferInterActableAreaVisibleItems,
+    ATOfferInterActableAreaCTA
+};
+
 @interface ATOfferModel : ATModel
 
+@property(nonatomic) ATOfferInterActableArea interActableArea;
 @property(nonatomic, readwrite) NSString *resourceID;
 @property(nonatomic, readwrite) NSString *offerID;
 @property(nonatomic, readwrite) NSString *pkgName;
