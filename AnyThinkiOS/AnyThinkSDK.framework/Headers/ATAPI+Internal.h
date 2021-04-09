@@ -64,6 +64,7 @@ extern NSString *const kATADLoadingNotificationUserInfoExtraKey;
 @interface ATAPI(Internal)
 +(BOOL)logEnabled;
 +(BOOL)adLogoVisible;
++(ATNetworkTerritory)networkTerritory;
 +(BOOL)isOfm;
 -(void) setVersion:(NSString*)version forNetwork:(NSString*)network;
 -(NSDictionary*)networkVersions;

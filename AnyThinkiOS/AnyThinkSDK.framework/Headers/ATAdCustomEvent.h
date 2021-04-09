@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ATAd.h"
 #import "ATTracker.h"
+#import "ATBidInfo.h"
 
 extern NSString *const kATSDKFailedToLoadSplashADMsg;
 extern NSString *const kATSDKFailedToLoadBannerADMsg;
@@ -49,4 +50,7 @@ extern NSString *const kATAdAssetsAppIDKey;
 
 @property (nonatomic, assign) NSString *networkUnitId;
 @property (nonatomic) NSDictionary *networkCustomInfo;
+@property (nonatomic) NSDictionary *headerBiddingExtra;
+-(void)assetsHeaderBiddingTrackingExtraWithBidInfo:(ATBidInfo*)bidInfo;
+
 @end

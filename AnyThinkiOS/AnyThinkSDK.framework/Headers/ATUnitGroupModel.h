@@ -9,6 +9,7 @@
 #import "ATModel.h"
 #import <UIKit/UIKit.h>
 #import "ATMyOfferOfferModel.h"
+#import "ATBidInfo.h"
 
 @interface ATUnitGroupModel : ATModel
 -(instancetype) initWithDictionary:(NSDictionary *)dictionary;
@@ -46,5 +47,8 @@
 @property(nonatomic, readonly) BOOL postsNotificationOnClick;
 @property(nonatomic, readonly) NSString *precision;
 @property(nonatomic, readonly) BOOL canAutoReady;
-
+@property(nonatomic, readonly) BOOL waterfallTimeOutSW;
+@property(nonatomic, readonly) BOOL reportBidPriceSW;
+@property(nonatomic, readonly) BOOL bidRealTimeLoadSW;
+@property(nonatomic, readwrite) ATBidInfo *bidInfo;
 @end
