@@ -33,10 +33,6 @@ extern NSString *const kATOfferTrackerEndMilliTimestamp;
 extern NSString *const kATOfferTrackerVideoTimePlayed;
 extern NSString *const kATOfferTrackerVideoMilliTimePlayed;
 
-// for v5.7.40+
-extern NSString *const kATOfferTrackerKYAbsoluteCoord;
-extern NSString *const kATOfferTrackerKYRelativeCoord;
-
 @interface ATOfferSetting : ATModel
 -(instancetype) initWithDictionary:(NSDictionary *)dictionary;
 
