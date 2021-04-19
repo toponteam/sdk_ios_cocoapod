@@ -22,4 +22,6 @@ extern NSString *const kATNativeAdConfigurationContextNetworkLogoViewFrameKey;//
 @property(nonatomic) CGRect mediaViewFrame;
 @property(nonatomic, weak) UIViewController *rootViewController;
 @property(nonatomic, weak) id<ATNativeADDelegate> delegate;
+@property(nonatomic) BOOL sizeToFit;
+
 @end

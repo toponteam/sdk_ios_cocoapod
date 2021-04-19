@@ -55,6 +55,7 @@
  * The native ad that is being shown.
  */
 @property(nonatomic, readonly) ATNativeAd *nativeAd;
+
 @end
 
 //Defined for TT native
