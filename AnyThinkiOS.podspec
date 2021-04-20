@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
   spec.homepage     = "https://github.com/anythinkteam/sdk_ios_cocoapod"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author             = { "topon" => "developer@toponad.com" }
-  spec.source       = { :git => "https://github.com/anythinkteam/sdk_ios_cocoapod.git", :tag => spec.version }
+  spec.source       = { :git => "http://github.com/anythinkteam/sdk_ios_cocoapod.git", :tag => spec.version }
   spec.platform     = :ios, '8.0'
   spec.ios.deployment_target = '8.0'
   spec.requires_arc = true
