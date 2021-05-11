@@ -33,13 +33,6 @@ extern NSString *const kATOfferTrackerEndMilliTimestamp;
 extern NSString *const kATOfferTrackerVideoTimePlayed;
 extern NSString *const kATOfferTrackerVideoMilliTimePlayed;
 
-// for v5.7.40+
-extern NSString *const kATOfferTrackerKYAbsoluteCoord;
-extern NSString *const kATOfferTrackerKYRelativeCoord;
-
-// v5.7.42+
-extern NSString *const kATOfferTrackerDeeplinkType;
-
 @interface ATOfferSetting : ATModel
 -(instancetype) initWithDictionary:(NSDictionary *)dictionary;
 
@@ -61,7 +54,6 @@ extern NSString *const kATOfferTrackerDeeplinkType;
 @property(nonatomic, readwrite) BOOL skipable;
 @property(nonatomic, readwrite) NSInteger splashOrientation;
 
-@property(nonatomic, readwrite) ATOfferLayoutType layoutType;
 @property(nonatomic, readwrite) ATClickMode clickMode;
 @property(nonatomic, readwrite) ATLoadType loadType;
 @property(nonatomic, readwrite) ATUserAgentType impressionUAType;

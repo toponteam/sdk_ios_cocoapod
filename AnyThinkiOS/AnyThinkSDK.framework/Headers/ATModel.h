@@ -31,11 +31,6 @@ typedef NS_ENUM(NSInteger, ATLinkType) {
     ATLinkTypeInnerSafari = 5
 };
 
-typedef NS_ENUM(NSInteger, ATOfferLayoutType) {
-    ATOfferLayoutTypeNormal = 0,
-    ATOfferLayoutTypeExpress
-};
-
 typedef NS_ENUM(NSInteger, ATClickMode) {
     ATClickModeSync = 1,
     ATClickModeAsync

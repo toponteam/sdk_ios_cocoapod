@@ -140,9 +140,6 @@ extern NSString *const kPlacementModelCustomDataKey;
 @property(nonatomic, readonly) NSString *currency;
 @property(nonatomic, readonly) NSString *exchangeRate;
 
-@property(nonatomic, readonly) NSArray *bURLNotificationFirms;
-
-
 // v5.7.10
 @property(nonatomic, readonly) NSString *campaign;
 

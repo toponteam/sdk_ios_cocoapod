@@ -47,7 +47,6 @@
 @property(nonatomic) NSInteger numberOfFinishedRequests;
 @property(nonatomic, readonly) NSMutableArray<NSDictionary*>* assets;
 @property(nonatomic) NSDictionary *requestExtra;
-@property(nonatomic) NSDictionary *serverExtra;
 @end
 
 @interface ATNativeADView(Event)
