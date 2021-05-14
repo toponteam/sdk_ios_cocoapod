@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "AnyThinkiOS"
-  spec.version      = "5.7.33"
+  spec.version      = "5.7.44"
   spec.summary      = "A short description of AnyThink SDK for iOS."
   spec.description  = <<-DESC
             TopOn SDK for developer
@@ -14,7 +14,7 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true
   spec.frameworks = 'SystemConfiguration', 'CoreGraphics','Foundation','UIKit'
   
-  spec.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
+  spec.pod_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
   spec.libraries = 'c++', 'z', 'sqlite3', 'xml2', 'resolv'
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 armv7s arm64' }
   spec.default_subspecs = 'AnyThinkSDK'
@@ -25,7 +25,7 @@ Pod::Spec.new do |spec|
      ss.resource = 'AnyThinkiOS/AnyThinkSDK.bundle'
   end
 
-  spec.subspec 'AnyThinkTouTiaoAdapter' do |ss|
+  spec.subspec 'AnyThinkPangleAdapter' do |ss|
      ss.dependency 'AnyThinkiOS/AnyThinkSDK'
      ss.ios.deployment_target = '8.0'
      ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkPangle*.framework'
