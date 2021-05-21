@@ -78,6 +78,11 @@ typedef NS_ENUM(NSInteger, ATOfferInterActableArea) {
 
 // If it is YES, it means that the feedback has been done.
 @property(nonatomic) BOOL feedback;
+
+// v5.7.45 +
+@property(nonatomic, readwrite) NSArray<NSString*>* deeplinkSuccessUrl;
+@property(nonatomic, readwrite) NSDictionary* at_deeplinkSuccessUrl;
+
 @end
 
 
