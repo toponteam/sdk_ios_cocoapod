@@ -10,6 +10,8 @@
 #import "ATBidInfo.h"
 @class ATUnitGroupModel;
 @class ATPlacementModel;
+@class ATBidWaterFallModel;
+@class ATBidNotifSendModel;
 @interface ATBidInfoManager : NSObject
 +(instancetype) sharedManager;
 /**
@@ -22,10 +24,19 @@
 /**
  Used for send hb loss notification
  */
--(void) saveLoadMaxPrice:(NSString*)price forRequestID:(NSString*)requestID;
--(NSString*)loadMaxPriceForRequestID:(NSString*)requestID;
+-(void) saveWithBidNotifSendModel:(ATBidNotifSendModel*)bidNotifSendModel forRequestID:(NSString*)requestID;
+-(ATBidNotifSendModel*)getBidNotifSendModelForRequestID:(NSString*)requestID;
+
+-(void) saveNoPriceCacheWitBidWaterFallModel:(ATBidWaterFallModel*)bidWaterfallModel;
+-(void) removeNoPriceCacheWithTpBidId:(NSString*)tpBidId unitId:(NSString*)unitId;
+-(ATBidWaterFallModel *)getBidWaterFallModelWithTpBidId:(NSString*)tpBidId unitId:(NSString*)unitId;
+
+/**
+ send hb win、loss、display notification
+ */
+-(void)sendHBWinnerNotificationForBidInfo:(ATBidInfo *)bidInfo;
 -(void)sendHBLossNotificationForPlacementID:(NSString*)placementID requestID:(NSString*)requestID unitGroups:(NSArray<ATUnitGroupModel*>*)unitGroups headerBiddingUnitGroups:(NSArray<ATUnitGroupModel*>*)headerBiddingUnitGroups;
--(void)sendNotifyDisplayForPlacementID:(NSString*)placementID unitGroup:(ATUnitGroupModel*)unitGroup winner:(BOOL)isWinner price:(NSString *)price;
+-(void)sendNotifyDisplayForPlacementID:(NSString*)placementID unitGroup:(ATUnitGroupModel*)unitGroup winner:(BOOL)isWinner headerBidding:(BOOL)headerBidding price:(NSString *)price;
 
 -(void) saveBidInfo:(ATBidInfo*)bidInfo forRequestID:(NSString*)requestID;
 -(void) removeDiskBidInfo:(ATBidInfo*)bidInfo;
@@ -35,6 +46,8 @@
 -(NSArray<ATUnitGroupModel*>*) unitGroupWithHistoryBidInfoAvailableForPlacementID:(NSString*)placementID unitGroups:(NSArray<ATUnitGroupModel*>*)unitGroupsToInspect s2sUnitGroups:(NSArray<ATUnitGroupModel*>*)s2sUnitGroupsToInspect newRequestID:(NSString*)newRequestID;
 +(NSString *) priceForUnitGroup:(ATUnitGroupModel*)unitGroupModel;
 +(NSString *) priceForUnitGroup:(ATUnitGroupModel*)unitGroupModel placementID:(NSString*)placementID requestID:(NSString*)requestID;
++(NSString *) getPriceToSendHBNotifiForUnitGroup:(ATUnitGroupModel*)unitGroupModel;
+
 -(BOOL) checkAdxBidInfoExpireForUnitGroupModel:(ATUnitGroupModel*)unitGroupModel;
 -(ATBidInfo*) getBidInfoCachedForPlacementID:(NSString*)placementID unitGroup:(ATUnitGroupModel*)unitGroup;
 -(void) invalidateBidInfoForPlacementID:(NSString*)placementID unitGroupModel:(ATUnitGroupModel*)unitGroupModel;
