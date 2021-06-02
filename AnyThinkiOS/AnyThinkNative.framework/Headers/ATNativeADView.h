@@ -9,6 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "ATNativeAd.h"
 #import "ATNativeRendering.h"
+
+typedef NS_ENUM(NSInteger, ATNativeAdRenderType) {
+    ATNativeAdRenderSelfRender = 1,
+    ATNativeAdRenderExpress = 2
+};
+
+typedef NS_ENUM(NSInteger, ATNativeAdType) {
+    ATNativeAdTypeFeed = 1,
+    ATNativeAdTypePaster = 2
+};
+
 /**
  * Subclasses are expected to call super when overriding willMoveToSuperview: because it it within this method the base class kick off the rendering process.
  */
@@ -55,6 +66,40 @@
  * The native ad that is being shown.
  */
 @property(nonatomic, readonly) ATNativeAd *nativeAd;
+/**
+ * The networkFirm id of native ad.
+ */
+@property(nonatomic, readonly) NSInteger networkFirmID;
+
+/**
+ * The duration of the video ad playing, unit ms
+ */
+- (CGFloat)videoPlayTime;
+/**
+ * Video ad duration, unit ms
+ */
+- (CGFloat)videoDuration;
+/**
+ Play mute switch
+ @param flag whether to mute
+ */
+- (void)muteEnable:(BOOL)flag;
+/**
+ * The video ad play
+ */
+- (void)videoPlay;
+/**
+ * The video ad pause
+ */
+- (void)videoPause;
+/**
+ * The native ad type
+ */
+- (ATNativeAdType)getNativeAdType;
+/**
+ * The native ad render type
+ */
+- (ATNativeAdRenderType)getCurrentNativeAdRenderType;
 
 @end
 

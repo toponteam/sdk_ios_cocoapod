@@ -94,13 +94,6 @@ typedef NS_ENUM(NSInteger, ATClickType) {
     ATClickTypeClickJumpUrl
 };
 
-typedef NS_ENUM(NSInteger, ATUnitGroupType) {
-    ATUnitGroupTypeNormal = 1,
-    ATUnitGroupTypeAdx,
-    ATUnitGroupTypeC2S,
-    ATUnitGroupTypeS2S
-};
-
 @interface ATModel : NSObject
 -(instancetype)initWithDictionary:(NSDictionary*)dictionary;
 @end

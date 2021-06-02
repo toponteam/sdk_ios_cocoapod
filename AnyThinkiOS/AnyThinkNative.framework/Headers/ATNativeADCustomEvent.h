@@ -29,7 +29,10 @@
 - (void)trackNativeAdVideoEnd;
 - (void)trackNativeAdClosed;
 - (void)trackNativeAdImpression;
--(void) trackNativeAdDeeplinkOrJumpResult:(BOOL)success;
+- (void)trackNativeAdDeeplinkOrJumpResult:(BOOL)success;
+
+//v5.7.47
+- (void)trackNativeAdCloseDetail;
 
 /// If it returns YES, then when sending the embedding points of "show", the embedding points of "impression" will be sent together. Otherwise, it will not be sent. Same for the banner ads (ATBannerCustomEvent.h).
 - (BOOL)sendImpressionTrackingIfNeed;
@@ -58,5 +61,5 @@
 -(void) notifyVideoExitFullScreen;
 -(void) notifyCloseButtonTapped;
 -(void) notifyDeeplinkOrJumpResult:(BOOL)success;
-
+-(void) notifyAdDetailClosed;
 @end

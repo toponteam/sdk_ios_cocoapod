@@ -31,6 +31,8 @@
 //@property(nonatomic, readonly) NSInteger screenOrientation;
 @property(nonatomic, readwrite) ATClickMode performsAsynchronousRedirection;
 
+// v5.7.47
+@property(nonatomic, readwrite) ATMyOfferInterType interType;
 
 +(instancetype) mockOfferModel;
 @end

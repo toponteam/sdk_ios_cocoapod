@@ -13,7 +13,7 @@ extern NSString *const kATSplashExtraRequestIDKey;
 @protocol ATSplashDelegate;
 @interface ATSplashCustomEvent : ATAdCustomEvent
 -(instancetype) initWithInfo:(NSDictionary*)serverInfo localInfo:(NSDictionary*)localInfo;
-@property(nonatomic, assign) id<ATSplashDelegate> delegate;
+@property(nonatomic, weak) id<ATSplashDelegate> delegate;
 @property(nonatomic, readonly) NSString *unitID;
 @property(nonatomic, assign) NSInteger priorityIndex;
 -(NSDictionary*)delegateExtra;

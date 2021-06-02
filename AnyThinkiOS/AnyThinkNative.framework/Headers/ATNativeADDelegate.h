@@ -26,5 +26,7 @@ extern NSString *const kATNativeDelegateExtraPriority;
 -(void) didLoadSuccessDrawWith:(NSArray*)views placementID:(NSString*)placementID extra:(NSDictionary *)extra;
 -(void) didDeepLinkOrJumpInAdView:(ATNativeADView*)adView placementID:(NSString*)placementID extra:(NSDictionary*)extra result:(BOOL)success;
 
+// v5.7.47
+-(void) didCloseDetailInAdView:(ATNativeADView*)adView placementID:(NSString*)placementID extra:(NSDictionary *)extra;
 @end
 #endif /* ATNativeADDelegate_h */
