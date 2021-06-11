@@ -67,6 +67,7 @@ extern NSString *const kATOfferTrackerDeeplinkType;
 @property(nonatomic, readwrite) ATUserAgentType impressionUAType;
 @property(nonatomic, readwrite) ATUserAgentType clickUAType;
 @property(nonatomic, readwrite) ATDeepLinkClickMode deeplinkClickMoment;
+@property(nonatomic, readwrite) ATSplashType splashType;
 
 /// The minimum value of the close button delayed display
 @property(nonatomic) NSInteger closeBtnDelayMinTime;

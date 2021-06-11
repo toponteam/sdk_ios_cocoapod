@@ -50,7 +50,7 @@
 @property(nonatomic, readonly) NSString *tpBidId;
 @property(nonatomic, readonly, weak) ATWaterfall *finalWaterfall;
 @property(nonatomic, readonly) NSInteger autoReqType;
-
+@property(nonatomic) BOOL adReportClicked;
 @property(nonatomic, copy) NSString *scene;
 
 @end
