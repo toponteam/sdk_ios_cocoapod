@@ -19,6 +19,7 @@
 -(void) trackNativeAdLoaded:(NSDictionary*)assets;
 -(void) trackNativeAdLoadFailed:(NSError*)error;
 -(void) didAttachMediaView;
+-(void) invalidateBidInfo;
 -(void) willDetachOffer:(ATNativeADCache*)offer fromAdView:(ATNativeADView*)adView;
 /**
  *@para refresh: whether the show is trigered by a ad refresh.

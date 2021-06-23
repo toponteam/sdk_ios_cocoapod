@@ -55,4 +55,7 @@
 
 @property(nonatomic, readonly, getter=isBidInfoNoPrice) BOOL bidInfoNoPrice;
 
+// v5.7.61+
+@property(nonatomic, readonly) NSInteger weight;
+
 @end
