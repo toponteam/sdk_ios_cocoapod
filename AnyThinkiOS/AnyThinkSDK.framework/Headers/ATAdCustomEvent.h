@@ -17,7 +17,7 @@ extern NSString *const kATSDKFailedToLoadInterstitialADMsg;
 extern NSString *const kATSDKFailedToLoadNativeADMsg;
 extern NSString *const kATSDKFailedToLoadRewardedVideoADMsg;
 extern NSString *const kATSDKSplashADTooLongToLoadPlacementSettingMsg;
-extern NSString *const kATSDKImportIssueErrorReason;
+extern NSString *const kSDKImportIssueErrorReason;
 extern NSString *const kATAdAssetsAppIDKey;
 @interface ATAdCustomEvent : NSObject
 +(NSDictionary*)customInfoWithUnitGroupModel:(ATUnitGroupModel*)unitGroupModel extra:(NSDictionary*)extra;
