@@ -100,6 +100,7 @@ extern NSString *const kPlacementModelCustomDataKey;
 @property(nonatomic, readonly) NSTimeInterval headerBiddingRequestTimeout;
 @property(nonatomic, readonly) NSTimeInterval headerBiddingRequestTolerateInterval;
 @property(nonatomic, readonly) NSString *S2SBidRequestAddress;
+@property(nonatomic, readonly) NSString *waterFallBidRequestAddress;
 
 @property(nonatomic, readonly) NSTimeInterval loadCapDuration;
 @property(nonatomic, readonly) NSInteger loadCap;

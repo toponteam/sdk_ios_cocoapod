@@ -25,5 +25,10 @@ extern NSString *const kATSplashDelegateExtraPriority;
 
 -(void)splashZoomOutViewDidClickForPlacementID:(NSString*)placementID extra:(NSDictionary *) extra;
 -(void)splashZoomOutViewDidCloseForPlacementID:(NSString*)placementID extra:(NSDictionary *) extra;
+
+// 5.7.53+
+- (void)splashDetailDidClosedForPlacementID:(NSString*)placementID extra:(NSDictionary *) extra;
+- (void)splashDidShowFailedForPlacementID:(NSString*)placementID error:(NSError *)error extra:(NSDictionary *)extra;
+
 @end
 #endif /* ATSplashDelegate_h */

@@ -68,4 +68,6 @@ extern NSString *const kATSplashExtraRootViewControllerKey;
 - (BOOL)splashReadyForPlacementID:(NSString *)placementID sendTK:(BOOL)send;
 
 - (ATCheckLoadModel*)checkSplashLoadStatusForPlacementID:(NSString *)placementID;
+- (NSArray<NSDictionary *> *)getSplashValidAdsForPlacementID:(NSString *)placementID;
+
 @end
