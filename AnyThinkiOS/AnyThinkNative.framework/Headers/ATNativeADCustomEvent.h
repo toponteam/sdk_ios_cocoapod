@@ -39,7 +39,7 @@
 - (BOOL)sendImpressionTrackingIfNeed;
 
 -(NSDictionary*)delegateExtra;
-- (NSMutableDictionary *)delegateExtraWithNativeAD:(ATNativeADCache *)cache;
+- (NSDictionary *)delegateExtraWithNativeAD:(ATNativeADCache *)cache;
 
 -(ATNativeADSourceType) sourceType;
 @property(nonatomic, copy) void(^requestCompletionBlock)(NSArray<NSDictionary*> *assets, NSError *error);

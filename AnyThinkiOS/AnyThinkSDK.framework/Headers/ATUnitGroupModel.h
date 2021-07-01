@@ -38,7 +38,6 @@
 @property(nonatomic, readwrite) NSString *bidPrice;
 @property(nonatomic, readwrite) NSString *bidToken;
 @property(nonatomic, readonly) BOOL headerBidding;
-@property(nonatomic, readonly) ATUnitGroupType unitGroupType;
 @property(nonatomic, readonly) NSTimeInterval bidTokenTime;
 @property(nonatomic, readonly) NSTimeInterval statusTime;
 @property(nonatomic, readonly) NSString *clickTkAddress;
@@ -52,7 +51,4 @@
 @property(nonatomic, readonly) BOOL reportBidPriceSW;
 @property(nonatomic, readonly) BOOL bidRealTimeLoadSW;
 @property(nonatomic, readwrite) ATBidInfo *bidInfo;
-
-@property(nonatomic, readonly, getter=isBidInfoNoPrice) BOOL bidInfoNoPrice;
-
 @end

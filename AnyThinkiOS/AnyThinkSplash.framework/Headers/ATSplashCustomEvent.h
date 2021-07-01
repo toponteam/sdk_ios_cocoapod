@@ -29,7 +29,4 @@ extern NSString *const kATSplashExtraRequestIDKey;
 -(void) trackSplashAdZoomOutViewClosed;
 -(void) trackSplashAdDeeplinkOrJumpResult:(BOOL)success;
 
-// v5.7.53+
--(void) trackSplashAdDetailClosed;
--(void) trackSplashAdShowFailed:(NSError *)error;
 @end
