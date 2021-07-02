@@ -35,4 +35,6 @@ typedef NS_ENUM(NSInteger, ATGDTNativeAdType) {
 
 - (ATCheckLoadModel*)checkNativeLoadStatusForPlacementID:(NSString*)placementID;
 
+// v5.7.53+
+- (NSArray<NSDictionary *> *)getNativeValidAdsForPlacementID:(NSString *)placementID;
 @end

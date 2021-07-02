@@ -24,6 +24,7 @@ extern NSString *const kATRewardedVideoCallbackExtraNetworkIDKey;
 @interface ATAdManager (RewardedVideo)
 -(BOOL) rewardedVideoReadyForPlacementID:(NSString*)placementID;
 -(ATCheckLoadModel*) checkRewardedVideoLoadStatusForPlacementID:(NSString*)placementID;
+- (NSArray<NSDictionary *> *)getRewardedVideoValidAdsForPlacementID:(NSString *)placementID;
 -(void) showRewardedVideoWithPlacementID:(NSString*)placementID inViewController:(UIViewController*)viewController delegate:(id<ATRewardedVideoDelegate>)delegate;
 -(void) showRewardedVideoWithPlacementID:(NSString*)placementID scene:(NSString*)scene inViewController:(UIViewController*)viewController delegate:(id<ATRewardedVideoDelegate>)delegate;
 @end
