@@ -36,8 +36,8 @@ typedef NS_ENUM(NSInteger, ATRevenueToPlatform) {
     ATRevenueToPlatformAppsflyer = 2,
     ATRevenueToPlatformTenjin
 };
-extern NSString *const kPlacementModelCacheDateKey;
-extern NSString *const kPlacementModelCustomDataKey;
+extern NSString *const kATPlacementModelCacheDateKey;
+extern NSString *const kATPlacementModelCustomDataKey;
 @interface ATPlacementModelExtra:ATModel
 @property(nonatomic, readonly) BOOL cachesPlacementSetting;
 @property(nonatomic, readonly) NSTimeInterval defaultAdSourceLoadingDelay;
