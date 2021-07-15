@@ -6,6 +6,7 @@
 //  Copyright © 2020 AnyThink. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import "ATModel.h"
 
 extern NSString *const kATOfferTrackerExtraLifeCircleID;
@@ -40,6 +41,12 @@ extern NSString *const kATOfferTrackerKYRelativeCoord;
 // v5.7.42+
 extern NSString *const kATOfferTrackerDeeplinkType;
 
+//typedef NS_ENUM(NSInteger, ATOfferCloseButtonSizeType) {
+//    ATOfferCloseButtonSizeTypeNormal = 1,
+//    ATOfferCloseButtonSizeType150Percent,
+//    ATOfferCloseButtonSizeType75Percent,
+//    ATOfferCloseButtonSizeType50Percent
+//};
 @interface ATOfferSetting : ATModel
 -(instancetype) initWithDictionary:(NSDictionary *)dictionary;
 
@@ -68,6 +75,7 @@ extern NSString *const kATOfferTrackerDeeplinkType;
 @property(nonatomic, readwrite) ATUserAgentType clickUAType;
 @property(nonatomic, readwrite) ATDeepLinkClickMode deeplinkClickMoment;
 @property(nonatomic, readwrite) ATSplashType splashType;
+@property(nonatomic, readwrite) ATSplashImageScaleType splashImageScaleType;
 
 /// The minimum value of the close button delayed display
 @property(nonatomic) NSInteger closeBtnDelayMinTime;
@@ -76,6 +84,10 @@ extern NSString *const kATOfferTrackerDeeplinkType;
 
 @property(nonatomic) NSInteger closeBtnDelayRate;
 
+// v5.7.56+
+@property(nonatomic) CGFloat closeBtnSize;
+@property(nonatomic) NSInteger onRewardTime;
+@property(nonatomic) BOOL rewardWhenFailed;
 @end
 
 

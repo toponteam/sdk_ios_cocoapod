@@ -106,6 +106,11 @@ typedef NS_ENUM(NSInteger, ATSplashType) {
     ATSplashTypeFullScreen
 };
 
+typedef NS_ENUM(NSInteger, ATSplashImageScaleType) {
+    ATSplashImageScaleTypeFit = 1,
+    ATSplashImageScaleTypeFill
+};
+
 @interface ATModel : NSObject
 -(instancetype)initWithDictionary:(NSDictionary*)dictionary;
 @end

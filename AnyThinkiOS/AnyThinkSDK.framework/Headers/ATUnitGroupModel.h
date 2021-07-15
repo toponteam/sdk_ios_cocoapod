@@ -54,8 +54,8 @@
 @property(nonatomic, readwrite) ATBidInfo *bidInfo;
 
 @property(nonatomic, readonly, getter=isBidInfoNoPrice) BOOL bidInfoNoPrice;
+@property(nonatomic, readonly) BOOL unitGroupS2SSW;
 
-// v5.7.61+
-@property(nonatomic, readonly) NSInteger weight;
+@property(nonatomic) BOOL s2sRewardEnabled;
 
 @end

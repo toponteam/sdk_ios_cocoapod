@@ -8,11 +8,11 @@
 
 #ifndef ATAdAdapter_h
 #define ATAdAdapter_h
-extern NSString *const kATADapterCustomInfoStatisticsInfoKey;
-extern NSString *const kATAdapterCustomInfoPlacementModelKey;
-extern NSString *const kATAdapterCustomInfoUnitGroupModelKey;
-extern NSString *const kATAdapterCustomInfoRequestIDKey;
-extern NSString *const kATAdapterCustomInfoExtraKey;
+extern NSString *const kADapterCustomInfoStatisticsInfoKey;
+extern NSString *const kAdapterCustomInfoPlacementModelKey;
+extern NSString *const kAdapterCustomInfoUnitGroupModelKey;
+extern NSString *const kAdapterCustomInfoRequestIDKey;
+extern NSString *const kAdapterCustomInfoExtraKey;
 @protocol ATAd;
 @class ATPlacementModel;
 @class ATUnitGroupModel;

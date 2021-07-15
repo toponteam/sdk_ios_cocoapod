@@ -107,9 +107,6 @@ typedef NS_ENUM(NSInteger, ATNativeAdType) {
 extern NSString const* kATExtraNativeImageSize228_150;
 extern NSString const* kATExtraNativeImageSize690_388;
 extern NSString *const kATExtraNativeImageSizeKey;
-extern NSString const* kATExtraNativeImageSize1280_720;
-extern NSString const* kATExtraNativeImageSize1200_628;
-extern NSString const* kATExtraNativeImageSize640_640;
 
 @interface ATNativeADView(DrawVideo)
 /*

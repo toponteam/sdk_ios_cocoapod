@@ -49,7 +49,7 @@ typedef NS_ENUM(NSInteger, ATOfferInterActableArea) {
 @property(nonatomic, readwrite) NSString *storeURL;
 @property(nonatomic, readwrite) ATLinkType linkType;
 @property(nonatomic, readwrite) NSString *clickURL;
-@property(nonatomic, readwrite) NSString *deeplinkUrl;
+@property(nonatomic, readwrite) NSString *deeplinkUrl; 
 @property(nonatomic, readwrite) NSString *localResourceID;
 @property(nonatomic, readwrite) ATOfferModelType offerModelType;
 @property(nonatomic, readwrite) ATOfferCrtType crtType;
@@ -82,6 +82,9 @@ typedef NS_ENUM(NSInteger, ATOfferInterActableArea) {
 // v5.7.47 +
 @property(nonatomic, readwrite) NSArray<NSString*>* deeplinkSuccessUrl;
 @property(nonatomic, readwrite) NSDictionary* at_deeplinkSuccessUrl;
+
+// v5.7.56+
+@property(nonatomic, readwrite) ATSplashImageScaleType splashImageScaleType;
 
 @end
 
