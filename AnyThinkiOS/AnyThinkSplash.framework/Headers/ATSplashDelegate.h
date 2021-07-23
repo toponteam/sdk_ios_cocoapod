@@ -30,8 +30,5 @@ extern NSString *const kATSplashDelegateExtraPriority;
 - (void)splashDetailDidClosedForPlacementID:(NSString*)placementID extra:(NSDictionary *) extra;
 - (void)splashDidShowFailedForPlacementID:(NSString*)placementID error:(NSError *)error extra:(NSDictionary *)extra;
 
-// 5.7.61+ This callback is triggered when the skip button is customized.
-- (void)splashCountdownTime:(NSInteger)countdown forPlacementID:(NSString*)placementID extra:(NSDictionary *) extra;;
-
 @end
 #endif /* ATSplashDelegate_h */
