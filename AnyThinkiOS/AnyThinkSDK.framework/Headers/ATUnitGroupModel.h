@@ -58,4 +58,7 @@
 
 @property(nonatomic) BOOL s2sRewardEnabled;
 
+// v5.7.61+
+@property(nonatomic, readonly) NSInteger weight;
+
 @end
