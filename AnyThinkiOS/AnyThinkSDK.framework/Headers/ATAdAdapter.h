@@ -8,19 +8,17 @@
 
 #ifndef ATAdAdapter_h
 #define ATAdAdapter_h
-extern NSString *const kATADapterCustomInfoStatisticsInfoKey;
-extern NSString *const kATAdapterCustomInfoPlacementModelKey;
-extern NSString *const kATAdapterCustomInfoUnitGroupModelKey;
-extern NSString *const kATAdapterCustomInfoRequestIDKey;
-extern NSString *const kATAdapterCustomInfoExtraKey;
+extern NSString *const kADapterCustomInfoStatisticsInfoKey;
+extern NSString *const kAdapterCustomInfoPlacementModelKey;
+extern NSString *const kAdapterCustomInfoUnitGroupModelKey;
+extern NSString *const kAdapterCustomInfoRequestIDKey;
+extern NSString *const kAdapterCustomInfoExtraKey;
 @protocol ATAd;
 @class ATPlacementModel;
 @class ATUnitGroupModel;
 @class ATMyOfferOfferModel;
 @class ATBidInfo;
 @class ATWaterfall;
-@class ATInHouseBidRequest;
-
 @protocol ATAdAdapter<NSObject>
 @property (nonatomic,copy) void (^metaDataDidLoadedBlock)(void);
 /*
@@ -35,7 +33,6 @@ extern NSString *const kATAdapterCustomInfoExtraKey;
 +(void) bidRequestWithPlacementModel:(ATPlacementModel*)placementModel unitGroupModel:(ATUnitGroupModel*)unitGroupModel info:(NSDictionary*)info completion:(void(^)(ATBidInfo *bidInfo, NSError *error))completion;
 @optional
 +(NSDictionary*)headerBiddingParametersWithUnitGroupModel:(ATUnitGroupModel*)model extra:(NSDictionary *)extra;
-+(ATInHouseBidRequest*)inHouseBiddingRequestWithPlacementModel:(ATPlacementModel*)placementModel unitGroupModel:(ATUnitGroupModel*)unitGroupModel extra:(NSDictionary *)extra;
 +(NSString*) adsourceRemoteKeyWithContent:(NSDictionary*)content unitGroupModel:(ATUnitGroupModel *)unitGroupModel;
 @end
 #endif /* ATAdAdapter_h */
