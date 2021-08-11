@@ -23,5 +23,6 @@ extern NSString *const kATNativeAdConfigurationContextNetworkLogoViewFrameKey;//
 @property(nonatomic, weak) UIViewController *rootViewController;
 @property(nonatomic, weak) id<ATNativeADDelegate> delegate;
 @property(nonatomic) BOOL sizeToFit;
+@property(nonatomic) BOOL useCustomPlayer;
 
 @end

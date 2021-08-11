@@ -9,13 +9,13 @@
 #import <AnyThinkSDK/AnyThinkSDK.h>
 
 //Currently only GDT supports these two keys.
-extern NSString *const kExtraInfoNativeAdSizeKey;//the value has to be an NSValue wrapped CGSize object.
-extern NSString *const kExtraInfoNativeAdTypeKey;//The value is requried for GDT native ad and has to be an NSNumber warpped ATGDTNativeAdType(NSInteger); Pass @(ATGDTNativeAdTypeTemplate)(@1) for template ads and @(ATGDTNativeAdTypeSelfRendering)(@2) for self rendering ads.
+extern NSString *const kATExtraInfoNativeAdSizeKey;//the value has to be an NSValue wrapped CGSize object.
+extern NSString *const kATExtraInfoNativeAdTypeKey;//The value is requried for GDT native ad and has to be an NSNumber warpped ATGDTNativeAdType(NSInteger); Pass @(ATGDTNativeAdTypeTemplate)(@1) for template ads and @(ATGDTNativeAdTypeSelfRendering)(@2) for self rendering ads.
 //Following keys are supported by nend only
-extern NSString *const kExtraInfoNativeAdUserIDKey;
-extern NSString *const kExtraInfoNativeAdMediationNameKey;
-extern NSString *const kExtraInfoNaitveAdUserFeatureKey;
-extern NSString *const kExtraInfoNativeAdLocationEnabledFlagKey;
+extern NSString *const kATExtraInfoNativeAdUserIDKey;
+extern NSString *const kATExtraInfoNativeAdMediationNameKey;
+extern NSString *const kATExtraInfoNaitveAdUserFeatureKey;
+extern NSString *const kATExtraInfoNativeAdLocationEnabledFlagKey;
 typedef NS_ENUM(NSInteger, ATGDTNativeAdType) {
     ATGDTNativeAdTypeTemplate = 1,
     ATGDTNativeAdTypeSelfRendering = 2
