@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "AnyThinkiOS"
-  spec.version      = "5.7.64"
+  spec.version      = "5.7.65"
   spec.summary      = "A short description of AnyThink SDK for iOS."
   spec.description  = <<-DESC
             TopOn SDK for developer
@@ -9,8 +9,8 @@ Pod::Spec.new do |spec|
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author             = { "topon" => "developer@toponad.com" }
   spec.source       = { :git => "https://github.com/toponteam/sdk_ios_cocoapod.git", :tag => spec.version }
-  spec.platform     = :ios, '8.0'
-  spec.ios.deployment_target = '8.0'
+  spec.ios.deployment_target = '9.0'
+  spec.static_framework = true
   spec.requires_arc = true
   spec.frameworks = 'SystemConfiguration', 'CoreGraphics','Foundation','UIKit'
   
@@ -19,162 +19,184 @@ Pod::Spec.new do |spec|
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 armv7s arm64' }
   spec.default_subspecs = 'AnyThinkSDK'
 
+
+
   spec.subspec 'AnyThinkSDK' do |ss|
-     ss.ios.deployment_target = '8.0'
-     ss.vendored_frameworks = 'AnyThinkiOS/AnyThink{Banner,Splash,SDK,RewardedVideo,Interstitial,Native}.framework'
-     ss.resource = 'AnyThinkiOS/AnyThinkSDK.bundle'
+    ss.ios.deployment_target = '9.0'
+  ss.vendored_frameworks = 'AnyThink{Banner,Splash,SDK,RewardedVideo,Interstitial,Native}.framework'
+      ss.resource = 'AnyThinkSDK.bundle'
+  end
+  
+    spec.subspec 'AnyThinkApplovinAdapter' do |ss|
+    ss.dependency 'AppLovinSDK','10.3.2'
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+    ss.vendored_frameworks = 'AnyThinkApplovinAdapter.framework'
+  end
+  
+    spec.subspec 'AnyThinkGDTAdapter' do |ss|
+    ss.dependency 'GDTMobSDK','4.13.0'
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+    ss.vendored_frameworks = 'AnyThinkGDTAdapter.framework'
+  end
+  
+    spec.subspec 'AnyThinkPangleAdapter' do |ss|
+    #ss.dependency 'Ads-CN-Beta','3.9.0.0'
+    # ss.dependency 'Ads-CN','3.8.1.0'
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+    ss.vendored_frameworks = 'AnyThinkPangleAdapter.framework'
   end
 
-  spec.subspec 'AnyThinkPangleAdapter' do |ss|
-     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
-     ss.ios.deployment_target = '8.0'
-     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkPangle*.framework'
+    spec.subspec 'AnyThinkUnityAdsAdapter' do |ss|
+    ss.dependency 'UnityAds','3.7.4'
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+    ss.vendored_frameworks = 'AnyThinkUnityAdsAdapter.framework'
   end
   
-  spec.subspec 'AnyThinkFacebookAdapter' do |ss|
-     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
-     ss.ios.deployment_target = '8.0'
-     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkFacebook*.framework'
+    spec.subspec 'AnyThinkSigmobAdapter' do |ss|
+    ss.dependency 'SigmobAd-iOS','3.2.4'
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+    ss.vendored_frameworks = 'AnyThinkSigmobAdapter.framework'
   end
   
-  spec.subspec 'AnyThinkAdmobAdapter' do |ss|
-     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
-     ss.ios.deployment_target = '8.0'
-     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkAdmob*.framework'
-  end
-   
-  spec.subspec 'AnyThinkInmobiAdapter' do |ss|
-     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
-     ss.ios.deployment_target = '8.0'
-     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkInmobi*.framework'
+    spec.subspec 'AnyThinkKuaiShouAdapter' do |ss|
+    ss.dependency 'KSAdSDK','3.3.13'
+    ss.dependency 'SDWebImage'
+    ss.dependency 'MJExtension'
+    ss.dependency 'AFNetworking'
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+    ss.vendored_frameworks = 'AnyThinkKuaiShouAdapter.framework'
   end
   
-  spec.subspec 'AnyThinkApplovinAdapter' do |ss|
-     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
-     ss.ios.deployment_target = '8.0'
-     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkApplovin*.framework'
+    spec.subspec 'AnyThinkAdColonyAdapter' do |ss|
+    ss.dependency 'AdColony','4.6.1'
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+    ss.vendored_frameworks = 'AnyThinkAdColonyAdapter.framework'
   end
 
-  spec.subspec 'AnyThinkMopubAdapter' do |ss|
-     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
-     ss.ios.deployment_target = '8.0'
-     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkMopub*.framework'
+    spec.subspec 'AnyThinkTapjoyAdapter' do |ss|
+    ss.dependency 'TapjoySDK','12.8.1'
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+    ss.vendored_frameworks = 'AnyThinkTapjoyAdapter.framework'
   end
   
-  spec.subspec 'AnyThinkMintegralAdapter' do |ss|
-     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
-     ss.ios.deployment_target = '8.0'
-     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkMintegral*.framework'
+    spec.subspec 'AnyThinkBaiduAdapter' do |ss|
+    ss.dependency 'BaiduMobAdSDK','4.80'
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+    ss.vendored_frameworks = 'AnyThinkBaiduAdapter.framework'
   end
   
-  spec.subspec 'AnyThinkGDTAdapter' do |ss|
-     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
-     ss.ios.deployment_target = '8.0'
-     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkGDT*.framework'
+    spec.subspec 'AnyThinkNendAdapter' do |ss|
+    ss.dependency 'NendSDK_iOS','7.0.5'
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+    ss.vendored_frameworks = 'AnyThinkNendAdapter.framework'
   end
   
-  spec.subspec 'AnyThinkAppnextAdapter' do |ss|
-     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
-     ss.ios.deployment_target = '8.0'
-     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkAppnext*.framework'
+    spec.subspec 'AnyThinkMaioAdapter' do |ss|
+    ss.dependency 'MaioSDK','1.5.8'
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+    ss.vendored_frameworks = 'AnyThinkMaioAdapter.framework'
   end
   
-  spec.subspec 'AnyThinkChartboostAdapter' do |ss|
-     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
-     ss.ios.deployment_target = '8.0'
-     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkChartboost*.framework'
+    spec.subspec 'AnyThinkMyTargetAdapter' do |ss|
+    ss.dependency 'myTargetSDK','5.12.0'
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+    ss.vendored_frameworks = 'AnyThinkMyTargetAdapter.framework'
   end
   
-  spec.subspec 'AnyThinkIronSourceAdapter' do |ss|
-     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
-     ss.ios.deployment_target = '8.0'
-     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkIronSource*.framework'
-  end
-  
-  spec.subspec 'AnyThinkVungleAdapter' do |ss|
-     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
-     ss.ios.deployment_target = '8.0'
-     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkVungle*.framework'
-  end
-  
-  spec.subspec 'AnyThinkAdcolonyAdapter' do |ss|
-     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
-     ss.ios.deployment_target = '8.0'
-     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkAdColony*.framework'
-  end
-  
-  spec.subspec 'AnyThinkUnityAdsAdapter' do |ss|
-     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
-     ss.ios.deployment_target = '8.0'
-     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkUnityAds*.framework'
-  end
-  
-  spec.subspec 'AnyThinkTapjoyAdapter' do |ss|
-     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
-     ss.ios.deployment_target = '8.0'
-     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkTapjoy*.framework'
-  end
-  
-  spec.subspec 'AnyThinkBaiduAdapter' do |ss|
-     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
-     ss.ios.deployment_target = '8.0'
-     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkBaidu*.framework'
-  end
-  
-  spec.subspec 'AnyThinkNendAdapter' do |ss|
-     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
-     ss.ios.deployment_target = '8.0'
-     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkNend*.framework'
-  end
-  
-  #Nend embedded framework not support
-  
-  spec.subspec 'AnyThinkMaioAdapter' do |ss|
-     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
-     ss.ios.deployment_target = '8.0'
-     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkMaio*.framework'
-  end
-  
-  spec.subspec 'AnyThinkKSAdapter' do |ss|
-     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
-     ss.ios.deployment_target = '8.0'
-     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkKuaiShou*.framework'
-  end
-  
-  spec.subspec 'AnyThinkSigmobAdapter' do |ss|
-     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
-     ss.ios.deployment_target = '8.0'
-     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkSigmob*.framework'
-  end
-  
-  spec.subspec 'AnyThinkOguryAdapter' do |ss|
-     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
-     ss.ios.deployment_target = '8.0'
-     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkOgury*.framework'
+    spec.subspec 'AnyThinkFyberAdapter' do |ss|
+    ss.dependency 'Fyber_Marketplace_SDK','7.8.6'
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+    ss.vendored_frameworks = 'AnyThinkFyberAdapter.framework'
   end
 
-  spec.subspec 'AnyThinkStartAppAdapter' do |ss|
-     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
-     ss.ios.deployment_target = '8.0'
-     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkStartApp*.framework'
+    spec.subspec 'AnyThinkChartboostAdapter' do |ss|
+    ss.dependency 'ChartboostSDK','8.4.2'
+    ss.dependency 'ChartboostHelium','2.3.1'
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+    ss.vendored_frameworks = 'AnyThinkChartboostAdapter.framework'
+  end
+  
+    spec.subspec 'AnyThinkStartAppAdapter' do |ss|
+    ss.dependency 'StartAppSDK','4.5.0'
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+    ss.vendored_frameworks = 'AnyThinkStartAppAdapter.framework'
   end
 
-  spec.subspec 'AnyThinkFyberAdapter' do |ss|
-     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
-     ss.ios.deployment_target = '8.0'
-     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkFyber*.framework'
+    spec.subspec 'AnyThinkIronSourceAdapter' do |ss|
+    ss.dependency 'IronSourceSDK','7.1.7'
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+    ss.vendored_frameworks = 'AnyThinkIronSourceAdapter.framework'
   end
 
-  spec.subspec 'AnyThinkKidozAdapter' do |ss|
-     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
-     ss.ios.deployment_target = '8.0'
-     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkKidoz*.framework'
+    spec.subspec 'AnyThinkInmobiAdapter' do |ss|
+    ss.dependency 'InMobiSDK/Core','9.1.7'
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+    ss.vendored_frameworks = 'AnyThinkInmobiAdapter.framework'
   end
-
-  spec.subspec 'AnyThinkMyTargetAdapter' do |ss|
-     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
-     ss.ios.deployment_target = '8.0'
-     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkMyTarget*.framework'
+  
+    spec.subspec 'AnyThinkMintegralAdapter' do |ss|
+    ss.dependency 'MintegralAdSDK/All','6.9.5.1'
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+    ss.vendored_frameworks = 'AnyThinkMintegralAdapter.framework'
+  end
+  
+    spec.subspec 'AnyThinkAdmobAdapter' do |ss|
+    ss.dependency 'Google-Mobile-Ads-SDK','8.7.0'
+    ss.dependency 'PersonalizedAdConsent'
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+    ss.vendored_frameworks = 'AnyThinkAdmobAdapter.framework'
+  end
+  
+    spec.subspec 'AnyThinkFacebookAdapter' do |ss|
+    ss.dependency 'FBAudienceNetwork','6.5.1'
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+    ss.vendored_frameworks = 'AnyThinkFacebookAdapter.framework'
+  end
+  
+    spec.subspec 'AnyThinkMopubAdapter' do |ss|
+    ss.dependency 'mopub-ios-sdk','5.17.0'
+    ss.ios.deployment_target = '10.0'
+    ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+    ss.vendored_frameworks = 'AnyThinkMopubAdapter.framework'
+  end
+  
+    spec.subspec 'AnyThinkKidozAdapter' do |ss|
+    ss.dependency 'AnyThinkKidozSDK','1.3.6'
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+    ss.vendored_frameworks = 'AnyThinkKidozAdapter.framework'
+  end
+    spec.subspec 'AnyThinkOguryAdapter' do |ss|
+    ss.dependency 'OguryAds','2.3.5'
+    ss.ios.deployment_target = '10.0'
+    ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+    ss.vendored_frameworks = 'AnyThinkOguryAdapter.framework'
+  end
+    spec.subspec 'AnyThinkVungleAdapter' do |ss|
+    ss.dependency 'AnyThinkVungleSDK','6.10.1'
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+    ss.vendored_frameworks = 'AnyThinkVungleAdapter.framework'
   end
 
 end

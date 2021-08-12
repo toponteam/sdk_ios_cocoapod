@@ -61,6 +61,9 @@ extern NSString *const kATOfferTrackerDeeplinkType;
 @property(nonatomic, readwrite) ATLoadStorekitTime storekitTime;
 @property(nonatomic, readwrite) NSInteger lastOfferidsNum;
 
+// The inherent attributes of the ad, such as the version number, etc.
+//@property(nonatomic, readwrite) BOOL showAdAttrs;
+
 //setting for banner
 @property(nonatomic, readwrite) NSString *bannerSize;
 @property(nonatomic, readwrite) BOOL showBannerCloseBtn;

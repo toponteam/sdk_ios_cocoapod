@@ -45,6 +45,7 @@ extern NSString *const kATTrackerExtraASIDKey;
 extern NSString *const kATTrackerExtraFormatKey;
 extern NSString *const kATTrackerExtraRequestExpectedOfferNumberFlagKey;
 extern NSString *const kATTrackerExtraClickImpKey;
+extern NSString *const kATTrackerExtraPlacementModelKey;
 
 // ofm
 extern NSString *const kATTrackerExtraOFMTrafficIDKey;

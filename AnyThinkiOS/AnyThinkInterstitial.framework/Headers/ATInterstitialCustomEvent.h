@@ -21,6 +21,8 @@
 -(void) trackInterstitialAdClose;
 -(void) trackInterstitialAdDeeplinkOrJumpResult:(BOOL)success;
 
+-(void) trackdInterstitialAdVideoRewarded;
+
 -(NSDictionary*)delegateExtra;
 -(ATNativeADSourceType) adSourceType;
 -(instancetype) initWithInfo:(NSDictionary*)serverInfo localInfo:(NSDictionary*)localInfo ;

@@ -57,6 +57,12 @@ typedef NS_ENUM(NSInteger, ATOfferInterActableArea) {
 @property(nonatomic, copy) NSString *jumpUrl;
 @property(nonatomic) NSInteger offerFirmID;
 
+// ad attributes
+@property(nonatomic, readwrite) NSString *adPublisher;
+@property(nonatomic, readwrite) NSString *adVersion;
+@property(nonatomic, readwrite) NSString *adPrivacy;
+@property(nonatomic, readwrite) NSString *adPermission;
+
 //banner(myoffer:5.6.6)
 @property(nonatomic, readwrite) NSString *bannerImageUrl;
 @property(nonatomic, readwrite) NSString *bannerBigImageUrl;
