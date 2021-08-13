@@ -63,7 +63,7 @@ Pod::Spec.new do |spec|
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkSigmobAdapter.framework'
   end
   
-    spec.subspec 'AnyThinkKuaiShouAdapter' do |ss|
+    spec.subspec 'AnyThinkKSAdapter' do |ss|
     ss.dependency 'KSAdSDK','3.3.13'
     ss.dependency 'SDWebImage'
     ss.dependency 'MJExtension'
