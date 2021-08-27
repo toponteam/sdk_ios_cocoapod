@@ -59,6 +59,7 @@ extern NSInteger const ATADLoadingErrorCodeNoUnitGroupsFoundInPlacement;
 extern NSInteger const ATADLoadingErrorCodeUnitGroupsFilteredOut;
 extern NSInteger const ATADLoadingErrorCodeFailureTooFrequent;
 extern NSInteger const ATADLoadingErrorCodeLoadCapsExceeded;
+extern NSInteger const ATADLoadingErrorCodeUnitGroupsExpired;
 
 extern NSInteger const ATADLoadingADXFailedCode;
 
