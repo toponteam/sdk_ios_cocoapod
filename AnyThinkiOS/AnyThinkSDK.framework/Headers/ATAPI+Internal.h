@@ -35,6 +35,11 @@ extern NSString *const kATADLoadingNotificationUserInfoUnitGroupKey;//Not used
 extern NSString *const kATADLoadingNotificationUserInfoErrorKey;
 extern NSString *const kATADLoadingNotificationUserInfoExtraKey;
 
+
+extern NSString *const kATADUserAreaKey;
+
+
+
 /**
  Adopters are expected to implement logic for network offers, for which storage mechanisms must be devise.
  */

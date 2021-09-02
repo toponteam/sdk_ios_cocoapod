@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "AnyThinkiOS"
-  spec.version      = "5.7.70"
+  spec.version      = "5.7.71"
   spec.summary      = "A short description of AnyThink SDK for iOS."
   spec.description  = <<-DESC
             TopOn SDK for developer
@@ -42,11 +42,18 @@ Pod::Spec.new do |spec|
   end
   
     spec.subspec 'AnyThinkPangleAdapter' do |ss|
-    #ss.dependency 'Ads-CN-Beta','3.9.0.0'
-    ss.dependency 'Ads-CN','3.9.0.3'
+    ss.dependency 'Ads-Global','3.9.0.4'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkPangleAdapter.framework'
+  end
+
+    spec.subspec 'AnyThinkTTAdapter' do |ss|
+    #ss.dependency 'Ads-CN-Beta','3.9.0.0'
+    ss.dependency 'Ads-CN','3.9.0.4'
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+    ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkTTAdapter.framework'
   end
 
     spec.subspec 'AnyThinkUnityAdsAdapter' do |ss|

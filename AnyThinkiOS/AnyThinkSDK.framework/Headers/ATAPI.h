@@ -154,6 +154,7 @@ extern NSString *const kATDeviceDataInfoOrientKey;
 extern NSString *const kATDeviceDataInfoIDFAKey;
 extern NSString *const kATDeviceDataInfoIDFVKey;
 
+
 typedef NS_ENUM(NSInteger, ATUserLocation) {
     ATUserLocationUnknown = 0,
     ATUserLocationInEU = 1,
@@ -172,6 +173,13 @@ typedef NS_ENUM(NSUInteger, ATNetworkTerritory) {
     ATNetworkTerritory_NO_CN,
 };
 
+typedef NS_ENUM(NSUInteger, ATAreaCode) {
+    ATAreaCodeGlobal = 1,
+    ATAreaCodeChinese_mainland,
+};
+
+
+
 @interface ATAPI : NSObject
 
 +(NSDictionary<NSNumber*, NSString*>*)networkNameMap;
@@ -180,6 +188,11 @@ typedef NS_ENUM(NSUInteger, ATNetworkTerritory) {
 +(instancetype)sharedInstance;
 +(BOOL) getMPisInit;
 +(void) setMPisInit:(BOOL)MPisInit;
+
+-(void) setLocationLongitude:(double)longitude dimension:(double)dimension;
+
+-(void) setWXStatus:(BOOL)isInstallWX;
+
 /*
  only for adx，onlineApi，MyOffer  banner&splash adLogo，NO by default
  */
@@ -204,6 +217,12 @@ typedef NS_ENUM(NSUInteger, ATNetworkTerritory) {
 -(BOOL)inDataProtectionArea;
 
 -(void) getUserLocationWithCallback:(void(^)(ATUserLocation location))callback;
+
+- (void) getAreaSuccess:(void(^)(NSString *areaCodeStr))success
+                failure: (void(^)(NSError *error))failure;
+
+- (void) setUserDataArea:(ATAreaCode)areaCode;
+
 
 -(NSString*)psID;
     

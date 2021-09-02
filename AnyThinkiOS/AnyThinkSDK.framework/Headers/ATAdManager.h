@@ -19,10 +19,18 @@ extern NSString *const kATAdLoadingExtraGDTEnableDefaultAudioSessionKey;
 @interface ATAdManager : NSObject
 +(instancetype) sharedManager;
 @property(nonatomic, strong) NSDictionary *extra;
+
+@property(nonatomic, strong) NSMutableDictionary *exludeUnitIDDic;
+
+
+
 /*
  We mark this method as deprecated because we move customData into ATAPI's shared instance. customData passed via this method will just be ignored.
  */
 -(void) loadADWithPlacementID:(NSString*)placementID extra:(NSDictionary*)extra customData:(NSDictionary*)customData delegate:(id<ATAdLoadingDelegate>)delegate DEPRECATED_ATTRIBUTE;
 -(void) loadADWithPlacementID:(NSString*)placementID extra:(NSDictionary*)extra delegate:(id<ATAdLoadingDelegate>)delegate;
 -(void) clearCache DEPRECATED_ATTRIBUTE;
+
+- (void)setExludePlacementid:(NSString *)placementid unitIDArray:(NSArray <NSString *> *)unitIDArray;
+
 @end
