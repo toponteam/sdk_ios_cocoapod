@@ -34,6 +34,9 @@
 // v5.7.47
 @property(nonatomic, readwrite) ATMyOfferInterType interType;
 
+@property(nonatomic, readwrite) ATUserAgentType impressionUAType;
+@property(nonatomic, readwrite) ATUserAgentType clickUAType;
+
 +(instancetype) mockOfferModel;
 @end
 

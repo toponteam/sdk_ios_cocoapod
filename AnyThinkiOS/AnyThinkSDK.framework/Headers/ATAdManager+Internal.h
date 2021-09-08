@@ -106,6 +106,19 @@ typedef NS_ENUM(NSInteger, ATAdManagerReadyAPICaller) {
 -(void) setAdBeingShownFlagForPlacementID:(NSString*)placementID;
 -(void) clearAdBeingShownFlagForPlacementID:(NSString*)placementID;
 -(BOOL) adBeingShownForPlacementID:(NSString*)placementID;
+
+#pragma mark - auto_refresh
+
+- (void)autoRefreshIsReadyPlacementID:(NSString *)placementID;
+
+- (BOOL)getFirstSplashLoadStatus:(NSString *)placementID;
+
+- (void)setFirstSplashLoadStatus:(NSString *)placementID status:(BOOL)status;
+
+- (BOOL)getFirstSplashTimeoutStatus:(NSString *)placementID;
+
+- (void)setFirstSplashTimeoutStatus:(NSString *)placementID status:(BOOL)status;
+
 @end
 
 @interface NSObject(DelegateBinding)
