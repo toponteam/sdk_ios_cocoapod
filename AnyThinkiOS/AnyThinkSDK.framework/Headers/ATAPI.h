@@ -104,6 +104,7 @@ extern NSString *const kATNetworkNameKidoz;
 extern NSString *const kATNetworkNameMyTarget;
 extern NSString *const kATNetworkNameMobrain;
 extern NSString *const kATNetworkNameMax;
+extern NSString *const kATNetworkNameklevin;
 
 extern NSString *const kATInmobiGDPRStringKey;
 extern NSString *const kATInmobiConsentStringKey;
@@ -154,6 +155,8 @@ extern NSString *const kATDeviceDataInfoOrientKey;
 extern NSString *const kATDeviceDataInfoIDFAKey;
 extern NSString *const kATDeviceDataInfoIDFVKey;
 
+extern NSString *const kATAdLoadingExtraBUAdLoadTypeKey;
+
 
 typedef NS_ENUM(NSInteger, ATUserLocation) {
     ATUserLocationUnknown = 0,
@@ -176,6 +179,12 @@ typedef NS_ENUM(NSUInteger, ATNetworkTerritory) {
 typedef NS_ENUM(NSUInteger, ATAreaCode) {
     ATAreaCodeGlobal = 1,
     ATAreaCodeChinese_mainland,
+};
+
+typedef NS_ENUM(NSInteger, ATBUAdLoadType) {
+    ATBUAdLoadTypeUnknown                    = -1,//Unknown
+    ATBUAdLoadTypePreload                    = 1,//Preload resources
+    ATBUAdLoadTypeLoad                       = 3,//Load resources in real time
 };
 
 

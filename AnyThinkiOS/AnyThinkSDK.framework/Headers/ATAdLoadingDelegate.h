@@ -15,7 +15,7 @@
 -(void) didFailToLoadADWithPlacementID:(NSString*)placementID error:(NSError*)error;
 
 
-//v 5.7.73
+//v 5.7.74
 -(void) didFinishLoadingSplashADWithPlacementID:(NSString *)placementID isTimeout:(BOOL)isTimeout;
 -(void) didTimeoutLoadingSplashADWithPlacementID:(NSString *)placementID;
 

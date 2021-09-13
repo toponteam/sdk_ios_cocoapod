@@ -14,7 +14,6 @@
 #import "ATAdManager.h"
 #import "ATAd.h"
 //The value is (subclass of) UIViewController
-extern NSString *const kATExtraInfoRootViewControllerKey;
 extern NSString *const kATAdLoadingExtraRefreshFlagKey;//Defined in loader
 extern NSString *const kATAdLoadingExtraAutoloadFlagKey;
 extern NSString *const kATAdLoadingTrackingExtraStatusKey;

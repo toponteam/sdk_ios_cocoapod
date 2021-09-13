@@ -37,6 +37,9 @@
 @property(nonatomic, readwrite) ATUserAgentType impressionUAType;
 @property(nonatomic, readwrite) ATUserAgentType clickUAType;
 
+@property (nonatomic, readwrite) ATMyOfferSetting *myOfferSetting;
+
+
 +(instancetype) mockOfferModel;
 @end
 
