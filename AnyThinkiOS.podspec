@@ -174,7 +174,7 @@ Pod::Spec.new do |spec|
   end
   
     spec.subspec 'AnyThinkFacebookAdapter' do |ss|
-    ss.dependency 'FBAudienceNetwork','6.5.1'
+    ss.dependency 'FBAudienceNetwork','6.6.0'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkFacebookAdapter.framework'
