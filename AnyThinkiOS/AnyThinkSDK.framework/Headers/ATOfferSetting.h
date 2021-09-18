@@ -91,15 +91,6 @@ extern NSString *const kATOfferTrackerDeeplinkType;
 @property(nonatomic) CGFloat closeBtnSize;
 @property(nonatomic) NSInteger onRewardTime;
 @property(nonatomic) BOOL rewardWhenFailed;
-
-// v5.7.71+
-@property(nonatomic) NSInteger automatedClick;
-@property(nonatomic) NSInteger automatedClickExtendTime;
-@property(nonatomic) BOOL showEendCard;
-
-
-
-
 @end
 
 

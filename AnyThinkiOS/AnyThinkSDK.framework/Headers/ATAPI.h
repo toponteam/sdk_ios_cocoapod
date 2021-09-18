@@ -59,7 +59,6 @@ extern NSInteger const ATADLoadingErrorCodeNoUnitGroupsFoundInPlacement;
 extern NSInteger const ATADLoadingErrorCodeUnitGroupsFilteredOut;
 extern NSInteger const ATADLoadingErrorCodeFailureTooFrequent;
 extern NSInteger const ATADLoadingErrorCodeLoadCapsExceeded;
-extern NSInteger const ATADLoadingErrorCodeUnitGroupsExpired;
 
 extern NSInteger const ATADLoadingADXFailedCode;
 
@@ -104,7 +103,6 @@ extern NSString *const kATNetworkNameKidoz;
 extern NSString *const kATNetworkNameMyTarget;
 extern NSString *const kATNetworkNameMobrain;
 extern NSString *const kATNetworkNameMax;
-extern NSString *const kATNetworkNameklevin;
 
 extern NSString *const kATInmobiGDPRStringKey;
 extern NSString *const kATInmobiConsentStringKey;
@@ -155,9 +153,6 @@ extern NSString *const kATDeviceDataInfoOrientKey;
 extern NSString *const kATDeviceDataInfoIDFAKey;
 extern NSString *const kATDeviceDataInfoIDFVKey;
 
-extern NSString *const kATAdLoadingExtraBUAdLoadTypeKey;
-
-
 typedef NS_ENUM(NSInteger, ATUserLocation) {
     ATUserLocationUnknown = 0,
     ATUserLocationInEU = 1,
@@ -176,19 +171,6 @@ typedef NS_ENUM(NSUInteger, ATNetworkTerritory) {
     ATNetworkTerritory_NO_CN,
 };
 
-typedef NS_ENUM(NSUInteger, ATAreaCode) {
-    ATAreaCodeGlobal = 1,
-    ATAreaCodeChinese_mainland,
-};
-
-typedef NS_ENUM(NSInteger, ATBUAdLoadType) {
-    ATBUAdLoadTypeUnknown                    = -1,//Unknown
-    ATBUAdLoadTypePreload                    = 1,//Preload resources
-    ATBUAdLoadTypeLoad                       = 3,//Load resources in real time
-};
-
-
-
 @interface ATAPI : NSObject
 
 +(NSDictionary<NSNumber*, NSString*>*)networkNameMap;
@@ -197,11 +179,6 @@ typedef NS_ENUM(NSInteger, ATBUAdLoadType) {
 +(instancetype)sharedInstance;
 +(BOOL) getMPisInit;
 +(void) setMPisInit:(BOOL)MPisInit;
-
--(void) setLocationLongitude:(double)longitude dimension:(double)dimension;
-
--(void) setWXStatus:(BOOL)isInstallWX;
-
 /*
  only for adx，onlineApi，MyOffer  banner&splash adLogo，NO by default
  */
@@ -226,12 +203,6 @@ typedef NS_ENUM(NSInteger, ATBUAdLoadType) {
 -(BOOL)inDataProtectionArea;
 
 -(void) getUserLocationWithCallback:(void(^)(ATUserLocation location))callback;
-
-- (void) getAreaSuccess:(void(^)(NSString *areaCodeStr))success
-                failure: (void(^)(NSError *error))failure;
-
-- (void) setUserDataArea:(ATAreaCode)areaCode;
-
 
 -(NSString*)psID;
     

@@ -1,0 +1,19 @@
+/* 
+  SigmobLanguage.strings
+  Sigmob
+
+  Created by happyelements on 2019/11/6.
+  Copyright © 2019 happyelements. All rights reserved.
+*/
+
+//splash Ad
+"跳过广告" = "跳过广告";
+"跳过" = "跳过";
+"广告" = "广告";
+
+// dialog
+"关闭视频?" = "关闭视频?";
+"确定关闭" = "确定关闭";
+"继续播放" = "继续播放";
+"还剩%d秒，您就可以获得奖励了哦!" = "还剩%d秒，您就可以获得奖励了哦!";
+"关闭" = "关闭";

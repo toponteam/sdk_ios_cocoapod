@@ -21,12 +21,6 @@ extern NSString *const kATAdLoadingExtraRewardAmountKey;
 
 extern NSString *const kATRewardedVideoCallbackExtraAdsourceIDKey;
 extern NSString *const kATRewardedVideoCallbackExtraNetworkIDKey;
-
-// Klevin SDK
-extern NSString *const kATRewardedVideoKlevinRewardTimeKey;
-extern NSString *const kATRewardedVideoKlevinRewardTriggerKey;
-
-
 @interface ATAdManager (RewardedVideo)
 -(BOOL) rewardedVideoReadyForPlacementID:(NSString*)placementID;
 -(ATCheckLoadModel*) checkRewardedVideoLoadStatusForPlacementID:(NSString*)placementID;

@@ -51,7 +51,6 @@
 @property(nonatomic, readonly) BOOL waterfallTimeOutSW;
 @property(nonatomic, readonly) BOOL reportBidPriceSW;
 @property(nonatomic, readonly) BOOL bidRealTimeLoadSW;
-@property(nonatomic, readonly) BOOL returnHBEcpmSW;
 @property(nonatomic, readwrite) ATBidInfo *bidInfo;
 
 @property(nonatomic, readonly, getter=isBidInfoNoPrice) BOOL bidInfoNoPrice;

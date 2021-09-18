@@ -15,7 +15,6 @@
 @property(nonatomic, readonly) NSString *bidId;
 @property(nonatomic, readonly) NSString *tpBidId;
 @property(nonatomic, readonly) NSString *price;
-@property(nonatomic, readonly) NSString *curRate;
 @property(nonatomic, readonly) id customObject;
 @property(nonatomic, readonly) NSString *placementID;
 @property(nonatomic, readonly) NSString *unitGroupUnitID;
