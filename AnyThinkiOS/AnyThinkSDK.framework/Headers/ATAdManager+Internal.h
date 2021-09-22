@@ -14,7 +14,6 @@
 #import "ATAdManager.h"
 #import "ATAd.h"
 //The value is (subclass of) UIViewController
-extern NSString *const kATExtraInfoRootViewControllerKey;
 extern NSString *const kATAdLoadingExtraRefreshFlagKey;//Defined in loader
 extern NSString *const kATAdLoadingExtraAutoloadFlagKey;
 extern NSString *const kATAdLoadingTrackingExtraStatusKey;
@@ -106,6 +105,19 @@ typedef NS_ENUM(NSInteger, ATAdManagerReadyAPICaller) {
 -(void) setAdBeingShownFlagForPlacementID:(NSString*)placementID;
 -(void) clearAdBeingShownFlagForPlacementID:(NSString*)placementID;
 -(BOOL) adBeingShownForPlacementID:(NSString*)placementID;
+
+#pragma mark - auto_refresh
+
+- (void)autoRefreshIsReadyPlacementID:(NSString *)placementID;
+
+- (BOOL)getFirstSplashLoadStatus:(NSString *)placementID;
+
+- (void)setFirstSplashLoadStatus:(NSString *)placementID status:(BOOL)status;
+
+- (BOOL)getFirstSplashTimeoutStatus:(NSString *)placementID;
+
+- (void)setFirstSplashTimeoutStatus:(NSString *)placementID status:(BOOL)status;
+
 @end
 
 @interface NSObject(DelegateBinding)

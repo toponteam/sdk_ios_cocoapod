@@ -31,12 +31,15 @@
 -(void) removeNoPriceCacheWithTpBidId:(NSString*)tpBidId unitId:(NSString*)unitId;
 -(ATBidWaterFallModel *)getBidWaterFallModelWithTpBidId:(NSString*)tpBidId unitId:(NSString*)unitId;
 
+
 /**
  send hb win、loss、display notification
  */
 -(void)sendHBWinnerNotificationForBidInfo:(ATBidInfo *)bidInfo;
 -(void)sendHBLossNotificationForPlacementID:(NSString*)placementID requestID:(NSString*)requestID unitGroups:(NSArray<ATUnitGroupModel*>*)unitGroups headerBiddingUnitGroups:(NSArray<ATUnitGroupModel*>*)headerBiddingUnitGroups;
 -(void)sendNotifyDisplayForPlacementID:(NSString*)placementID unitGroup:(ATUnitGroupModel*)unitGroup winner:(BOOL)isWinner headerBidding:(BOOL)headerBidding price:(NSString *)price;
+
+-(void)sendHBLossNotificationForBidInfo:(ATBidInfo *)bidInfo price:(NSString*)price headerBidding:(BOOL)headerBidding requestID:(NSString*)requestID;
 
 -(void) saveBidInfo:(ATBidInfo*)bidInfo forRequestID:(NSString*)requestID;
 -(void) removeDiskBidInfo:(ATBidInfo*)bidInfo;

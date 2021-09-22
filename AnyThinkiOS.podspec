@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "AnyThinkiOS"
-  spec.version      = "5.7.66"
+  spec.version      = "5.7.75.beta"
   spec.summary      = "A short description of AnyThink SDK for iOS."
   spec.description  = <<-DESC
             TopOn SDK for developer
@@ -28,43 +28,50 @@ Pod::Spec.new do |spec|
   end
   
     spec.subspec 'AnyThinkApplovinAdapter' do |ss|
-    ss.dependency 'AppLovinSDK','10.3.2'
+    ss.dependency 'AppLovinSDK','10.3.5'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkApplovinAdapter.framework'
   end
   
     spec.subspec 'AnyThinkGDTAdapter' do |ss|
-    ss.dependency 'GDTMobSDK','4.13.0'
+    ss.dependency 'GDTMobSDK','4.13.11'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkGDTAdapter.framework'
   end
   
     spec.subspec 'AnyThinkPangleAdapter' do |ss|
-    #ss.dependency 'Ads-CN-Beta','3.9.0.0'
-    # ss.dependency 'Ads-CN','3.8.1.0'
+    ss.dependency 'Ads-Global','3.9.0.4'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkPangleAdapter.framework'
   end
 
+    spec.subspec 'AnyThinkTTAdapter' do |ss|
+    ss.dependency 'Ads-CN-Beta','4.0.0.0'
+    # ss.dependency 'Ads-CN','4.0.0.0'
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+    ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkTTAdapter.framework'
+  end
+
     spec.subspec 'AnyThinkUnityAdsAdapter' do |ss|
-    ss.dependency 'UnityAds','3.7.4'
+    ss.dependency 'UnityAds','3.7.5'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkUnityAdsAdapter.framework'
   end
   
     spec.subspec 'AnyThinkSigmobAdapter' do |ss|
-    ss.dependency 'SigmobAd-iOS','3.2.4'
+    ss.dependency 'SigmobAd-iOS','3.2.5'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkSigmobAdapter.framework'
   end
   
     spec.subspec 'AnyThinkKSAdapter' do |ss|
-    ss.dependency 'KSAdSDK','3.3.13'
+    ss.dependency 'KSAdSDK','3.3.15.1'
     ss.dependency 'SDWebImage'
     ss.dependency 'MJExtension'
     ss.dependency 'AFNetworking'
@@ -74,7 +81,7 @@ Pod::Spec.new do |spec|
   end
   
     spec.subspec 'AnyThinkAdColonyAdapter' do |ss|
-    ss.dependency 'AdColony','4.6.1'
+    ss.dependency 'AdColony','4.7.1'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkAdColonyAdapter.framework'
@@ -88,14 +95,14 @@ Pod::Spec.new do |spec|
   end
   
     spec.subspec 'AnyThinkBaiduAdapter' do |ss|
-    ss.dependency 'BaiduMobAdSDK','4.80'
+    ss.dependency 'BaiduMobAdSDK','4.82'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkBaiduAdapter.framework'
   end
   
     spec.subspec 'AnyThinkNendAdapter' do |ss|
-    ss.dependency 'NendSDK_iOS','7.0.5'
+    ss.dependency 'NendSDK_iOS','7.0.6'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkNendAdapter.framework'
@@ -109,14 +116,14 @@ Pod::Spec.new do |spec|
   end
   
     spec.subspec 'AnyThinkMyTargetAdapter' do |ss|
-    ss.dependency 'myTargetSDK','5.12.0'
+    ss.dependency 'myTargetSDK','5.13.0'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkMyTargetAdapter.framework'
   end
   
     spec.subspec 'AnyThinkFyberAdapter' do |ss|
-    ss.dependency 'Fyber_Marketplace_SDK','7.8.6'
+    ss.dependency 'Fyber_Marketplace_SDK','7.8.9'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkFyberAdapter.framework'
@@ -138,28 +145,28 @@ Pod::Spec.new do |spec|
   end
 
     spec.subspec 'AnyThinkIronSourceAdapter' do |ss|
-    ss.dependency 'IronSourceSDK','7.1.7'
+    ss.dependency 'IronSourceSDK','7.1.10.0'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkIronSourceAdapter.framework'
   end
 
     spec.subspec 'AnyThinkInmobiAdapter' do |ss|
-    ss.dependency 'InMobiSDK/Core','9.1.7'
+    ss.dependency 'InMobiSDK/Core','9.2.1'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkInmobiAdapter.framework'
   end
   
     spec.subspec 'AnyThinkMintegralAdapter' do |ss|
-    ss.dependency 'MintegralAdSDK/All','6.9.5.1'
+    ss.dependency 'MintegralAdSDK/All','7.0.2.0'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkMintegralAdapter.framework'
   end
   
     spec.subspec 'AnyThinkAdmobAdapter' do |ss|
-    ss.dependency 'Google-Mobile-Ads-SDK','7.67.0'
+    ss.dependency 'Google-Mobile-Ads-SDK','8.10.0'
     ss.dependency 'PersonalizedAdConsent'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
@@ -167,14 +174,14 @@ Pod::Spec.new do |spec|
   end
   
     spec.subspec 'AnyThinkFacebookAdapter' do |ss|
-    ss.dependency 'FBAudienceNetwork','6.5.1'
+    ss.dependency 'FBAudienceNetwork','6.7.0'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkFacebookAdapter.framework'
   end
   
     spec.subspec 'AnyThinkMopubAdapter' do |ss|
-    ss.dependency 'mopub-ios-sdk','5.17.0'
+    ss.dependency 'mopub-ios-sdk','5.18.0'
     ss.ios.deployment_target = '10.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkMopubAdapter.framework'
@@ -188,7 +195,7 @@ Pod::Spec.new do |spec|
   end
 
     spec.subspec 'AnyThinkOguryAdapter' do |ss|
-    ss.dependency 'OguryAds','2.3.5'
+    ss.dependency 'OguryAds','2.4.1'
     ss.ios.deployment_target = '10.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkOguryAdapter.framework'
@@ -199,6 +206,23 @@ Pod::Spec.new do |spec|
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkVungleAdapter.framework'
+  end
+
+    spec.subspec 'AnyThinkKlevinAdapter' do |ss|
+    ss.dependency 'AnyThinkKlevinSDK','2.1.0'
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+    ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkKlevinAdapter.framework'
+  end
+
+    spec.subspec 'AnyThinkPangleGlobalAdapter' do |ss|
+    ss.dependency 'Ads-CN-Beta','4.0.0.0'
+    ss.dependency 'Ads-CN-Beta/International','4.0.0.0'
+    # ss.dependency 'Ads-CN','3.9.0.4'
+    # ss.dependency 'Ads-CN/International','3.9.0.4'
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+    ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkPangleAdapter.framework','AnyThinkiOS/AnyThinkTTAdapter.framework'
   end
 
 end

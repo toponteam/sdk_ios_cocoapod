@@ -59,6 +59,10 @@ extern NSString *const kATSplashExtraAppIDKey;
 extern NSString *const kATSplashExtraRIDKey;
 extern NSString *const kATSplashExtraRootViewControllerKey;
 
+#pragma mark - Klevin
+extern NSString *const kATSplashExtraKlevinPosID;
+extern NSString *const kATSplashExtraKlevinAppID;
+
 
 @protocol ATSplashDelegate;
 @interface ATAdManager (Splash)
