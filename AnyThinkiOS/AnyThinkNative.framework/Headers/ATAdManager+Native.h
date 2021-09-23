@@ -16,6 +16,8 @@ extern NSString *const kATExtraInfoNativeAdUserIDKey;
 extern NSString *const kATExtraInfoNativeAdMediationNameKey;
 extern NSString *const kATExtraInfoNaitveAdUserFeatureKey;
 extern NSString *const kATExtraInfoNativeAdLocationEnabledFlagKey;
+
+extern NSString *const kATNativeAdSizeToFitKey;
 typedef NS_ENUM(NSInteger, ATGDTNativeAdType) {
     ATGDTNativeAdTypeTemplate = 1,
     ATGDTNativeAdTypeSelfRendering = 2
