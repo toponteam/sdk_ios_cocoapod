@@ -51,12 +51,6 @@ extern NSString *const kATSplashExtraKSAppID ;
 extern NSString *const kATSplashExtraKSPosID;
 
 extern NSString *const kATAdLoadingExtraSplashAdSizeKey;
-
-#pragma mark - Mobrain
-extern NSString *const kATSplashExtraMobrainAdnTypeKey;
-extern NSString *const kATSplashExtraMobrainAppKeyKey;
-extern NSString *const kATSplashExtraAppIDKey;
-extern NSString *const kATSplashExtraRIDKey;
 extern NSString *const kATSplashExtraRootViewControllerKey;
 
 #pragma mark - Klevin

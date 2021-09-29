@@ -92,6 +92,8 @@ typedef NS_ENUM(NSInteger, ATOfferInterActableArea) {
 // v5.7.56+
 @property(nonatomic, readwrite) ATSplashImageScaleType splashImageScaleType;
 
+
+- (BOOL)showAdAttributes;
 @end
 
 

@@ -80,7 +80,12 @@ extern NSString *const kATADUserAreaKey;
 -(void) setInitFlag:(NSInteger)flag forNetwork:(NSString*)networkName;
 -(BOOL) startWithAppID:(NSString*)appID appKey:(NSString*)appKey error:(NSError**)error isOfm:(BOOL) isOfm shouldUpdateOfm:(BOOL)shouldUpdateOfm completion:(void (^)(NSDictionary *, NSError *)) completion;
 -(void) applyAppSettingWithCompletion:(void (^)(NSDictionary * setting, NSError * error)) completion shouldUpdateOfm:(BOOL)shouldUpdateOfm;
+
 @property(nonatomic, readonly) NSString *userAgent;
+
+
+
+
 @end
 
 #endif /* ATAPI_Internal_h */
