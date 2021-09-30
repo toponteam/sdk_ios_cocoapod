@@ -51,10 +51,6 @@ typedef NS_ENUM(NSInteger, ATAdManagerReadyAPICaller) {
     ATAdManagerReadyAPICallerReady = 0,
     ATAdManagerReadyAPICallerShow = 1
 };
-
-
-@protocol ATBaiduTemplateRenderingAttributeDelegate;
-
 @interface ATAdManager(Internal)
 #pragma mark - for inner usage
 //TODO: Packing the following method in a category and hide it from the client code.
@@ -66,8 +62,6 @@ typedef NS_ENUM(NSInteger, ATAdManagerReadyAPICaller) {
 -(BOOL) psIDExpired;
 @property(nonatomic, readonly) dispatch_queue_t show_api_control_queue;
 @property(nonatomic, readonly) NSString *psID;
-
-@property(nonatomic, strong) id<ATBaiduTemplateRenderingAttributeDelegate> baiduTemplateRenderingAttributeValue;
 
 /**
  Contains all the placement ids the developer has configured for this app. This property is thread-safe.

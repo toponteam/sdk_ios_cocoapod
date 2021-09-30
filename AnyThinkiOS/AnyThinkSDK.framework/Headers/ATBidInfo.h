@@ -9,15 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "ATModel.h"
 
-#define kATBiddingInitiatingFailedCode -2
-#define kATBiddingNetworkTimeoutCode -3
-#define KATBiddingS2SConnectionErrorCode -4
-#define kATBiddingBiddingFailedByCapCode -5
-#define kATBiddingBiddingFailedByPacingCode -6
-#define kATBiddingBiddingFailedIntervalCode -7
-#define kATBiddingBiddingFailedByExcludedCode -8
-#define kATBiddingBiddingFailedIntegrationErrorCode -9
-
 @interface ATBidInfo : ATModel
 @property(nonatomic, readonly) NSDate *expireDate;
 @property(nonatomic, readonly) NSDictionary *offerDataDict;
@@ -35,7 +26,7 @@
 @property(nonatomic, readonly) NSString *bURLWin;
 @property(nonatomic, readwrite) BOOL bidPriceSmallerlast;
 @property(nonatomic, readwrite) BOOL bidResultIsFailed;
-@property(nonatomic, readwrite) NSError *error;
+@property(nonatomic, readwrite) NSString *errormsg;
 @property(nonatomic, readonly, getter=isValid) BOOL valid;
 @property(nonatomic, readonly, getter=isExpired) BOOL expired;
 @property(nonatomic, readonly, getter=isSendNotif) BOOL sendNotif;
