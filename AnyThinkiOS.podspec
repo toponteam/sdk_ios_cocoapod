@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "AnyThinkiOS"
-  spec.version      = "5.7.76"
+  spec.version      = "5.7.78"
   spec.summary      = "A short description of AnyThink SDK for iOS."
   spec.description  = <<-DESC
             TopOn SDK for developer
@@ -81,7 +81,7 @@ Pod::Spec.new do |spec|
   end
   
     spec.subspec 'AnyThinkAdColonyAdapter' do |ss|
-    ss.dependency 'AdColony','4.7.1'
+    ss.dependency 'AdColony','4.7.2'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkAdColonyAdapter.framework'
@@ -147,21 +147,21 @@ Pod::Spec.new do |spec|
   end
 
     spec.subspec 'AnyThinkIronSourceAdapter' do |ss|
-    ss.dependency 'IronSourceSDK','7.1.10.0'
+    ss.dependency 'IronSourceSDK','7.1.11.0'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkIronSourceAdapter.framework'
   end
 
     spec.subspec 'AnyThinkInmobiAdapter' do |ss|
-    ss.dependency 'InMobiSDK/Core','9.2.1'
+    ss.dependency 'InMobiSDK/Core','10.0.0'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkInmobiAdapter.framework'
   end
   
     spec.subspec 'AnyThinkMintegralAdapter' do |ss|
-    ss.dependency 'MintegralAdSDK/All','7.0.2.0'
+    ss.dependency 'MintegralAdSDK/All','7.0.3'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkMintegralAdapter.framework'
@@ -204,7 +204,7 @@ Pod::Spec.new do |spec|
   end
 
     spec.subspec 'AnyThinkVungleAdapter' do |ss|
-    ss.dependency 'AnyThinkVungleSDK','6.10.1'
+    ss.dependency 'AnyThinkVungleSDK','6.10.3'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkVungleAdapter.framework'

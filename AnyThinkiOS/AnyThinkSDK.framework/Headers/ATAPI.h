@@ -198,9 +198,13 @@ typedef NS_ENUM(NSInteger, ATBUAdLoadType) {
 +(BOOL) getMPisInit;
 +(void) setMPisInit:(BOOL)MPisInit;
 
++ (void)testModeInfo;
+
 -(void) setLocationLongitude:(double)longitude dimension:(double)dimension;
 
 -(void) setWXStatus:(BOOL)isInstallWX;
+
+
 
 /*
  only for adx，onlineApi，MyOffer  banner&splash adLogo，NO by default
@@ -324,4 +328,7 @@ set denied Upload Info list for sdk to Control report
 -(NSArray*) deniedUploadInfoArray;
 -(BOOL) isContainsForDeniedUploadInfoArray:(NSString *)key;
 
+
 @end
+
+
