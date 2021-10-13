@@ -204,7 +204,7 @@ Pod::Spec.new do |spec|
   end
 
     spec.subspec 'AnyThinkVungleAdapter' do |ss|
-    ss.dependency 'AnyThinkVungleSDK','6.10.3'
+    ss.dependency 'VungleSDK-iOS','6.10.3'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkVungleAdapter.framework'
