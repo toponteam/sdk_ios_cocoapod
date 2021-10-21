@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "AnyThinkiOS"
-  spec.version      = "5.7.78"
+  spec.version      = "5.7.80"
   spec.summary      = "A short description of AnyThink SDK for iOS."
   spec.description  = <<-DESC
             TopOn SDK for developer
@@ -35,21 +35,21 @@ Pod::Spec.new do |spec|
   end
   
     spec.subspec 'AnyThinkGDTAdapter' do |ss|
-    ss.dependency 'GDTMobSDK','4.13.11'
+    ss.dependency 'GDTMobSDK','4.13.22'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkGDTAdapter.framework'
   end
   
     spec.subspec 'AnyThinkPangleAdapter' do |ss|
-    ss.dependency 'Ads-Global','3.9.0.4'
+    ss.dependency 'Ads-Global','4.0.0.1'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkPangleAdapter.framework'
   end
 
     spec.subspec 'AnyThinkTTAdapter' do |ss|
-    ss.dependency 'Ads-CN-Beta','4.0.0.0'
+    ss.dependency 'Ads-CN','4.0.0.2'
     # ss.dependency 'Ads-CN','4.0.0.0'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
@@ -64,14 +64,14 @@ Pod::Spec.new do |spec|
   end
   
     spec.subspec 'AnyThinkSigmobAdapter' do |ss|
-    ss.dependency 'SigmobAd-iOS','3.2.5'
+    ss.dependency 'SigmobAd-iOS','3.4.3'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkSigmobAdapter.framework'
   end
   
     spec.subspec 'AnyThinkKSAdapter' do |ss|
-    ss.dependency 'KSAdSDK','3.3.15.1'
+    ss.dependency 'KSAdSDK','3.3.16'
     ss.dependency 'SDWebImage'
     ss.dependency 'MJExtension'
     ss.dependency 'AFNetworking'
@@ -218,8 +218,8 @@ Pod::Spec.new do |spec|
   end
 
     spec.subspec 'AnyThinkPangleGlobalAdapter' do |ss|
-    ss.dependency 'Ads-CN-Beta','4.0.0.0'
-    ss.dependency 'Ads-CN-Beta/International','4.0.0.0'
+    ss.dependency 'Ads-CN','4.0.0.2'
+    ss.dependency 'Ads-CN/International','4.0.0.2'
     # ss.dependency 'Ads-CN','3.9.0.4'
     # ss.dependency 'Ads-CN/International','3.9.0.4'
     ss.ios.deployment_target = '9.0'
