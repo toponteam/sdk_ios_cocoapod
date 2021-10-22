@@ -15,9 +15,6 @@
 extern NSString *const kATAdAssetsCustomEventKey;
 extern NSString *const kATAdAssetsCustomObjectKey;
 extern NSString *const kATAdAssetsUnitIDKey;
-extern NSString *const kATAdAssetsPriceKey;
-extern NSString *const kATAdAssetsBidIDKey;
-extern NSString *const kATAdAssetsTpBidIDKey;
 
 typedef NS_ENUM(NSInteger, ATAdSourceStatus) {
     ATAdSourceStatusInvalid = 0,//pacing & cap_by_hour/cap_by_day

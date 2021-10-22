@@ -50,7 +50,5 @@ extern NSString *const kATAdAssetsAppIDKey;
 
 @property (nonatomic, assign) NSString *networkUnitId;
 @property (nonatomic) NSDictionary *networkCustomInfo;
-@property (nonatomic) NSDictionary *headerBiddingExtra;
--(void)assetsHeaderBiddingTrackingExtraWithBidInfo:(ATBidInfo*)bidInfo;
 
 @end

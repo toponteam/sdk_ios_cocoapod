@@ -35,7 +35,7 @@
 /**
  send hb win、loss、display notification
  */
--(void)sendHBWinnerNotificationForBidInfo:(ATBidInfo *)bidInfo;
+-(void)sendHBWinnerNotificationForBidInfo:(ATBidInfo *)bidInfo nextUnitGroupPrice:(NSString *)nextPrice;
 -(void)sendHBLossNotificationForPlacementID:(NSString*)placementID requestID:(NSString*)requestID unitGroups:(NSArray<ATUnitGroupModel*>*)unitGroups headerBiddingUnitGroups:(NSArray<ATUnitGroupModel*>*)headerBiddingUnitGroups;
 -(void)sendNotifyDisplayForPlacementID:(NSString*)placementID unitGroup:(ATUnitGroupModel*)unitGroup winner:(BOOL)isWinner headerBidding:(BOOL)headerBidding price:(NSString *)price;
 

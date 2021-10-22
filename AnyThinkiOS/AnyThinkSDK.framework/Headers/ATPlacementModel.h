@@ -169,4 +169,9 @@ extern NSString *const kATPlacementModelCustomDataKey;
 @property(nonatomic, readonly) NSInteger encryptFlag;
 @property(nonatomic, readonly, copy) NSString *encryptPublicKey;
 
+/**
+ Maximum waiting time for s2s HB adSource to get buyeruid
+ */
+@property(nonatomic, readonly) NSInteger getBuyeruIdWaitTime;
+
 @end

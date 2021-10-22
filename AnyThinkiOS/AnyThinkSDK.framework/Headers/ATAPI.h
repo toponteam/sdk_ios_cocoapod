@@ -84,6 +84,7 @@ extern NSString *const kATNetworkNameVungle;
 extern NSString *const kATNetworkNameAdColony;
 extern NSString *const kATNetworkNameUnityAds;
 extern NSString *const kATNetworkNameTT;
+extern NSString *const kATNetworkNamePangle;
 extern NSString *const kATNetworkNameOneway;
 extern NSString *const kATNetworkNameAppnext;
 extern NSString *const kATNetworkNameYeahmobi;
