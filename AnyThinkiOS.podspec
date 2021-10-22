@@ -95,9 +95,8 @@ Pod::Spec.new do |spec|
   end
   
     spec.subspec 'AnyThinkBaiduAdapter' do |ss|
-    # ss.dependency 'BaiduMobAdSDK','4.82'
-    ss.dependency 'AnyThinkBaiduSDK','4.82'
-
+    ss.dependency 'BaiduMobAdSDK','4.82'
+    # ss.dependency 'AnyThinkBaiduSDK','4.82'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkBaiduAdapter.framework'
