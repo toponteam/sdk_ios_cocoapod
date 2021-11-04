@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "AnyThinkiOS"
-  spec.version      = "5.7.80"
+  spec.version      = "5.7.81"
   spec.summary      = "A short description of AnyThink SDK for iOS."
   spec.description  = <<-DESC
             TopOn SDK for developer
@@ -35,22 +35,23 @@ Pod::Spec.new do |spec|
   end
   
     spec.subspec 'AnyThinkGDTAdapter' do |ss|
-    ss.dependency 'GDTMobSDK','4.13.22'
+    ss.dependency 'GDTMobSDK','4.13.26'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkGDTAdapter.framework'
   end
   
     spec.subspec 'AnyThinkPangleAdapter' do |ss|
-    ss.dependency 'Ads-Global','4.0.0.1'
+    ss.dependency 'Ads-Global-Beta','4.1.0.0'
+    # ss.dependency 'Ads-Global','4.1.0.0'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkPangleAdapter.framework'
   end
 
     spec.subspec 'AnyThinkTTAdapter' do |ss|
-    ss.dependency 'Ads-CN','4.0.0.2'
-    # ss.dependency 'Ads-CN','4.0.0.0'
+    ss.dependency 'Ads-CN-Beta','4.1.0.0'
+    # ss.dependency 'Ads-CN','4.1.0.0'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkTTAdapter.framework'
@@ -71,7 +72,7 @@ Pod::Spec.new do |spec|
   end
   
     spec.subspec 'AnyThinkKSAdapter' do |ss|
-    ss.dependency 'KSAdSDK','3.3.16'
+    ss.dependency 'KSAdSDK','3.3.17'
     ss.dependency 'SDWebImage'
     ss.dependency 'MJExtension'
     ss.dependency 'AFNetworking'
@@ -95,7 +96,7 @@ Pod::Spec.new do |spec|
   end
   
     spec.subspec 'AnyThinkBaiduAdapter' do |ss|
-    ss.dependency 'BaiduMobAdSDK','4.82'
+    ss.dependency 'BaiduMobAdSDK','4.83'
     # ss.dependency 'AnyThinkBaiduSDK','4.82'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
@@ -175,7 +176,7 @@ Pod::Spec.new do |spec|
   end
   
     spec.subspec 'AnyThinkFacebookAdapter' do |ss|
-    ss.dependency 'FBAudienceNetwork','6.7.0'
+    ss.dependency 'FBAudienceNetwork','6.8.0'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkFacebookAdapter.framework'

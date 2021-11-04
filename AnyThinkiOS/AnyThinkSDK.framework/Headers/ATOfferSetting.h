@@ -41,6 +41,8 @@ extern NSString *const kATOfferTrackerKYRelativeCoord;
 // v5.7.42+
 extern NSString *const kATOfferTrackerDeeplinkType;
 
+extern NSString *const kATOfferTrackerOPDPType;
+
 //typedef NS_ENUM(NSInteger, ATOfferCloseButtonSizeType) {
 //    ATOfferCloseButtonSizeTypeNormal = 1,
 //    ATOfferCloseButtonSizeType150Percent,
