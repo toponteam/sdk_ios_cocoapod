@@ -29,6 +29,7 @@
 @property(nonatomic, readonly) NSDate *cacheDate;
 @property(nonatomic, readonly) NSDictionary *assets;//To be removed
 @property(nonatomic, readonly) ATUnitGroupModel *unitGroup;
+@property(nonatomic) NSMutableArray<NSDictionary*> *unitGroupInfos;
 @property(nonatomic) NSNumber *sdkTime;
 @property(nonatomic, readonly) ATNativeADCustomEvent *customEvent;
 /**
@@ -52,5 +53,6 @@
 @property(nonatomic, readonly) NSInteger autoReqType;
 @property(nonatomic) BOOL adReportClicked;
 @property(nonatomic, copy) NSString *scene;
+@property(nonatomic) BOOL adViewHasShowToWindow;
 
 @end

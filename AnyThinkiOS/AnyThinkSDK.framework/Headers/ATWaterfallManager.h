@@ -53,7 +53,12 @@ typedef NS_ENUM(NSInteger, ATUnitGroupFinishType) {
 
 @interface ATWaterfallManager : NSObject
 +(instancetype) sharedManager;
+
 -(BOOL) loadingAdForPlacementID:(NSString*)placementID;
+
+// just for api: check ad loading status
+-(BOOL) loadingAdForPlacementID:(NSString*)placementID skipSettingLoadingStatus:(BOOL)skip;
+
 -(void) attachWaterfall:(ATWaterfall*)waterfall completion:(void(^)(ATWaterfallWrapper *waterfallWrapper, ATWaterfall *waterfall, ATWaterfall *headerBiddingWaterfall, ATWaterfall *finalWaterfall, BOOL finished, NSDate *loadStartDate))completion;
 -(void) accessWaterfallForPlacementID:(NSString*)placementID requestID:(NSString*)requestID withBlock:(void(^)(ATWaterfallWrapper *waterfallWrapper, ATWaterfall *waterfall, ATWaterfall *headerBiddingWaterfall, ATWaterfall *finalWaterfall, BOOL finished, NSDate *loadStartDate))block;
 @end
