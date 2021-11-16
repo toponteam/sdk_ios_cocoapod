@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AnyThinkNative/AnyThinkNative.h>
 #import "OFMNativeAdConfiguration.h"
 #import "OFMNativeADRenderer.h"
 #import "OFMNativeAdDelegate.h"
