@@ -8,13 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "ATAd.h"
-
-typedef NS_ENUM(NSInteger, ATRefreshType){
-    ATRefreshTypeNone,
-    ATRefreshTypeAutoRefresh,
-    ATRefreshTypePlayAgain
-} ;
-
 extern NSString *const kATTrackerExtraErrorKey;
 extern NSString *const kATTrackerExtraAutoloadFlagKey;
 extern NSString *const kATTrackerExtraSDKCalledFlagKey;

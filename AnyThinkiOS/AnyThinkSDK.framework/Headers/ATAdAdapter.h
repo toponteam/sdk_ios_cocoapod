@@ -14,7 +14,6 @@ extern NSString *const kATAdapterCustomInfoUnitGroupModelKey;
 extern NSString *const kATAdapterCustomInfoRequestIDKey;
 extern NSString *const kATAdapterCustomInfoExtraKey;
 extern NSString *const kATAdapterCustomInfoBuyeruIdKey;
-extern NSString *const kATAdapterCustomInfoBidResultKey;
 
 extern NSString *const kATHeaderBiddingParametersUnitIdKey;
 extern NSString *const kATHeaderBiddingParametersNetworkFirmIdKey;
@@ -30,9 +29,7 @@ extern NSString *const kATHeaderBiddingParametersBuyeruIdKey;
 extern NSString *const kATHeaderBiddingParametersBidTokenKey;
 extern NSString *const kATHeaderBiddingParametersAdWidthKey;
 extern NSString *const kATHeaderBiddingParametersAdHeightKey;
-extern NSString *const kATHeaderBiddingParametersBidFormatKey;
-extern NSString *const kATHeaderBiddingParametersBidderTypeKey;
-extern NSString *const kATHeaderBiddingParametersUnitGroupKey;
+
 @protocol ATAd;
 @class ATPlacementModel;
 @class ATUnitGroupModel;
@@ -54,9 +51,8 @@ extern NSString *const kATHeaderBiddingParametersUnitGroupKey;
 -(void) loadADWithInfo:(NSDictionary *)serverInfo localInfo:(NSDictionary *)localInfo completion:(void (^)(NSArray<NSDictionary*> *assets, NSError *error))completion;
 +(void) bidRequestWithPlacementModel:(ATPlacementModel*)placementModel unitGroupModel:(ATUnitGroupModel*)unitGroupModel info:(NSDictionary*)info completion:(void(^)(ATBidInfo *bidInfo, NSError *error))completion;
 @optional
-//+(void) inhouseRequestInfoWithCompletion:(void(^)(NSDictionary *bidResult))completion;
-
 +(void)headerBiddingParametersWithUnitGroupModel:(ATUnitGroupModel*)model extra:(NSDictionary *)extra completion:(void(^)(NSDictionary *headerBiddingParams))completion;
-//+(ATInHouseBidRequest*)inHouseBiddingRequestWithPlacementModel:(ATPlacementModel*)placementModel unitGroupModel:(ATUnitGroupModel*)unitGroupModel extra:(NSDictionary *)extra;
++(ATInHouseBidRequest*)inHouseBiddingRequestWithPlacementModel:(ATPlacementModel*)placementModel unitGroupModel:(ATUnitGroupModel*)unitGroupModel extra:(NSDictionary *)extra;
++(NSString*) adsourceRemoteKeyWithContent:(NSDictionary*)content unitGroupModel:(ATUnitGroupModel *)unitGroupModel;
 @end
 #endif /* ATAdAdapter_h */

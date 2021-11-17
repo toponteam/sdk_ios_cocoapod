@@ -99,8 +99,7 @@ typedef NS_ENUM(NSInteger, ATUnitGroupType) {
     ATUnitGroupTypeAdx,
     ATUnitGroupTypeC2S,
     ATUnitGroupTypeS2S,
-    ATUnitGroupTypeInHouse,
-    ATUnitGroupTypeBKS
+    ATUnitGroupTypeInHouse
 };
 
 typedef NS_ENUM(NSInteger, ATSplashType) {

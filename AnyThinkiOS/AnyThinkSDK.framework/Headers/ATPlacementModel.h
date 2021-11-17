@@ -96,7 +96,6 @@ extern NSString *const kATPlacementModelCustomDataKey;
 @property(nonatomic, readonly) NSArray<ATUnitGroupModel*>* S2SHeaderBiddingUnitGroups;
 @property(nonatomic, readonly) NSArray<ATUnitGroupModel*>* olApiUnitGroups;
 @property(nonatomic, readonly) NSArray<ATUnitGroupModel*>* inhouseUnitGroups;
-@property(nonatomic, readonly) NSArray<ATUnitGroupModel*>* bksUnitGroups;
 
 @property(nonatomic, readonly) NSTimeInterval headerBiddingRequestTimeout;
 @property(nonatomic, readonly) NSTimeInterval headerBiddingRequestTolerateInterval;
@@ -174,8 +173,5 @@ extern NSString *const kATPlacementModelCustomDataKey;
  Maximum waiting time for s2s HB adSource to get buyeruid
  */
 @property(nonatomic, readonly) NSInteger getBuyeruIdWaitTime;
-
-@property(nonatomic, readonly, copy) NSString *inhouseUrl;
-@property(nonatomic, readonly, copy) NSString *thirdInhouseUrl; // bks url of third plantforms
 
 @end

@@ -23,7 +23,6 @@
 @property(nonatomic, readonly) NSDate *expireDate;
 @property(nonatomic, readonly) NSDate *cacheDate;
 @property(nonatomic, readonly) ATUnitGroupModel *unitGroup;
-@property(nonatomic) NSMutableArray<NSDictionary*> *unitGroupInfos;
 @property(nonatomic, readonly) NSString *unitID;
 @property(nonatomic, readonly) __kindof UIView *bannerView;
 @property(nonatomic, readonly) id customObject;

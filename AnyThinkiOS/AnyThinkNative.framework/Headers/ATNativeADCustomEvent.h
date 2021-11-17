@@ -63,5 +63,4 @@
 -(void) notifyCloseButtonTapped;
 -(void) notifyDeeplinkOrJumpResult:(BOOL)success;
 -(void) notifyAdDetailClosed;
--(void) notifyNativeAdShow;
 @end
