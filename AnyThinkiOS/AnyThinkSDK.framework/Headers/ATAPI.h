@@ -205,7 +205,7 @@ typedef NS_ENUM(NSInteger, ATBUAdLoadType) {
 
 -(void) setWXStatus:(BOOL)isInstallWX;
 
-
++ (void) setInitializationType:(int)type;
 
 /*
  only for adx，onlineApi，MyOffer  banner&splash adLogo，NO by default

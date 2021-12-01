@@ -19,6 +19,7 @@
 #define kATBiddingBiddingFailedIntegrationErrorCode -9
 
 @interface ATBidInfo : ATModel
+@property(nonatomic, copy) NSDictionary *bidResult;
 @property(nonatomic, readonly) NSDate *expireDate;
 @property(nonatomic, readonly) NSDictionary *offerDataDict;
 @property(nonatomic, readonly) NSString *bidId;

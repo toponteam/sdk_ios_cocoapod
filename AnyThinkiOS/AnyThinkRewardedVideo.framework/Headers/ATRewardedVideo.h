@@ -24,6 +24,7 @@
 @property(nonatomic, readonly) NSDate *cacheDate;
 @property(nonatomic, readonly) NSDate *expireDate;
 @property(nonatomic, readonly) ATUnitGroupModel *unitGroup;
+@property(nonatomic) NSMutableArray<NSDictionary*> *unitGroupInfos;
 @property(nonatomic, readonly) NSString *unitID;
 /**
  * Third-party network native ad object.

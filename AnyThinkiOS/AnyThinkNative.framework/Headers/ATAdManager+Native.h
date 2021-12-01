@@ -24,6 +24,7 @@ typedef NS_ENUM(NSInteger, ATGDTNativeAdType) {
 };
 @class ATNativeADView;
 @class ATNativeADConfiguration;
+@class ATNativeAdOffer;
 
 @protocol ATBaiduTemplateRenderingAttributeDelegate <NSObject>
 
@@ -112,6 +113,9 @@ typedef NS_ENUM(NSInteger, ATGDTNativeAdType) {
  */
 - (__kindof UIView*) retriveAdViewWithPlacementID:(NSString*)placementID configuration:(ATNativeADConfiguration*)configuration;
 - (__kindof UIView*) retriveAdViewWithPlacementID:(NSString*)placementID configuration:(ATNativeADConfiguration*)configuration scene:(NSString *)scene;
+
+- (ATNativeAdOffer*) getNativeAdOfferWithPlacementID:(NSString*)placementID;
+- (ATNativeAdOffer*) getNativeAdOfferWithPlacementID:(NSString*)placementID scene:(NSString *)scene;
 
 - (ATCheckLoadModel*)checkNativeLoadStatusForPlacementID:(NSString*)placementID;
 
