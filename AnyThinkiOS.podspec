@@ -50,7 +50,7 @@ Pod::Spec.new do |spec|
   end
 
     spec.subspec 'AnyThinkTTAdapter' do |ss|
-    ss.dependency 'Ads-CN-Beta','4.1.0.2'
+    ss.dependency 'Ads-CN','4.1.0.2'
     # ss.dependency 'Ads-CN','4.1.0.0'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
@@ -218,8 +218,8 @@ Pod::Spec.new do |spec|
   end
 
     spec.subspec 'AnyThinkPangleGlobalAdapter' do |ss|
-    ss.dependency 'Ads-CN-Beta','4.1.0.2'
-    ss.dependency 'Ads-CN-Beta/International','4.1.0.2'
+    ss.dependency 'Ads-CN','4.1.0.2'
+    ss.dependency 'Ads-CN/International','4.1.0.2'
     # ss.dependency 'Ads-CN','3.9.0.4'
     # ss.dependency 'Ads-CN/International','3.9.0.4'
     ss.ios.deployment_target = '9.0'
