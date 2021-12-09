@@ -72,7 +72,7 @@ Pod::Spec.new do |spec|
   end
   
     spec.subspec 'AnyThinkKSAdapter' do |ss|
-    ss.dependency 'KSAdSDK','3.3.18.1'
+    ss.dependency 'KSAdSDK','3.3.15.1'
     ss.dependency 'SDWebImage'
     ss.dependency 'MJExtension'
     ss.dependency 'AFNetworking'
