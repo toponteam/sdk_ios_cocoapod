@@ -54,6 +54,5 @@
 @property(nonatomic) BOOL adReportClicked;
 @property(nonatomic, copy) NSString *scene;
 @property(nonatomic) BOOL adViewHasShowToWindow;
-@property(nonatomic) BOOL adHasReportImpression;
 
 @end

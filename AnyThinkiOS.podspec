@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "AnyThinkiOS"
-  spec.version      = "5.7.90"
+  spec.version      = "5.7.85"
   spec.summary      = "A short description of AnyThink SDK for iOS."
   spec.description  = <<-DESC
             TopOn SDK for developer
@@ -35,7 +35,7 @@ Pod::Spec.new do |spec|
   end
   
     spec.subspec 'AnyThinkGDTAdapter' do |ss|
-    ss.dependency 'GDTMobSDK','4.13.32'
+    ss.dependency 'GDTMobSDK','4.13.26'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkGDTAdapter.framework'
@@ -65,7 +65,7 @@ Pod::Spec.new do |spec|
   end
   
     spec.subspec 'AnyThinkSigmobAdapter' do |ss|
-    ss.dependency 'SigmobAd-iOS','3.5.0'
+    ss.dependency 'SigmobAd-iOS','3.4.3'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkSigmobAdapter.framework'
@@ -161,14 +161,14 @@ Pod::Spec.new do |spec|
   end
   
     spec.subspec 'AnyThinkMintegralAdapter' do |ss|
-    ss.dependency 'MintegralAdSDK/All','7.0.5'
+    ss.dependency 'MintegralAdSDK/All','7.0.3'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkMintegralAdapter.framework'
   end
   
     spec.subspec 'AnyThinkAdmobAdapter' do |ss|
-    ss.dependency 'Google-Mobile-Ads-SDK','8.13.0'
+    ss.dependency 'Google-Mobile-Ads-SDK','8.10.0'
     ss.dependency 'PersonalizedAdConsent'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'

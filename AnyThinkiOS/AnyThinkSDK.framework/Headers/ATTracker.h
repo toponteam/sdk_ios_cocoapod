@@ -32,7 +32,6 @@ extern NSString *const kATTrackerExtraDefaultLoadFlagKey;
 extern NSString *const kATTrackerExtraFilledWithinNetworkTimeoutFlagKey;
 extern NSString *const kATTrackerExtraFillRequestFlagKey;
 extern NSString *const kATTrackerExtraFillTimeKey;
-extern NSString *const kATTrackerExtraDataFillTimeKey;
 extern NSString *const kATTrackerExtraASResultKey;
 extern NSString *const kATTrackerExtraAppIDKey;
 extern NSString *const kATTrackerExtraLastestRequestIDKey;
@@ -54,7 +53,6 @@ extern NSString *const kATTrackerExtraFormatKey;
 extern NSString *const kATTrackerExtraRequestExpectedOfferNumberFlagKey;
 extern NSString *const kATTrackerExtraClickImpKey;
 extern NSString *const kATTrackerExtraPlacementModelKey;
-extern NSString *const kATTrackerExtraAdCacheStatusKey;
 
 // ofm
 extern NSString *const kATTrackerExtraOFMTrafficIDKey;
@@ -78,8 +76,7 @@ typedef NS_ENUM(NSInteger, ATNativeADTrackType) {
     ATNativeAdTrackTypeBidSort = 11,
     ATNativeAdTrackTypeLoadResult = 12,//currently sent when loading succeeds
     ATNativeAdTrackTypeShowAPICall = 13,
-    ATNativeADTrackTypeRankAndShuffle = 15,
-    ATNativeADTrackTypeEntryScenario = 16
+    ATNativeADTrackTypeRankAndShuffle = 15
 };
 
 typedef NS_ENUM(NSInteger, ATNativeADSourceType) {
