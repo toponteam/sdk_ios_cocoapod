@@ -124,6 +124,8 @@ typedef NS_ENUM(NSInteger, ATAdManagerReadyAPICaller) {
 
 - (void)setFirstSplashTimeoutStatus:(NSString *)placementID status:(BOOL)status;
 
+#pragma mark - send_tracking
+- (void)sendEntryScenarioTrackingWithPlacementID:(NSString *)placementID scene:(NSString *)scene isLoading:(BOOL)isLoading isReady:(BOOL)isReady extraInfo: (NSDictionary *)extraInfo;
 @end
 
 @interface NSObject(DelegateBinding)

@@ -113,6 +113,11 @@ typedef NS_ENUM(NSInteger, ATSplashImageScaleType) {
     ATSplashImageScaleTypeFill
 };
 
+typedef NS_ENUM(NSInteger, ATBiddingCurrencyType) {
+    ATBiddingCurrencyTypeUS = 1,
+    ATBiddingCurrencyTypeCNY
+};
+
 @interface ATModel : NSObject
 -(instancetype)initWithDictionary:(NSDictionary*)dictionary;
 @end
