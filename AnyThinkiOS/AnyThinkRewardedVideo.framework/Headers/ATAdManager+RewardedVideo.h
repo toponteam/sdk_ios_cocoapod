@@ -34,4 +34,7 @@ extern NSString *const kATRewardedVideoKlevinRewardTriggerKey;
 - (NSArray<NSDictionary *> *)getRewardedVideoValidAdsForPlacementID:(NSString *)placementID;
 -(void) showRewardedVideoWithPlacementID:(NSString*)placementID inViewController:(UIViewController*)viewController delegate:(id<ATRewardedVideoDelegate>)delegate;
 -(void) showRewardedVideoWithPlacementID:(NSString*)placementID scene:(NSString*)scene inViewController:(UIViewController*)viewController delegate:(id<ATRewardedVideoDelegate>)delegate;
+
+-(void)entryRewardedVideoScenarioWithPlacementID:(NSString *)placementID scene:(NSString*)scene;
+
 @end

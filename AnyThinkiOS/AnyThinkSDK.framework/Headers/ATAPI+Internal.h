@@ -69,6 +69,7 @@ extern NSString *const kATADUserAreaKey;
 @interface ATAPI(Internal)
 +(BOOL)logEnabled;
 +(BOOL)adLogoVisible;
++(NSString *)hbTestModeDeviceID;
 +(ATNetworkTerritory)networkTerritory;
 +(BOOL)isOfm;
 -(void) setVersion:(NSString*)version forNetwork:(NSString*)network;

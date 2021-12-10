@@ -24,12 +24,14 @@
 @property(nonatomic, readonly) NSDictionary *offerDataDict;
 @property(nonatomic, readonly) NSString *bidId;
 @property(nonatomic, readonly) NSString *tpBidId;
-@property(nonatomic, readonly) NSString *price;
+@property(nonatomic, readwrite) NSString *price;
 @property(nonatomic, readonly) NSString *curRate;
+@property(nonatomic, readonly) ATBiddingCurrencyType currencyType;
 @property(nonatomic, readonly) id customObject;
 @property(nonatomic, readonly) NSString *placementID;
 @property(nonatomic, readonly) NSString *unitGroupUnitID;
 @property(nonatomic, readonly) NSInteger networkFirmID;
+@property(nonatomic, readonly) NSString *adapterClassString;
 @property(nonatomic, readonly) NSString *lURL;
 @property(nonatomic, readonly) NSString *nURL;
 @property(nonatomic, readonly) NSString *bURL;
@@ -41,8 +43,8 @@
 @property(nonatomic, readonly, getter=isExpired) BOOL expired;
 @property(nonatomic, readonly, getter=isSendNotif) BOOL sendNotif;
 @property(nonatomic, readonly, getter=isNoPrice) BOOL noPrice;
-+(instancetype) bidInfoWithPlacementID:(NSString*)placementID unitGroupUnitID:(NSString*)unitGroupUnitID token:(NSString*)token price:(NSString*)price expirationInterval:(NSTimeInterval)expirationInterval customObject:(id)customObject;
--(instancetype) initWithDictionary:(NSDictionary*)dictionary placementID:(NSString*)placementID unitGroupUnitID:(NSString*)unitGroupUnitID expirationInterval:(NSTimeInterval)expirationInterval;
++(instancetype) bidInfoWithPlacementID:(NSString*)placementID unitGroupUnitID:(NSString*)unitGroupUnitID adapterClassString:(NSString *)adapterClassString token:(NSString*)token price:(NSString*)price currencyType:(ATBiddingCurrencyType)currencyType expirationInterval:(NSTimeInterval)expirationInterval customObject:(id)customObject;
+-(instancetype) initWithDictionary:(NSDictionary*)dictionary placementID:(NSString*)placementID unitGroupUnitID:(NSString*)unitGroupUnitID adapterClassString:(NSString *)adapterClassString currencyType:(ATBiddingCurrencyType)currencyType expirationInterval:(NSTimeInterval)expirationInterval;
 -(void) invalidate;
 -(void) hasBeenSendNotif;
 -(NSDictionary *) serializationToDictionary;

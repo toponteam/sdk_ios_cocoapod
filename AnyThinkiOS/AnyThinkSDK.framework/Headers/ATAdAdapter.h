@@ -14,6 +14,7 @@ extern NSString *const kATAdapterCustomInfoUnitGroupModelKey;
 extern NSString *const kATAdapterCustomInfoRequestIDKey;
 extern NSString *const kATAdapterCustomInfoExtraKey;
 extern NSString *const kATAdapterCustomInfoBuyeruIdKey;
+extern NSString *const kATAdapterCustomInfoBidInfoKey;
 extern NSString *const kATAdapterCustomInfoBidResultKey;
 
 extern NSString *const kATHeaderBiddingParametersUnitIdKey;
@@ -33,6 +34,8 @@ extern NSString *const kATHeaderBiddingParametersAdHeightKey;
 extern NSString *const kATHeaderBiddingParametersBidFormatKey;
 extern NSString *const kATHeaderBiddingParametersBidderTypeKey;
 extern NSString *const kATHeaderBiddingParametersUnitGroupKey;
+extern NSString *const kATHeaderBiddingParametersSDKInfoKey;
+
 @protocol ATAd;
 @class ATPlacementModel;
 @class ATUnitGroupModel;
@@ -40,6 +43,13 @@ extern NSString *const kATHeaderBiddingParametersUnitGroupKey;
 @class ATBidInfo;
 @class ATWaterfall;
 @class ATInHouseBidRequest;
+
+typedef NS_ENUM(NSInteger, ATBiddingLossType) {
+    ATBiddingLossWithLowPriceInNormal = 103,
+    ATBiddingLossWithLowPriceInHB = 102,
+    ATBiddingLossWithBiddingTimeOut = 2,
+    ATBiddingLossWithExpire = 5
+};
 
 @protocol ATAdAdapter<NSObject>
 @property (nonatomic,copy) void (^metaDataDidLoadedBlock)(void);
@@ -58,5 +68,9 @@ extern NSString *const kATHeaderBiddingParametersUnitGroupKey;
 
 +(void)headerBiddingParametersWithUnitGroupModel:(ATUnitGroupModel*)model extra:(NSDictionary *)extra completion:(void(^)(NSDictionary *headerBiddingParams))completion;
 //+(ATInHouseBidRequest*)inHouseBiddingRequestWithPlacementModel:(ATPlacementModel*)placementModel unitGroupModel:(ATUnitGroupModel*)unitGroupModel extra:(NSDictionary *)extra;
+
++(void) sendWinnerNotifyWithCustomObject:(id)customObject secondPrice:(NSString*)price;
++(void) sendLossNotifyWithCustomObject:(id)customObject lossType:(ATBiddingLossType)lossType;
+
 @end
 #endif /* ATAdAdapter_h */

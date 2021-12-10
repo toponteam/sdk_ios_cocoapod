@@ -74,4 +74,6 @@ extern NSString *const kATSplashExtraKlevinAppID;
 - (ATCheckLoadModel*)checkSplashLoadStatusForPlacementID:(NSString *)placementID;
 - (NSArray<NSDictionary *> *)getSplashValidAdsForPlacementID:(NSString *)placementID;
 
+- (void)entrySplashScenarioWithPlacementID:(NSString *)placementID scene:(NSString *)scene;
+
 @end
