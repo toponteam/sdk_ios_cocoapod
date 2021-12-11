@@ -178,6 +178,4 @@ extern NSString *const kATPlacementModelCustomDataKey;
 @property(nonatomic, readonly, copy) NSString *inhouseUrl;
 @property(nonatomic, readonly, copy) NSString *thirdInhouseUrl; // bks url of third plantforms
 
-@property(nonatomic, readonly) NSString *exchRateC2U;
-
 @end

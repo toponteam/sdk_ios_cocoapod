@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "ATAPI+Internal.h"
-#import "ATUnitGroupModel.h"
-#import "ATAdAdapter.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

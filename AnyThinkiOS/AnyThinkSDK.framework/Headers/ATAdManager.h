@@ -27,9 +27,6 @@ extern NSString *const kATAdLoadingExtraGDTEnableDefaultAudioSessionKey;
 
 
 
-
-
-
 /*
  We mark this method as deprecated because we move customData into ATAPI's shared instance. customData passed via this method will just be ignored.
  */

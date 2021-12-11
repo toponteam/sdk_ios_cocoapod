@@ -125,6 +125,5 @@ typedef NS_ENUM(NSInteger, ATGDTNativeAdType) {
 
 - (void) setBaiduTemplateRenderingAttribute:(id<ATBaiduTemplateRenderingAttributeDelegate> )baiduTemplateRenderingAttribute;
 
-- (void)entryNativeScenarioWithPlacementID:(NSString *)placementID scene:(NSString *)scene;
 
 @end

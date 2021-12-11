@@ -188,10 +188,7 @@ typedef NS_ENUM(NSInteger, ATBUAdLoadType) {
     ATBUAdLoadTypeLoad                       = 3,//Load resources in real time
 };
 
-typedef NS_ENUM(NSInteger, ATPersonalizedAdState) {
-    ATPersonalizedAdStateType = 1,
-    ATNonpersonalizedAdStateType = 2
-};
+
 
 @interface ATAPI : NSObject
 
@@ -332,17 +329,7 @@ set denied Upload Info list for sdk to Control report
 -(NSArray*) deniedUploadInfoArray;
 -(BOOL) isContainsForDeniedUploadInfoArray:(NSString *)key;
 
-/*
-set header bidding test mode, only support incoming device idfa. setLogEnabled must be turned on before use
-*/
-+(void) setHeaderBiddingTestModeWithDeviceID:(NSString *)idfa;
 
-/**
- Set personalized recommendation state
- @param state 1 is to close personalized recommendation, other values or not set to open
- */
--(void) setPersonalizedAdState:(ATPersonalizedAdState)state;
--(ATPersonalizedAdState) getPersonalizedAdState;
 @end
 
 

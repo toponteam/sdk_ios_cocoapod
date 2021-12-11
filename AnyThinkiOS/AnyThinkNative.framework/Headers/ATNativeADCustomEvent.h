@@ -40,7 +40,6 @@
 
 -(NSDictionary*)delegateExtra;
 - (NSMutableDictionary *)delegateExtraWithNativeAD:(ATNativeADCache *)cache;
--(instancetype) initWithInfo:(NSDictionary*)serverInfo localInfo:(NSDictionary *)localInfo;
 
 -(ATNativeADSourceType) sourceType;
 @property(nonatomic, copy) void(^requestCompletionBlock)(NSArray<NSDictionary*> *assets, NSError *error);
@@ -51,6 +50,8 @@
  */
 @property(nonatomic) NSInteger numberOfFinishedRequests;
 @property(nonatomic, readonly) NSMutableArray<NSDictionary*>* assets;
+@property(nonatomic) NSDictionary *requestExtra;
+@property(nonatomic) NSDictionary *serverExtra;
 @end
 
 @interface ATNativeADView(Event)
