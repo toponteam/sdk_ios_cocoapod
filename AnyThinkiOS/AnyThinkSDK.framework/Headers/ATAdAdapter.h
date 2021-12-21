@@ -31,9 +31,16 @@ extern NSString *const kATHeaderBiddingParametersBuyeruIdKey;
 extern NSString *const kATHeaderBiddingParametersBidTokenKey;
 extern NSString *const kATHeaderBiddingParametersAdWidthKey;
 extern NSString *const kATHeaderBiddingParametersAdHeightKey;
+
+extern NSString *const kATHeaderBiddingParametersDirectOfferKey;
+
+extern NSString *const kATHeaderBiddingParametersDirectOfferSizeKey;
+
+
 extern NSString *const kATHeaderBiddingParametersBidFormatKey;
 extern NSString *const kATHeaderBiddingParametersBidderTypeKey;
 extern NSString *const kATHeaderBiddingParametersUnitGroupKey;
+
 extern NSString *const kATHeaderBiddingParametersSDKInfoKey;
 
 @protocol ATAd;

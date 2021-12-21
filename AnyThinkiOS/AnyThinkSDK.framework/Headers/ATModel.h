@@ -64,13 +64,16 @@ typedef NS_ENUM(NSInteger, ATVideoClickable) {
 typedef NS_ENUM(NSInteger, ATNetworkFirmId) {
     ATNetworkFirmIdADX =  66,
     ATNetworkFirmIdMyOffer = 35,
-    ATNetworkFirmIdGDTOnline = 42
+    ATNetworkFirmIdGDTOnline = 42,
+    ATNetworkFirmIdDirectOffer =  67,
+
 };
 
 typedef NS_ENUM(NSInteger, ATOfferModelType) {
     ATOfferModelMyOffer = 1,
     ATOfferModelADX =  2,
-    ATOfferModelOnlineApi =  3
+    ATOfferModelOnlineApi =  3,
+    ATOfferModelDirectOffer =  4,
 };
 
 typedef NS_ENUM(NSInteger, ATOfferCrtType) {
@@ -100,7 +103,8 @@ typedef NS_ENUM(NSInteger, ATUnitGroupType) {
     ATUnitGroupTypeC2S,
     ATUnitGroupTypeS2S,
     ATUnitGroupTypeInHouse,
-    ATUnitGroupTypeBKS
+    ATUnitGroupTypeBKS,
+    ATUnitGroupTypeDirectOffer
 };
 
 typedef NS_ENUM(NSInteger, ATSplashType) {
