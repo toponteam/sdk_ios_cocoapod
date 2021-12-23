@@ -39,7 +39,7 @@
 -(void)sendHBLossNotificationForPlacementID:(NSString*)placementID requestID:(NSString*)requestID unitGroups:(NSArray<ATUnitGroupModel*>*)unitGroups headerBiddingUnitGroups:(NSArray<ATUnitGroupModel*>*)headerBiddingUnitGroups;
 -(void)sendNotifyDisplayForPlacementID:(NSString*)placementID unitGroup:(ATUnitGroupModel*)unitGroup winner:(BOOL)isWinner headerBidding:(BOOL)headerBidding price:(NSString *)price;
 
--(void)sendHBLossNotificationForBidInfo:(ATBidInfo *)bidInfo price:(NSString*)price headerBidding:(BOOL)headerBidding requestID:(NSString*)requestID;
+-(void)sendHBLossNotificationForBidInfo:(ATBidInfo *)bidInfo price:(NSString*)price headerBidding:(BOOL)headerBidding winnerNetworkFirmID:(NSInteger)winnerNetworkFirmID requestID:(NSString*)requestID;
 
 -(void) saveBidInfo:(ATBidInfo*)bidInfo forRequestID:(NSString*)requestID;
 -(void) removeDiskBidInfo:(ATBidInfo*)bidInfo;
