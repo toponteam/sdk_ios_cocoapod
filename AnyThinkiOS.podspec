@@ -50,7 +50,7 @@ Pod::Spec.new do |spec|
   end
 
     spec.subspec 'AnyThinkTTAdapter' do |ss|
-    ss.dependency 'Ads-CN','4.2.5.0'
+    ss.dependency 'Ads-CN-Beta','4.2.5.0'
     # ss.dependency 'Ads-CN','4.1.0.0'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
