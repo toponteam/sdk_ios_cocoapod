@@ -46,6 +46,7 @@ extern NSString *const kATAdStorageExtraUnitGroupInfoUnitIDKey;
 extern NSString *const kATAdStorageExtraUnitGroupInfoNetworkSDKVersionKey;
 extern NSString *const kATAdStorageExtraUnitGroupInfoReadyFlagKey;
 extern NSString *const kATAdStorageExtraFinalWaterfallKey;
+extern NSString *const kATAdStorageExtraAdapterClassKey;
 
 typedef NS_ENUM(NSInteger, ATAdManagerReadyAPICaller) {
     ATAdManagerReadyAPICallerReady = 0,

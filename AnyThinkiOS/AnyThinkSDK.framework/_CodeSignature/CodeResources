@@ -38,11 +38,11 @@
 		</data>
 		<key>Headers/ATAdManager+Internal.h</key>
 		<data>
-		atcVA632MH8YRMJ3o8qxHYcANtk=
+		mx8wXqirYQfhO3S0mj/B1PcYwnM=
 		</data>
 		<key>Headers/ATAdManager.h</key>
 		<data>
-		y3MITcTl9Ls3oqIbE/OtXVhmBBM=
+		A3zD9QnbdE+EMopKrWgI0iFwXGM=
 		</data>
 		<key>Headers/ATBidInfo.h</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>Headers/ATModel.h</key>
 		<data>
-		b8sp+yktWj2nLFfoXFfO5Rws91s=
+		EN9QQw3x5ejfRgmQ0rLrTEt5mmA=
 		</data>
 		<key>Headers/ATMyOfferOfferModel.h</key>
 		<data>
@@ -86,7 +86,7 @@
 		</data>
 		<key>Headers/ATPlacementModel.h</key>
 		<data>
-		COMgfJSgMnlvmCnpdgG4VWfJlFs=
+		Fi2Us+2DicettYoWx7inO/9ljt4=
 		</data>
 		<key>Headers/ATTracker.h</key>
 		<data>
@@ -98,7 +98,7 @@
 		</data>
 		<key>Headers/ATWaterfallManager.h</key>
 		<data>
-		F8IYBeR0A6k1lP+gtPXKLf6j+eI=
+		h1ws8WPu7u2cGK0V0Br88A3uyFo=
 		</data>
 		<key>Headers/AnyThinkSDK.h</key>
 		<data>
@@ -106,7 +106,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		uaohwJzkE6ZFH7dPe8VToP4Po5U=
+		0ewM961XZ/qhGNE6l6w8NAWs1SE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -207,22 +207,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			atcVA632MH8YRMJ3o8qxHYcANtk=
+			mx8wXqirYQfhO3S0mj/B1PcYwnM=
 			</data>
 			<key>hash2</key>
 			<data>
-			IFU7jbzYAk0laBPFz5XYnILCKds+y/tzL9VwyyR+dYg=
+			QCq3J65sNUa6LlWiNJ4UfJ83A2RCUWOXuQnjKkIdTq0=
 			</data>
 		</dict>
 		<key>Headers/ATAdManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			y3MITcTl9Ls3oqIbE/OtXVhmBBM=
+			A3zD9QnbdE+EMopKrWgI0iFwXGM=
 			</data>
 			<key>hash2</key>
 			<data>
-			gtXUFamNCUkfwpafE0uou22HGVgdsQAHqMrbN5aptgg=
+			qtHepNgOlL1dwWaJytO3cqU+CmlKsd1EmCrwV+m6Z/I=
 			</data>
 		</dict>
 		<key>Headers/ATBidInfo.h</key>
@@ -273,11 +273,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			b8sp+yktWj2nLFfoXFfO5Rws91s=
+			EN9QQw3x5ejfRgmQ0rLrTEt5mmA=
 			</data>
 			<key>hash2</key>
 			<data>
-			Ed+HZCl/3KbMxGHV9kXgwjGABuTyOMU7zGyubrjkISo=
+			DMiUWJYgjMmRGFPyx4Nk9pbj8OtCwBtSHy2a2I4MRyM=
 			</data>
 		</dict>
 		<key>Headers/ATMyOfferOfferModel.h</key>
@@ -339,11 +339,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			COMgfJSgMnlvmCnpdgG4VWfJlFs=
+			Fi2Us+2DicettYoWx7inO/9ljt4=
 			</data>
 			<key>hash2</key>
 			<data>
-			/XiDH0FuLGDcJgedzkjPjTy1v5YqhkBNk+GDft+RD6w=
+			BwLyrbDDF0kN+J/p5f/OSMFm3hIBcNG2hM46k5muaTc=
 			</data>
 		</dict>
 		<key>Headers/ATTracker.h</key>
@@ -372,11 +372,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			F8IYBeR0A6k1lP+gtPXKLf6j+eI=
+			h1ws8WPu7u2cGK0V0Br88A3uyFo=
 			</data>
 			<key>hash2</key>
 			<data>
-			LI52Qv5WSd6FMjMwHN7uHl//JjiC+2LOqwn9rFXCjQc=
+			Yv87M6ZfJDRY+HkUcxRgF7JLQus+3Wi/Ft+3AV3L0b0=
 			</data>
 		</dict>
 		<key>Headers/AnyThinkSDK.h</key>

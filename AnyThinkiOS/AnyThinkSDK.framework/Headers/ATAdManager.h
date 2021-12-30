@@ -39,7 +39,7 @@ extern NSString *const kATAdLoadingExtraGDTEnableDefaultAudioSessionKey;
 
 - (void)setExludePlacementid:(NSString *)placementid unitIDArray:(NSArray <NSString *> *)unitIDArray;
 
-
+- (BOOL)splashReadyWithoutLogForPlacementID:(NSString *)placementID sendTK:(BOOL)send;
 
 
 @end

@@ -97,9 +97,10 @@ extern NSString *const kATPlacementModelCustomDataKey;
 @property(nonatomic, readonly) NSArray<ATUnitGroupModel*>* olApiUnitGroups;
 @property(nonatomic, readonly) NSArray<ATUnitGroupModel*>* inhouseUnitGroups;
 @property(nonatomic, readonly) NSArray<ATUnitGroupModel*>* bksUnitGroups;
+@property(nonatomic, readonly) NSArray<ATUnitGroupModel*>* bottomListUnitGroups;
 @property(nonatomic, strong) NSArray <ATUnitGroupModel*>* directOfferHeaderBiddingUnitGroups;
 
-
+@property(nonatomic, readonly) NSTimeInterval bottomRreqts;     // bottomAd dalay request time
 
 
 @property(nonatomic, readonly) NSTimeInterval headerBiddingRequestTimeout;
