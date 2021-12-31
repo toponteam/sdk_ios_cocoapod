@@ -12,7 +12,8 @@
 
 extern NSString *const kATRewardedVideoCallbackExtraAdsourceIDKey;
 extern NSString *const kATRewardedVideoCallbackExtraNetworkIDKey;
-extern NSString *const kATRewardedVideoCallbackExtraIsHeaderBidding;
+extern NSString *const kATRewardedVideoCallbackExtraIsHeaderBidding DEPRECATED_MSG_ATTRIBUTE("The kATRewardedVideoCallbackExtraIsHeaderBidding class will be obsolete, please use kATRewardedVideoDelegateExtraAdSourceIsHeaderBidding");
+extern NSString *const kATRewardedVideoDelegateExtraAdSourceIsHeaderBidding;
 extern NSString *const kATRewardedVideoCallbackExtraPrice;
 extern NSString *const kATRewardedVideoCallbackExtraPriority;
 
