@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/ATAPI+Internal.h</key>
 		<data>
-		VFmtMnzvm5uP3rfwaFODASBG2CU=
+		eS3+b4IO7B/+Y+zFRmOXUZvxbW4=
 		</data>
 		<key>Headers/ATAPI.h</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Headers/ATAdAdapter.h</key>
 		<data>
-		rU3331XePHXvHJBw2QGvSGM/stY=
+		t6OMj5WFPYRgsYG+awuclKsJCj0=
 		</data>
 		<key>Headers/ATAdCustomEvent.h</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Headers/ATAdManager.h</key>
 		<data>
-		A3zD9QnbdE+EMopKrWgI0iFwXGM=
+		/eC9xCd0ccKwZo0KBzy11cl682w=
 		</data>
 		<key>Headers/ATBidInfo.h</key>
 		<data>
@@ -106,7 +106,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		0ewM961XZ/qhGNE6l6w8NAWs1SE=
+		B6jh+qwe7HfiCP4rMzkMn+hWidg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -130,11 +130,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			VFmtMnzvm5uP3rfwaFODASBG2CU=
+			eS3+b4IO7B/+Y+zFRmOXUZvxbW4=
 			</data>
 			<key>hash2</key>
 			<data>
-			WpNmlU9Vsf7+pAyfDM7f6/bgUzxLfcU7vmvq3dbtKmc=
+			cwrCZcIvDd8WP7DY3QIvxGaa3SyPGn36T+CT/dFdaiM=
 			</data>
 		</dict>
 		<key>Headers/ATAPI.h</key>
@@ -163,11 +163,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			rU3331XePHXvHJBw2QGvSGM/stY=
+			t6OMj5WFPYRgsYG+awuclKsJCj0=
 			</data>
 			<key>hash2</key>
 			<data>
-			xNznUjBkgCdhnqiwhemH7uBW5pKE6a//1d4h6QcuVfg=
+			1DC6OxUl5CplsQle0UUqocP4ofzQGFxRtrEVrhygjoE=
 			</data>
 		</dict>
 		<key>Headers/ATAdCustomEvent.h</key>
@@ -218,11 +218,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			A3zD9QnbdE+EMopKrWgI0iFwXGM=
+			/eC9xCd0ccKwZo0KBzy11cl682w=
 			</data>
 			<key>hash2</key>
 			<data>
-			qtHepNgOlL1dwWaJytO3cqU+CmlKsd1EmCrwV+m6Z/I=
+			AmdJKTaKypwzI9X9oCkTfg5ZDxVza2rFMO4lpfR7EJQ=
 			</data>
 		</dict>
 		<key>Headers/ATBidInfo.h</key>

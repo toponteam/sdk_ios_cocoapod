@@ -19,6 +19,12 @@
 @property(nonatomic, readonly) NSNumber *rating;
 @property(nonatomic, readonly) UIImage *sponsorImage;
 @property(nonatomic, readonly) NSString *videoUrl;
+@property(nonatomic, readonly) NSString *logoUrl;
+@property(nonatomic, readonly) NSString *iconUrl;
+@property(nonatomic, readonly) NSString *imageUrl;
+@property(nonatomic, readonly) UIView *mediaView;
+@property(nonatomic, readonly) NSArray *imageList;
+@property(nonatomic, readonly) NSInteger videoDuration;
 
 /**
  * For some ads, this property does not always determines whether the ad is a video ad or not; however, to do this, you can always use the corresponding ad view's isVideoContents method instead.
