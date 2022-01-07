@@ -11,12 +11,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Mobrain
-// kATSplashExtraMobrainAdnTypeKey Obsolete, please use kATSplashExtraMobrainAdnNameKey to pass in, the name of adn, please use the following values'pangle','baidu','gdt','ks', other values may cause the advertisement to fail to load
-extern NSString *const kATSplashExtraMobrainAdnNameKey;
+extern NSString *const kATSplashExtraMobrainAdnTypeKey;
 extern NSString *const kATSplashExtraMobrainAppKeyKey;
 extern NSString *const kATSplashExtraMobrainAppIDKey;
 extern NSString *const kATSplashExtraMobrainRIDKey;
-
 /**
  optional
  Set whether to mute the video，YES = mute，NO = unMute
