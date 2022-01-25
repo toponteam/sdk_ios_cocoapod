@@ -51,20 +51,11 @@ typedef NS_ENUM(NSInteger, ATOfferInterActableArea) {
 @property(nonatomic, readwrite) NSString *clickURL;
 @property(nonatomic, readwrite) NSString *deeplinkUrl; 
 @property(nonatomic, readwrite) NSString *localResourceID;
-@property(nonatomic, assign) ATOfferModelType offerModelType;
-@property(nonatomic, assign) ATOfferCrtType crtType;
+@property(nonatomic, readwrite) ATOfferModelType offerModelType;
+@property(nonatomic, readwrite) ATOfferCrtType crtType;
 
 @property(nonatomic, copy) NSString *jumpUrl;
 @property(nonatomic) NSInteger offerFirmID;
-
-
-@property(nonatomic, assign) BOOL offerIMCapSw;
-@property(nonatomic, assign) BOOL offerCLCapSw;
-
-@property(nonatomic, assign) BOOL resourceIMCapSw;
-@property(nonatomic, assign) BOOL resourceCLCapSw;
-
-
 
 // ad attributes
 @property(nonatomic, readwrite) NSString *adPublisher;

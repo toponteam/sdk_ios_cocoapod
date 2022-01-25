@@ -30,7 +30,6 @@
 @property(nonatomic, readonly) NSDictionary *content;
 @property(nonatomic, readonly) NSTimeInterval showingInterval;//minimum interval between previous request & last impression
 @property(nonatomic, readonly) CGSize adSize;
-
 @property(nonatomic, readonly) BOOL splashZoomOut;
 @property(nonatomic, readonly) NSString *price;
 @property(nonatomic, readonly) NSString *ecpmByCurrency;
@@ -62,7 +61,5 @@
 
 // v5.7.61+
 @property(nonatomic, readonly) NSInteger weight;
-
-@property(nonatomic, copy) NSString *directOfferOid;
 
 @end

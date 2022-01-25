@@ -97,18 +97,11 @@ extern NSString *const kATPlacementModelCustomDataKey;
 @property(nonatomic, readonly) NSArray<ATUnitGroupModel*>* olApiUnitGroups;
 @property(nonatomic, readonly) NSArray<ATUnitGroupModel*>* inhouseUnitGroups;
 @property(nonatomic, readonly) NSArray<ATUnitGroupModel*>* bksUnitGroups;
-@property(nonatomic, readonly) NSArray<ATUnitGroupModel*>* bottomListUnitGroups;
-@property(nonatomic, strong) NSArray <ATUnitGroupModel*>* directOfferHeaderBiddingUnitGroups;
-
-@property(nonatomic, readonly) NSTimeInterval bottomRreqts;     // bottomAd dalay request time
-
 
 @property(nonatomic, readonly) NSTimeInterval headerBiddingRequestTimeout;
 @property(nonatomic, readonly) NSTimeInterval headerBiddingRequestTolerateInterval;
 @property(nonatomic, readonly) NSString *S2SBidRequestAddress;
 @property(nonatomic, readonly) NSString *waterFallBidRequestAddress;
-
-
 
 @property(nonatomic, readonly) NSTimeInterval loadCapDuration;
 @property(nonatomic, readonly) NSInteger loadCap;
@@ -147,7 +140,6 @@ extern NSString *const kATPlacementModelCustomDataKey;
 @property(nonatomic, readonly) NSDictionary* olApiSettingDict;
 
 
-
 @property(nonatomic, readonly) NSString *currency;
 @property(nonatomic, readonly) NSString *exchangeRate;
 
@@ -174,10 +166,6 @@ extern NSString *const kATPlacementModelCustomDataKey;
 //todo: just for in-house list. It's not a good solution.
 @property(nonatomic, copy) NSArray<ATUnitGroupModel*>* waterfallA;
 
-
-@property(nonatomic, copy) NSArray *directOfferUnitIDArray;
-
-
 // v5.7.56+
 @property(nonatomic, readonly) NSInteger encryptFlag;
 @property(nonatomic, readonly, copy) NSString *encryptPublicKey;
@@ -191,8 +179,5 @@ extern NSString *const kATPlacementModelCustomDataKey;
 @property(nonatomic, readonly, copy) NSString *thirdInhouseUrl; // bks url of third plantforms
 
 @property(nonatomic, readonly) NSString *exchRateC2U;
-
-
-@property(nonatomic, assign) BOOL isExistHBAdSource;
 
 @end
