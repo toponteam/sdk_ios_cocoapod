@@ -86,7 +86,7 @@
 		</data>
 		<key>Headers/ATPlacementModel.h</key>
 		<data>
-		Fi2Us+2DicettYoWx7inO/9ljt4=
+		8hhQ9FgOWNRCfy29hLNV5apAKX0=
 		</data>
 		<key>Headers/ATTracker.h</key>
 		<data>
@@ -98,7 +98,7 @@
 		</data>
 		<key>Headers/ATWaterfallManager.h</key>
 		<data>
-		h1ws8WPu7u2cGK0V0Br88A3uyFo=
+		efsV9lEeTaN3d/dGSW1cyS1Fns4=
 		</data>
 		<key>Headers/AnyThinkSDK.h</key>
 		<data>
@@ -106,7 +106,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		XB/KEwCNJKvL08hIQSROQE4BAb0=
+		YYkIlCs+pzAwhU8oVg7P1c9E6tA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -339,11 +339,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Fi2Us+2DicettYoWx7inO/9ljt4=
+			8hhQ9FgOWNRCfy29hLNV5apAKX0=
 			</data>
 			<key>hash2</key>
 			<data>
-			BwLyrbDDF0kN+J/p5f/OSMFm3hIBcNG2hM46k5muaTc=
+			LILXB53koZhvBTIAwKUjVmgmCHFgvPsUIAY7FwSC0ps=
 			</data>
 		</dict>
 		<key>Headers/ATTracker.h</key>
@@ -372,11 +372,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			h1ws8WPu7u2cGK0V0Br88A3uyFo=
+			efsV9lEeTaN3d/dGSW1cyS1Fns4=
 			</data>
 			<key>hash2</key>
 			<data>
-			Yv87M6ZfJDRY+HkUcxRgF7JLQus+3Wi/Ft+3AV3L0b0=
+			gsIdSQUubvfE2jnE98/bMmCHTlmFlctaPgQ5Yl3qVTY=
 			</data>
 		</dict>
 		<key>Headers/AnyThinkSDK.h</key>

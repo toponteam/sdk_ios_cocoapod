@@ -192,4 +192,7 @@ extern NSString *const kATPlacementModelCustomDataKey;
 
 @property(nonatomic, readonly) NSString *exchRateC2U;
 
+
+@property(nonatomic, assign) BOOL isExistHBAdSource;
+
 @end

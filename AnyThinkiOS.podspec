@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "AnyThinkiOS"
-  spec.version      = "5.7.97"
+  spec.version      = "5.7.98"
   spec.summary      = "A short description of AnyThink SDK for iOS."
   spec.description  = <<-DESC
             TopOn SDK for developer
@@ -50,7 +50,7 @@ Pod::Spec.new do |spec|
   end
 
     spec.subspec 'AnyThinkTTAdapter' do |ss|
-    ss.dependency 'Ads-CN-Beta','4.2.5.1'
+    ss.dependency 'Ads-CN-Beta','4.2.5.2'
     # ss.dependency 'Ads-CN','4.1.0.0'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
@@ -125,7 +125,7 @@ Pod::Spec.new do |spec|
   end
   
     spec.subspec 'AnyThinkFyberAdapter' do |ss|
-    ss.dependency 'Fyber_Marketplace_SDK','7.8.9'
+    ss.dependency 'Fyber_Marketplace_SDK','8.1.1'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkFyberAdapter.framework'
@@ -161,7 +161,7 @@ Pod::Spec.new do |spec|
   end
   
     spec.subspec 'AnyThinkMintegralAdapter' do |ss|
-    ss.dependency 'MintegralAdSDK/All','7.0.6'
+    ss.dependency 'MintegralAdSDK/All','7.1.0'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkMintegralAdapter.framework'

@@ -56,6 +56,8 @@ typedef NS_ENUM(NSInteger, ATUnitGroupFinishType) {
 @interface ATWaterfallManager : NSObject
 +(instancetype) sharedManager;
 
+-(void) removeWaterfallWrappers:(NSString *)placementID;
+
 -(BOOL) loadingAdForPlacementID:(NSString*)placementID;
 
 // just for api: check ad loading status
