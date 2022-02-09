@@ -12,7 +12,8 @@
 
 extern NSString *const kATSplashDelegateExtraNetworkIDKey;
 extern NSString *const kATSplashDelegateExtraAdSourceIDKey;
-extern NSString *const kATSplashDelegateExtraIsHeaderBidding;
+extern NSString *const kATSplashDelegateExtraIsHeaderBidding DEPRECATED_MSG_ATTRIBUTE("The kATSplashDelegateExtraIsHeaderBidding class will be obsolete, please use kATSplashDelegateExtraAdSourceIsHeaderBidding");
+extern NSString *const kATSplashDelegateExtraAdSourceIsHeaderBidding;
 extern NSString *const kATSplashDelegateExtraPrice;
 extern NSString *const kATSplashDelegateExtraPriority;
 

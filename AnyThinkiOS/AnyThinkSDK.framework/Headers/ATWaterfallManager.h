@@ -24,11 +24,16 @@ typedef NS_ENUM(NSInteger, ATUnitGroupFinishType) {
 @interface ATWaterfallWrapper:NSObject
 -(void) finish;
 -(void) fill;
+//-(void) callback;
 -(ATUnitGroupModel*) filledUnitGroupWithMaximumPrice;
+- (ATUnitGroupModel *)requestingUnitGroupMaxPriceWithFilteredUnitID:(NSString *)unitID;
 @property(nonatomic) NSInteger numberOfCachedOffers;
 @property(nonatomic, readonly, getter=isFilled) BOOL filled;
+//@property(nonatomic, readonly, getter=isCallbacked) BOOL callbacked;
 @property(nonatomic) BOOL headerBiddingFired;
 @property(nonatomic) BOOL headerBiddingFailed;
+@property(nonatomic, readonly) dispatch_queue_t access_queue;
+
 @end
 
 @interface ATWaterfall:NSObject
@@ -37,6 +42,8 @@ typedef NS_ENUM(NSInteger, ATUnitGroupFinishType) {
 -(void) finishUnitGroup:(ATUnitGroupModel*)unitGroup withType:(ATUnitGroupFinishType)type;
 -(void) addUnitGroup:(ATUnitGroupModel*)unitGroup;
 -(void) insertUnitGroup:(ATUnitGroupModel*)unitGroup price:(NSString *)price;
+-(void) insertUnitGroup:(ATUnitGroupModel*)unitGroup price:(NSString *)price filtered:(BOOL)filtered;
+
 -(ATUnitGroupModel*) firstPendingNonHBUnitGroupWithNetworkFirmID:(NSInteger)nwFirmID;
 -(ATUnitGroupModel*) unitGroupWithUnitID:(NSString*)unitID;
 -(ATUnitGroupModel*) unitGroupWithMaximumPrice;
@@ -54,11 +61,16 @@ typedef NS_ENUM(NSInteger, ATUnitGroupFinishType) {
 @interface ATWaterfallManager : NSObject
 +(instancetype) sharedManager;
 
+-(void) removeWaterfallWrappers:(NSString *)placementID;
+
 -(BOOL) loadingAdForPlacementID:(NSString*)placementID;
 
 // just for api: check ad loading status
 -(BOOL) loadingAdForPlacementID:(NSString*)placementID skipSettingLoadingStatus:(BOOL)skip;
 
 -(void) attachWaterfall:(ATWaterfall*)waterfall completion:(void(^)(ATWaterfallWrapper *waterfallWrapper, ATWaterfall *waterfall, ATWaterfall *headerBiddingWaterfall, ATWaterfall *finalWaterfall, BOOL finished, NSDate *loadStartDate))completion;
--(void) accessWaterfallForPlacementID:(NSString*)placementID requestID:(NSString*)requestID withBlock:(void(^)(ATWaterfallWrapper *waterfallWrapper, ATWaterfall *waterfall, ATWaterfall *headerBiddingWaterfall, ATWaterfall *finalWaterfall, BOOL finished, NSDate *loadStartDate))block;
+
+-(void) attachDefaultWaterfall:(ATWaterfall*)defaultWaterfall completion:(void(^)(ATWaterfallWrapper *waterfallWrapper, ATWaterfall *waterfall, ATWaterfall *headerBiddingWaterfall, ATWaterfall *finalWaterfall, ATWaterfall *defaultWaterfall, BOOL finished, NSDate *loadStartDate))completion;
+-(void) accessWaterfallForPlacementID:(NSString*)placementID requestID:(NSString*)requestID withBlock:(void(^)(ATWaterfallWrapper *waterfallWrapper, ATWaterfall *waterfall, ATWaterfall *headerBiddingWaterfall, ATWaterfall *defaultWaterfall, ATWaterfall *finalWaterfall, BOOL finished, NSDate *loadStartDate))block;
+
 @end

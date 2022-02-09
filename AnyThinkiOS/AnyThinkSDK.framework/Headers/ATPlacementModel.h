@@ -23,6 +23,12 @@ typedef NS_ENUM(NSInteger, ATADShowType) {
     ATADShowTypeSerial = 1
 };
 
+typedef enum : NSUInteger {
+    ATLoadingApiUnknown,
+    ATLoadingApiTypeOld,
+    ATLoadingApiTypeNew,
+} ATLoadingApiType;
+
 typedef NS_ENUM(NSInteger, ATAdFormat) {
     ATAdFormatNative = 0,
     ATAdFormatRewardedVideo = 1,
@@ -97,6 +103,10 @@ extern NSString *const kATPlacementModelCustomDataKey;
 @property(nonatomic, readonly) NSArray<ATUnitGroupModel*>* olApiUnitGroups;
 @property(nonatomic, readonly) NSArray<ATUnitGroupModel*>* inhouseUnitGroups;
 @property(nonatomic, readonly) NSArray<ATUnitGroupModel*>* bksUnitGroups;
+@property(nonatomic, readonly) NSArray<ATUnitGroupModel*>* bottomListUnitGroups;
+@property(nonatomic, strong) NSArray <ATUnitGroupModel*>* directOfferHeaderBiddingUnitGroups;
+
+@property(nonatomic, readonly) NSTimeInterval bottomRreqts;     // bottomAd dalay request time
 
 @property(nonatomic, readonly) NSTimeInterval headerBiddingRequestTimeout;
 @property(nonatomic, readonly) NSTimeInterval headerBiddingRequestTolerateInterval;
@@ -107,6 +117,10 @@ extern NSString *const kATPlacementModelCustomDataKey;
 @property(nonatomic, readonly) NSInteger loadCap;
 
 @property(nonatomic, readonly) NSInteger expectedNumberOfOffers;
+
+
+@property(nonatomic, readonly) NSTimeInterval bidWaitTimeout;
+@property(nonatomic, readonly) NSTimeInterval reqWaitTimeout;
 
 @property(nonatomic, readonly) NSTimeInterval loadFailureInterval;
 @property(nonatomic, readonly) NSTimeInterval offerLoadingTimeout;
@@ -139,6 +153,7 @@ extern NSString *const kATPlacementModelCustomDataKey;
 
 @property(nonatomic, readonly) NSDictionary* olApiSettingDict;
 
+@property(nonatomic, readonly) NSInteger waterfallCheckTime;
 
 @property(nonatomic, readonly) NSString *currency;
 @property(nonatomic, readonly) NSString *exchangeRate;
@@ -166,6 +181,10 @@ extern NSString *const kATPlacementModelCustomDataKey;
 //todo: just for in-house list. It's not a good solution.
 @property(nonatomic, copy) NSArray<ATUnitGroupModel*>* waterfallA;
 
+
+@property(nonatomic, copy) NSArray *directOfferUnitIDArray;
+
+
 // v5.7.56+
 @property(nonatomic, readonly) NSInteger encryptFlag;
 @property(nonatomic, readonly, copy) NSString *encryptPublicKey;
@@ -179,5 +198,9 @@ extern NSString *const kATPlacementModelCustomDataKey;
 @property(nonatomic, readonly, copy) NSString *thirdInhouseUrl; // bks url of third plantforms
 
 @property(nonatomic, readonly) NSString *exchRateC2U;
+
+@property(nonatomic) ATLoadingApiType loadingApiType;
+
+@property(nonatomic, assign) BOOL isExistHBAdSource;
 
 @end

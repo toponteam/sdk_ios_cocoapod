@@ -12,10 +12,16 @@
 typedef NS_ENUM(NSInteger, ATRefreshType){
     ATRefreshTypeNone,
     ATRefreshTypeAutoRefresh,
-    ATRefreshTypePlayAgain
+    ATRefreshTypePlayAgain,
+    ATRefreshTypeInitiation,
+    ATRefreshTypeLoadFailed,
+    ATRefreshTypeNotReady,
+    ATRefreshTypeShowStart,
+    ATRefreshTypeShowFailed
 } ;
 
 extern NSString *const kATTrackerExtraErrorKey;
+extern NSString *const kATTrackerExtraAgainLookFlagKey;
 extern NSString *const kATTrackerExtraAutoloadFlagKey;
 extern NSString *const kATTrackerExtraSDKCalledFlagKey;
 extern NSString *const kATTrackerExtraSDKNotCalledReasonKey;
@@ -55,6 +61,7 @@ extern NSString *const kATTrackerExtraRequestExpectedOfferNumberFlagKey;
 extern NSString *const kATTrackerExtraClickImpKey;
 extern NSString *const kATTrackerExtraPlacementModelKey;
 extern NSString *const kATTrackerExtraAdCacheStatusKey;
+extern NSString *const kATTrackerExtraAdRequestUsedTimeKey;
 
 // ofm
 extern NSString *const kATTrackerExtraOFMTrafficIDKey;

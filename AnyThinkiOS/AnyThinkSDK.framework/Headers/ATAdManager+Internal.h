@@ -46,6 +46,7 @@ extern NSString *const kATAdStorageExtraUnitGroupInfoUnitIDKey;
 extern NSString *const kATAdStorageExtraUnitGroupInfoNetworkSDKVersionKey;
 extern NSString *const kATAdStorageExtraUnitGroupInfoReadyFlagKey;
 extern NSString *const kATAdStorageExtraFinalWaterfallKey;
+extern NSString *const kATAdStorageExtraAdapterClassKey;
 
 typedef NS_ENUM(NSInteger, ATAdManagerReadyAPICaller) {
     ATAdManagerReadyAPICallerReady = 0,
@@ -124,8 +125,14 @@ typedef NS_ENUM(NSInteger, ATAdManagerReadyAPICaller) {
 
 - (void)setFirstSplashTimeoutStatus:(NSString *)placementID status:(BOOL)status;
 
+
+#pragma mark - real time TK
+
++ (NSArray *)getRealTimeNetworkArray;
+
 #pragma mark - send_tracking
 - (void)sendEntryScenarioTrackingWithPlacementID:(NSString *)placementID scene:(NSString *)scene isLoading:(BOOL)isLoading isReady:(BOOL)isReady extraInfo: (NSDictionary *)extraInfo;
+
 @end
 
 @interface NSObject(DelegateBinding)

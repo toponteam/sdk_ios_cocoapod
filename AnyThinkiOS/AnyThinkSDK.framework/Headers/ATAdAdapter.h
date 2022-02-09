@@ -16,6 +16,7 @@ extern NSString *const kATAdapterCustomInfoExtraKey;
 extern NSString *const kATAdapterCustomInfoBuyeruIdKey;
 extern NSString *const kATAdapterCustomInfoBidInfoKey;
 extern NSString *const kATAdapterCustomInfoBidResultKey;
+extern NSString *const kATAdapterCustomInfoBidPlacementIDKey;
 
 extern NSString *const kATHeaderBiddingParametersUnitIdKey;
 extern NSString *const kATHeaderBiddingParametersNetworkFirmIdKey;
@@ -31,9 +32,16 @@ extern NSString *const kATHeaderBiddingParametersBuyeruIdKey;
 extern NSString *const kATHeaderBiddingParametersBidTokenKey;
 extern NSString *const kATHeaderBiddingParametersAdWidthKey;
 extern NSString *const kATHeaderBiddingParametersAdHeightKey;
+
+extern NSString *const kATHeaderBiddingParametersDirectOfferKey;
+
+extern NSString *const kATHeaderBiddingParametersDirectOfferSizeKey;
+
+
 extern NSString *const kATHeaderBiddingParametersBidFormatKey;
 extern NSString *const kATHeaderBiddingParametersBidderTypeKey;
 extern NSString *const kATHeaderBiddingParametersUnitGroupKey;
+
 extern NSString *const kATHeaderBiddingParametersSDKInfoKey;
 
 @protocol ATAd;
@@ -57,7 +65,7 @@ typedef NS_ENUM(NSInteger, ATBiddingLossType) {
  * Create a rewarded instance for download event and FOR DOWNLOAD EVENT ONLY.
  */
 //+(id<ATAd>) placeholderAdWithPlacementModel:(ATPlacementModel*)placementModel requestID:(NSString*)requestID unitGroup:(ATUnitGroupModel*)unitGroup finalWaterfall:(ATWaterfall*)finalWaterfall;
-+(id<ATAd>) readyFilledAdWithPlacementModel:(ATPlacementModel*)placementModel requestID:(NSString*)requestID priority:(NSInteger)priority unitGroup:(ATUnitGroupModel*)unitGroup finalWaterfall:(ATWaterfall*)finalWaterfall;
++(id<ATAd>) readyFilledAdWithPlacementModel:(ATPlacementModel*)placementModel requestID:(NSString*)requestID priority:(NSInteger)priority unitGroup:(ATUnitGroupModel*)unitGroup finalWaterfall:(ATWaterfall*)finalWaterfall localInfo:(NSDictionary *)localInfo;
 +(ATMyOfferOfferModel*) resourceReadyMyOfferForPlacementModel:(ATPlacementModel*)placementModel unitGroupModel:(ATUnitGroupModel*)unitGroupModel info:(NSDictionary*)info;
 +(BOOL) adReadyForInfo:(NSDictionary*)info;
 -(instancetype) initWithNetworkCustomInfo:(NSDictionary *)serverInfo localInfo:(NSDictionary *)localInfo;
