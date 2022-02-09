@@ -211,7 +211,7 @@ Pod::Spec.new do |spec|
   end
  
     spec.subspec 'AnyThinkKlevinAdapter' do |ss|
-    ss.dependency 'AnyThinkKlevinSDK','2.4.1.222'
+    ss.dependency 'AnyThinkKlevinSDK','2.4.1'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkKlevinAdapter.framework'
