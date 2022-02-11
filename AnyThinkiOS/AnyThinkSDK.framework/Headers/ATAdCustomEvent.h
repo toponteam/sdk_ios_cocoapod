@@ -25,12 +25,8 @@ extern NSString *const kATAdAssetsAppIDKey;
 -(void) handleAssets:(NSDictionary*)assets;
 -(void) handleLoadingFailure:(NSError*)error;
 -(void) handleClose;
--(void) handleShow;
--(void) handleShowFailed;
-
 -(void) trackShow;
 -(void) trackClick;
-
 -(ATNativeADSourceType) adSourceType;
 @property(nonatomic, weak) id<ATAd> ad;
 @property(nonatomic) NSNumber *sdkTime;

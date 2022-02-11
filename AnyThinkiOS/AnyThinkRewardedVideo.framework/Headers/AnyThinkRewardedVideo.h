@@ -12,8 +12,6 @@
 #import <AnyThinkRewardedVideo/ATAdManager+RewardedVideo.h>
 #import <AnyThinkRewardedVideo/ATRewardedVideoDelegate.h>
 #import <AnyThinkRewardedVideo/ATRewardedVideoCustomEvent.h>
-#import <AnyThinkRewardedVideo/ATRewardedVideoAutoAdManager.h>
-
 
 //! Project version number for AnyThinkRewardedVideo.
 FOUNDATION_EXPORT double AnyThinkRewardedVideoVersionNumber;

@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/ATAPI.h</key>
 		<data>
-		ccrNNxrma/Hc332cGb8LfsHdCc0=
+		D+Sh4l5jGJsAuUd5+ClHaYWDRwA=
 		</data>
 		<key>Headers/ATAd.h</key>
 		<data>
@@ -26,11 +26,11 @@
 		</data>
 		<key>Headers/ATAdCustomEvent.h</key>
 		<data>
-		zaJiQMpjf0gaOapH+U6tvfbTs/s=
+		OD3vs1r0mZbsXlmfzBt7N3R6A9k=
 		</data>
 		<key>Headers/ATAdLoadingDelegate.h</key>
 		<data>
-		7KRw8kUTgN56Ql416NNbOezvptw=
+		cc38pQZpUVXMIuogJMdko8KOhqo=
 		</data>
 		<key>Headers/ATAdManagement.h</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Headers/ATAdManager.h</key>
 		<data>
-		C3BPpNl0+eE7dFeMnhm67l3QNa4=
+		/eC9xCd0ccKwZo0KBzy11cl682w=
 		</data>
 		<key>Headers/ATBidInfo.h</key>
 		<data>
@@ -86,19 +86,19 @@
 		</data>
 		<key>Headers/ATPlacementModel.h</key>
 		<data>
-		pKKb2+xfcrp1xbZX2EJrK0ieu38=
+		8hhQ9FgOWNRCfy29hLNV5apAKX0=
 		</data>
 		<key>Headers/ATTracker.h</key>
 		<data>
-		7iZIRaK8/LERnjnaIpuHbz24spE=
+		DkwKDise7SfvBrfdsREp7aHpXvs=
 		</data>
 		<key>Headers/ATUnitGroupModel.h</key>
 		<data>
-		HCTVncvhAfx/EA4H8z29mxs0VwI=
+		JoPJWEV+L3I96K2XNPLwdi2alZQ=
 		</data>
 		<key>Headers/ATWaterfallManager.h</key>
 		<data>
-		LTrucxkmGbWaMNsbf+TrIyh8o8s=
+		efsV9lEeTaN3d/dGSW1cyS1Fns4=
 		</data>
 		<key>Headers/AnyThinkSDK.h</key>
 		<data>
@@ -106,7 +106,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		YYkW1ydeR0Z5J1943E/vcI7O1UM=
+		Gfe+tXYSz1/0qyO6G7mSMx0qVyY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -141,11 +141,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ccrNNxrma/Hc332cGb8LfsHdCc0=
+			D+Sh4l5jGJsAuUd5+ClHaYWDRwA=
 			</data>
 			<key>hash2</key>
 			<data>
-			9FPsSH34wFGjsOBV0iSkWq9PQaerlnDEnxFexe3Lviw=
+			okObU5YYGiDHp+OTsJDX8cBQv3+WSThTH6NSaNtmDBI=
 			</data>
 		</dict>
 		<key>Headers/ATAd.h</key>
@@ -174,22 +174,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zaJiQMpjf0gaOapH+U6tvfbTs/s=
+			OD3vs1r0mZbsXlmfzBt7N3R6A9k=
 			</data>
 			<key>hash2</key>
 			<data>
-			exYW0xkwfogLJqBn0gM45Id7kBDsDRg70Qm+nsMV34I=
+			8jhnLU492gk7NbTNvzlqeFzDz1219dfpNne3h5j08wE=
 			</data>
 		</dict>
 		<key>Headers/ATAdLoadingDelegate.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			7KRw8kUTgN56Ql416NNbOezvptw=
+			cc38pQZpUVXMIuogJMdko8KOhqo=
 			</data>
 			<key>hash2</key>
 			<data>
-			zP7yIM/KPwyjrvXtXIDApmBnN7F3VyvUDHqwq9MXiJ4=
+			ujFLd/fnLJBjeR5FYLCVewe2/J84kJ/EBARUv4jb4Hc=
 			</data>
 		</dict>
 		<key>Headers/ATAdManagement.h</key>
@@ -218,11 +218,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			C3BPpNl0+eE7dFeMnhm67l3QNa4=
+			/eC9xCd0ccKwZo0KBzy11cl682w=
 			</data>
 			<key>hash2</key>
 			<data>
-			Q0ttGYPpYk+OVG+DZhSnTvosdp5jZ7kLLHqKCwDahF4=
+			AmdJKTaKypwzI9X9oCkTfg5ZDxVza2rFMO4lpfR7EJQ=
 			</data>
 		</dict>
 		<key>Headers/ATBidInfo.h</key>
@@ -339,44 +339,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			pKKb2+xfcrp1xbZX2EJrK0ieu38=
+			8hhQ9FgOWNRCfy29hLNV5apAKX0=
 			</data>
 			<key>hash2</key>
 			<data>
-			olfd2WVzebPECyUunBZmixL9drqwmhQhofRQkrmJ7zI=
+			LILXB53koZhvBTIAwKUjVmgmCHFgvPsUIAY7FwSC0ps=
 			</data>
 		</dict>
 		<key>Headers/ATTracker.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			7iZIRaK8/LERnjnaIpuHbz24spE=
+			DkwKDise7SfvBrfdsREp7aHpXvs=
 			</data>
 			<key>hash2</key>
 			<data>
-			JL+n8n9vaqZ+exw8FLmMRXcm94TMm4aE79eK7Vm0YSo=
+			0o3MK14R2HaRgeerjsIJYmmlf3JU1FwAfCEDB+1/fEs=
 			</data>
 		</dict>
 		<key>Headers/ATUnitGroupModel.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			HCTVncvhAfx/EA4H8z29mxs0VwI=
+			JoPJWEV+L3I96K2XNPLwdi2alZQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			u/D/0Laufv7lEScifSXd1uiZHVDnNmiRXqvGOcdWJlo=
+			x8DxeVyK2uC60hAOx7C9BXo/tUlR36u53TicpDR0fFM=
 			</data>
 		</dict>
 		<key>Headers/ATWaterfallManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			LTrucxkmGbWaMNsbf+TrIyh8o8s=
+			efsV9lEeTaN3d/dGSW1cyS1Fns4=
 			</data>
 			<key>hash2</key>
 			<data>
-			4e/qE+/0t9QB6l7fjTLCdx4IWIOjODdkeBjtwqrCBUI=
+			gsIdSQUubvfE2jnE98/bMmCHTlmFlctaPgQ5Yl3qVTY=
 			</data>
 		</dict>
 		<key>Headers/AnyThinkSDK.h</key>

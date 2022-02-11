@@ -35,7 +35,6 @@ extern NSString *const kATAdLoadingExtraGDTEnableDefaultAudioSessionKey;
  */
 -(void) loadADWithPlacementID:(NSString*)placementID extra:(NSDictionary*)extra customData:(NSDictionary*)customData delegate:(id<ATAdLoadingDelegate>)delegate DEPRECATED_ATTRIBUTE;
 -(void) loadADWithPlacementID:(NSString*)placementID extra:(NSDictionary*)extra delegate:(id<ATAdLoadingDelegate>)delegate;
-
 -(void) clearCache DEPRECATED_ATTRIBUTE;
 
 - (void)setExludePlacementid:(NSString *)placementid unitIDArray:(NSArray <NSString *> *)unitIDArray;

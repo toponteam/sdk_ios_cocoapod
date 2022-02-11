@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "AnyThinkiOS"
-  spec.version      = "5.8.11"
+  spec.version      = "5.7.99"
   spec.summary      = "A short description of AnyThink SDK for iOS."
   spec.description  = <<-DESC
             TopOn SDK for developer
@@ -211,7 +211,7 @@ Pod::Spec.new do |spec|
   end
  
     spec.subspec 'AnyThinkKlevinAdapter' do |ss|
-    ss.dependency 'AnyThinkKlevinSDK','2.4.1'
+    ss.dependency 'AnyThinkKlevinSDK','2.3.0'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkKlevinAdapter.framework'
