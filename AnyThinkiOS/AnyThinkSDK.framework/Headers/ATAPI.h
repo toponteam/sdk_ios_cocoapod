@@ -32,7 +32,6 @@ extern NSString *const kATADDelegateExtraOfferIDKey;
 extern NSString *const kATADDelegateExtraCreativeIDKey;
 extern NSString *const kATADDelegateExtraIsDeeplinkKey;
 extern NSString *const kATADDelegateExtraRVUserCustomData;
-extern NSString *const kATADDelegateExtraDismissTypeKey;
 
 extern NSString *const ATADShowingErrorDomain;
 

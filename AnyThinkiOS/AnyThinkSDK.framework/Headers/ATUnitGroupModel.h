@@ -11,6 +11,13 @@
 #import "ATMyOfferOfferModel.h"
 #import "ATBidInfo.h"
 
+
+typedef NS_ENUM(NSInteger, ATShowAutoLoadType) {
+    ATShowAutoOneAdSupportLoadType = 1,
+    ATShowAutoOneAdNotSupportLoadType,
+    ATShowAutoOneNetWorkNotSupportLoadType,
+};
+
 @interface ATUnitGroupModel : ATModel
 -(instancetype) initWithDictionary:(NSDictionary *)dictionary;
 @property(nonatomic, readonly, weak) Class adapterClass;
@@ -64,5 +71,12 @@
 @property(nonatomic, readonly) NSInteger weight;
 
 @property(nonatomic, copy) NSString *directOfferOid;
+
+
+
+@property(nonatomic, assign) ATShowAutoLoadType showAutoLoadType;
+
+
+@property(nonatomic) NSInteger priority; // when ad is filterd 
 
 @end

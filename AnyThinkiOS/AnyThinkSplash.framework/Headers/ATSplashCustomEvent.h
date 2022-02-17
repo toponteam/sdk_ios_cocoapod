@@ -11,15 +11,6 @@
 extern NSString *const kATSplashExtraRequestIDKey;
 @class ATSplash;
 @protocol ATSplashDelegate;
-
-typedef NS_OPTIONS(NSInteger, ATSplashCloseType) {
-    ATSplashCloseNuknow = 1,            // splash close type unknow
-    ATSplashCloseSkip = 2,              // splash skip to close
-    ATSplashCloseCountdown = 3,         // splash countdown to close
-    ATSplashCloseClickcontent = 4,      // splash clickcontent to close
-    ATSplashCloseShowfail = 99          // splash showfail to close
-};
-
 @interface ATSplashCustomEvent : ATAdCustomEvent
 -(instancetype) initWithInfo:(NSDictionary*)serverInfo localInfo:(NSDictionary*)localInfo;
 @property(nonatomic, weak) id<ATSplashDelegate> delegate;
@@ -29,7 +20,7 @@ typedef NS_OPTIONS(NSInteger, ATSplashCloseType) {
 -(NSDictionary*)delegateExtra;
 -(void) trackShowWithoutWaterfall;
 -(void) trackClickWithoutWaterfall;
--(void) trackSplashAdClosed __attribute__((deprecated("Deprecated, please Use `trackSplashAdClosed:`")));
+-(void) trackSplashAdClosed;
 -(void) trackSplashAdLoaded:(id)splashAd;
 -(void) trackSplashAdLoaded:(id)splashAd adExtra:(NSDictionary *)adExtra;
 -(void) trackSplashAdShow;
@@ -47,8 +38,5 @@ typedef NS_OPTIONS(NSInteger, ATSplashCloseType) {
 -(void) trackSplashAdCountdownTime:(NSInteger)countdown;
 
 - (void)startCountdown:(NSDictionary *)localInfo countdownBlock:(void(^)(NSInteger time))block;
-
-// v5.7.99
--(void) trackSplashAdClosed:(NSDictionary *)extra;
 
 @end

@@ -23,6 +23,12 @@ typedef NS_ENUM(NSInteger, ATADShowType) {
     ATADShowTypeSerial = 1
 };
 
+typedef enum : NSUInteger {
+    ATLoadingApiUnknown,
+    ATLoadingApiTypeOld,
+    ATLoadingApiTypeNew,
+} ATLoadingApiType;
+
 typedef NS_ENUM(NSInteger, ATAdFormat) {
     ATAdFormatNative = 0,
     ATAdFormatRewardedVideo = 1,
@@ -102,18 +108,19 @@ extern NSString *const kATPlacementModelCustomDataKey;
 
 @property(nonatomic, readonly) NSTimeInterval bottomRreqts;     // bottomAd dalay request time
 
-
 @property(nonatomic, readonly) NSTimeInterval headerBiddingRequestTimeout;
 @property(nonatomic, readonly) NSTimeInterval headerBiddingRequestTolerateInterval;
 @property(nonatomic, readonly) NSString *S2SBidRequestAddress;
 @property(nonatomic, readonly) NSString *waterFallBidRequestAddress;
 
-
-
 @property(nonatomic, readonly) NSTimeInterval loadCapDuration;
 @property(nonatomic, readonly) NSInteger loadCap;
 
 @property(nonatomic, readonly) NSInteger expectedNumberOfOffers;
+
+
+@property(nonatomic, readonly) NSTimeInterval bidWaitTimeout;
+@property(nonatomic, readonly) NSTimeInterval reqWaitTimeout;
 
 @property(nonatomic, readonly) NSTimeInterval loadFailureInterval;
 @property(nonatomic, readonly) NSTimeInterval offerLoadingTimeout;
@@ -146,7 +153,7 @@ extern NSString *const kATPlacementModelCustomDataKey;
 
 @property(nonatomic, readonly) NSDictionary* olApiSettingDict;
 
-
+@property(nonatomic, readonly) NSInteger waterfallCheckTime;
 
 @property(nonatomic, readonly) NSString *currency;
 @property(nonatomic, readonly) NSString *exchangeRate;
@@ -192,6 +199,7 @@ extern NSString *const kATPlacementModelCustomDataKey;
 
 @property(nonatomic, readonly) NSString *exchRateC2U;
 
+@property(nonatomic) ATLoadingApiType loadingApiType;
 
 @property(nonatomic, assign) BOOL isExistHBAdSource;
 
