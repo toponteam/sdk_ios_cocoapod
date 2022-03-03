@@ -1,0 +1,6 @@
+framework module OfmMobrainAdapter {
+  umbrella header "OfmMobrainAdapter.h"
+
+  export *
+  module * { export * }
+}
