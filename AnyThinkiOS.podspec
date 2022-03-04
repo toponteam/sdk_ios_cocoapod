@@ -170,7 +170,7 @@ Pod::Spec.new do |spec|
     spec.subspec 'AnyThinkAdmobAdapter' do |ss|
     ss.dependency 'Google-Mobile-Ads-SDK','9.0.0'
     ss.dependency 'PersonalizedAdConsent'
-    ss.ios.deployment_target = '9.0'
+    ss.ios.deployment_target = '10.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkAdmobAdapter.framework'
   end
