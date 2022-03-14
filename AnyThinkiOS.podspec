@@ -17,7 +17,6 @@ Pod::Spec.new do |spec|
   spec.pod_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
   spec.libraries = 'c++', 'z', 'sqlite3', 'xml2', 'resolv'
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 armv7s arm64' }
-  spec.resource = 'AnyThinkiOS/LICENSE'
   spec.default_subspecs = 'AnyThinkSDK'
 
 
