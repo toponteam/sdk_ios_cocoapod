@@ -1,14 +1,14 @@
 Pod::Spec.new do |spec|
   spec.name         = "AnyThinkiOS"
-  spec.version      = "5.9.11"
+  spec.version      = "5.8.13"
   spec.summary      = "A short description of AnyThink SDK for iOS."
   spec.description  = <<-DESC
             TopOn SDK for developer
                    DESC
   spec.homepage     = "https://github.com/anythinkteam/sdk_ios_cocoapod"
-  spec.license      = { :type => "MIT", :file => "LICENSE" }
+  spec.license      = { :type => "MIT", :file => "AnyThinkiOS/LICENSE" }
   spec.author             = { "topon" => "developer@toponad.com" }
-  spec.source       = { :git => "https://github.com/toponteam/sdk_ios_cocoapod.git", :tag => spec.version.to_s }
+  spec.source       = { :http => "https://sdk-release.toponad.com/SDK_Release/v#{spec.version}/iOS/AnyThinkiOS.zip" }
   spec.ios.deployment_target = '9.0'
   spec.static_framework = true
   spec.requires_arc = true
@@ -17,8 +17,8 @@ Pod::Spec.new do |spec|
   spec.pod_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
   spec.libraries = 'c++', 'z', 'sqlite3', 'xml2', 'resolv'
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 armv7s arm64' }
+  spec.resource = 'AnyThinkiOS/LICENSE'
   spec.default_subspecs = 'AnyThinkSDK'
-
 
 
   spec.subspec 'AnyThinkSDK' do |ss|
