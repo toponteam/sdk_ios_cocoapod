@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
   spec.homepage     = "https://github.com/anythinkteam/sdk_ios_cocoapod"
   spec.license      = { :type => "MIT", :file => "AnyThinkiOS/LICENSE" }
   spec.author             = { "topon" => "developer@toponad.com" }
-  spec.source       = { :http => "https://topon-sdk-release.oss-cn-hangzhou.aliyuncs.com/SDK_Release/v#{spec.version}/iOS/AnyThinkiOS.zip" }
+  spec.source       = { :http => "https://topon-sdk-release.oss-accelerate.aliyuncs.com/SDK_Release/v#{spec.version}/iOS/AnyThinkiOS.zip" }
   spec.ios.deployment_target = '9.0'
   spec.static_framework = true
   spec.requires_arc = true
