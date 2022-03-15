@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "AnyThinkiOS"
-  spec.version      = "5.8.13"
+  spec.version      = "5.9.11"
   spec.summary      = "A short description of AnyThink SDK for iOS."
   spec.description  = <<-DESC
             TopOn SDK for developer
@@ -19,6 +19,7 @@ Pod::Spec.new do |spec|
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 armv7s arm64' }
   spec.resource = 'AnyThinkiOS/LICENSE'
   spec.default_subspecs = 'AnyThinkSDK'
+
 
 
   spec.subspec 'AnyThinkSDK' do |ss|

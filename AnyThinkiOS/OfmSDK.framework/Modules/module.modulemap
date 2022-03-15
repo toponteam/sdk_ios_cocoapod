@@ -1,6 +1,0 @@
-framework module OfmSDK {
-  umbrella header "OfmSDK.h"
-
-  export *
-  module * { export * }
-}
