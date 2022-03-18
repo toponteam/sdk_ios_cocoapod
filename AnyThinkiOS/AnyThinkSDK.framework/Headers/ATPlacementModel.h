@@ -23,6 +23,12 @@ typedef NS_ENUM(NSInteger, ATADShowType) {
     ATADShowTypeSerial = 1
 };
 
+
+typedef enum : NSUInteger {
+    ATLoadingRequestConcurrentFixedType = 1,
+    ATLoadingRequestConcurrentEqualPriceType = 2,
+} ATLoadingRequestModelType;
+
 typedef enum : NSUInteger {
     ATLoadingApiUnknown,
     ATLoadingApiTypeOld,
@@ -82,7 +88,11 @@ extern NSString *const kATPlacementModelCustomDataKey;
 /**
  * How many unit groups to be loaded concurrently
  */
-@property(nonatomic, readonly) NSInteger maxConcurrentRequestCount;
+
+@property(nonatomic, readonly) ATLoadingRequestModelType loadingRequestModelType;
+@property(nonatomic, readonly) NSInteger fixedMaxConcurrentRequestCount;
+@property(nonatomic, readonly) NSInteger equalPriceMaxConcurrentRequestCount;
+
 @property(nonatomic, readonly) NSString *psID;
 @property(nonatomic, readonly) NSString *sessionID;
 @property(nonatomic, readonly) ATADShowType showType;

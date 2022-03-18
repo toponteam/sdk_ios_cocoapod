@@ -19,6 +19,20 @@ extern NSString *const kATSDKFailedToLoadRewardedVideoADMsg;
 extern NSString *const kATSDKSplashADTooLongToLoadPlacementSettingMsg;
 extern NSString *const kATSDKImportIssueErrorReason;
 extern NSString *const kATAdAssetsAppIDKey;
+
+extern NSString *const kATAdCustomEventNotificationKey;
+
+typedef NS_OPTIONS(NSInteger, ATCustomEventType) {
+    ATCustomEventLoaded = 0,
+    ATCustomEventLoadFail = 1,
+    ATCustomEventShow = 2,
+    ATCustomEventShowFail = 3,
+    ATCustomEventClick = 4,
+    ATCustomEventClose = 5,
+    ATCustomEventDetailViewWillPresentScreen = 6,
+
+};
+
 @interface ATAdCustomEvent : NSObject
 +(NSDictionary*)customInfoWithUnitGroupModel:(ATUnitGroupModel*)unitGroupModel extra:(NSDictionary*)extra;
 -(instancetype) initWithUnitID:(NSString*)unitID serverInfo:(NSDictionary*)serverInfo localInfo:(NSDictionary*)localInfo;
