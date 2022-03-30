@@ -26,7 +26,7 @@
 		</data>
 		<key>Headers/ATAdCustomEvent.h</key>
 		<data>
-		GWvQG+4hqhZjYwUQN0rFYKgfdVM=
+		L559MaYjcBEUCqd+zG4mXCcaGxE=
 		</data>
 		<key>Headers/ATAdLoadingDelegate.h</key>
 		<data>
@@ -106,7 +106,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		tPSRQdXx24vWde3JbBE9eqV9eSA=
+		QgptXIOgZwbZULVcrhzC9kz1iWQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -174,11 +174,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			GWvQG+4hqhZjYwUQN0rFYKgfdVM=
+			L559MaYjcBEUCqd+zG4mXCcaGxE=
 			</data>
 			<key>hash2</key>
 			<data>
-			23ErrtUSa1Qds8O/AWXBGZqi5cSRlg3IH8m7FD4LP3k=
+			/rvFF3DcaQxlon4uHJSdtCMlCX9jO7mA8A5byLQoTJk=
 			</data>
 		</dict>
 		<key>Headers/ATAdLoadingDelegate.h</key>

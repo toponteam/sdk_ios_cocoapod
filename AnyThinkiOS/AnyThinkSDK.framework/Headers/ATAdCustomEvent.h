@@ -30,7 +30,7 @@ typedef NS_OPTIONS(NSInteger, ATCustomEventType) {
     ATCustomEventClick = 4,
     ATCustomEventClose = 5,
     ATCustomEventDetailViewWillPresentScreen = 6,
-
+    ATCustomEventCloseBeforeViewAppear = 7, 
 };
 
 @interface ATAdCustomEvent : NSObject
