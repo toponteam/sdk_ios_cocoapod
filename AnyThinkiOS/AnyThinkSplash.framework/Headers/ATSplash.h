@@ -34,9 +34,6 @@
 @property(nonatomic, readonly, weak) ATWaterfall *finalWaterfall;
 @property(nonatomic, readonly) NSInteger autoReqType;
 @property(nonatomic) BOOL adReportClicked;
-@property(nonatomic) BOOL isNativeSplash;
-@property(nonatomic) NSDictionary *assets;
-@property(nonatomic) NSObject *delegateObject;
 
 //to do
 // for ad which loads without a placement setting

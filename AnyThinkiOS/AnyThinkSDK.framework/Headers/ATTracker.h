@@ -63,10 +63,6 @@ extern NSString *const kATTrackerExtraPlacementModelKey;
 extern NSString *const kATTrackerExtraAdCacheStatusKey;
 extern NSString *const kATTrackerExtraAdRequestUsedTimeKey;
 
-extern NSString *const kATTrackerExtralReqParTypeKey;
-
-extern NSString *const kATTrackerExtralReqParNumKey;
-
 // ofm
 extern NSString *const kATTrackerExtraOFMTrafficIDKey;
 extern NSString *const kATTrackerExtraOFMSystemKey;
