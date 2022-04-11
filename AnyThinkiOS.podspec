@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "AnyThinkiOS"
-  spec.version      = "5.8.13"
+  spec.version      = "5.9.32"
   spec.summary      = "A short description of AnyThink SDK for iOS."
   spec.description  = <<-DESC
             TopOn SDK for developer
@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
   spec.homepage     = "https://github.com/anythinkteam/sdk_ios_cocoapod"
   spec.license      = { :type => "MIT", :file => "AnyThinkiOS/LICENSE" }
   spec.author             = { "topon" => "developer@toponad.com" }
-  spec.source       = { :http => "https://topon-sdk-release.oss-accelerate.aliyuncs.com/SDK_Release/v#{spec.version}/iOS/AnyThinkiOS.zip" }
+  spec.source       = { :http => "https://topon-sdk-release.oss-cn-hangzhou.aliyuncs.com/SDK_Release/v#{spec.version}/iOS/AnyThinkiOS.zip" }
   spec.ios.deployment_target = '9.0'
   spec.static_framework = true
   spec.requires_arc = true
@@ -35,7 +35,7 @@ Pod::Spec.new do |spec|
   end
   
     spec.subspec 'AnyThinkGDTAdapter' do |ss|
-    ss.dependency 'GDTMobSDK','4.13.50'
+    ss.dependency 'GDTMobSDK','4.13.61'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkGDTAdapter.framework'
@@ -182,12 +182,12 @@ Pod::Spec.new do |spec|
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkFacebookAdapter.framework'
   end
   
-    spec.subspec 'AnyThinkMopubAdapter' do |ss|
-    ss.dependency 'mopub-ios-sdk','5.18.0'
-    ss.ios.deployment_target = '10.0'
-    ss.dependency 'AnyThinkiOS/AnyThinkSDK'
-    ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkMopubAdapter.framework'
-  end
+  #   spec.subspec 'AnyThinkMopubAdapter' do |ss|
+  #   ss.dependency 'mopub-ios-sdk','5.18.0'
+  #   ss.ios.deployment_target = '10.0'
+  #   ss.dependency 'AnyThinkiOS/AnyThinkSDK'
+  #   ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkMopubAdapter.framework'
+  # end
   
     spec.subspec 'AnyThinkKidozAdapter' do |ss|
     ss.dependency 'AnyThinkKidozSDK','1.3.6'

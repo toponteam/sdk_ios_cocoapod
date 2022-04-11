@@ -1,6 +1,0 @@
-framework module AnyThinkMobrainAdapter {
-  umbrella header "AnyThinkMobrainAdapter.h"
-
-  export *
-  module * { export * }
-}
