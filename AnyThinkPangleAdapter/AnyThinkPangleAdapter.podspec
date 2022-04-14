@@ -17,7 +17,7 @@ TODO: Add long description of the pod here.
 
   s.homepage         = 'https://github.com/bo/AnyThinkPangleAdapter'
   s.author = { 'topon' => 'developer@toponad.com' }
-  s.license = { :type => "MIT", :file => "AnyThinkiOS/LICENSE" }
+  s.license = { :type => "MIT", :file => "#{s.name}-#{s.version}/LICENSE" }
 
   s.ios.deployment_target = '9.0'
   s.static_framework = true

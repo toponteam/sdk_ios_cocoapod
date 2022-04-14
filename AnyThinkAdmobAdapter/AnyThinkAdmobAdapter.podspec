@@ -15,9 +15,9 @@ Pod::Spec.new do |s|
      TopOn SDK for developer
                        DESC
 
-  s.homepage         = 'https://github.com/bo/AnyThinkAdmobAdapter'
+  s.homepage = 'https://github.com/bo/AnyThinkAdmobAdapter'
   s.author = { 'topon' => 'developer@toponad.com' }
-  s.license = { :type => "MIT", :file => "AnyThinkiOS/LICENSE" }
+  s.license = { :type => "MIT", :file => "#{s.name}-#{s.version}/LICENSE" }
 
   s.ios.deployment_target = '10.0'
   s.static_framework = true
@@ -37,7 +37,7 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = "#{s.name}-5.9.32/#{s.name}.framework"
   # s.vendored_frameworks = "#{s.name}-#{s.version}/#{s.name}.framework"
 
-  s.dependency 'AnyThinkiOS','5.9.30'
+  s.dependency 'AnyThinkiOS','5.9.32'
   s.dependency 'Google-Mobile-Ads-SDK','9.0.0'
   s.dependency 'PersonalizedAdConsent'
 

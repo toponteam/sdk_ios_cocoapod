@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.homepage = 'https://github.com/bo/AnyThinkApplovinAdapter'
   s.author = { 'topon' => 'developer@toponad.com' }
-  s.license = { :type => "MIT", :file => "AnyThinkiOS/LICENSE" }
+  s.license = { :type => "MIT", :file => "#{s.name}-#{s.version}/LICENSE" }
 
   s.ios.deployment_target = '9.0'
   s.static_framework = true
@@ -37,7 +37,7 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = "#{s.name}-5.9.32/#{s.name}.framework"
   # s.vendored_frameworks = "#{s.name}-#{s.version}/#{s.name}.framework"
 
-  s.dependency 'AnyThinkiOS','5.9.30'
+  s.dependency 'AnyThinkiOS','5.9.32'
   s.dependency 'AppLovinSDK','10.3.7'
 
 
