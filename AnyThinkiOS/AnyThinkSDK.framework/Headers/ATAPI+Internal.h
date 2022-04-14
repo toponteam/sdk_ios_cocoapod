@@ -9,6 +9,7 @@
 #ifndef ATAPI_Internal_h
 #define ATAPI_Internal_h
 #import "ATAPI.h"
+
 extern NSString *const kATNativeADAssetsAdvertiserKey;
 extern NSString *const kATNativeADAssetsMainTextKey;
 extern NSString *const kATNativeADAssetsMainTitleKey;
@@ -70,6 +71,7 @@ extern NSString *const kATADUserAreaKey;
 @end
 
 @interface ATAPI(Internal)
++(ATLogType)logType;
 +(BOOL)logEnabled;
 +(BOOL)adLogoVisible;
 +(NSString *)hbTestModeDeviceID;

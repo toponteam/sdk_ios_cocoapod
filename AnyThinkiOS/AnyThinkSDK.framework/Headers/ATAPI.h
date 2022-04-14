@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+
 extern NSString *const kATADDelegateExtraECPMLevelKey;
 extern NSString *const kATADDelegateExtraSegmentIDKey;
 extern NSString *const kATADDelegateExtraScenarioIDKey;
@@ -193,6 +194,13 @@ typedef NS_ENUM(NSInteger, ATPersonalizedAdState) {
     ATNonpersonalizedAdStateType = 2
 };
 
+typedef NS_OPTIONS(NSInteger, ATLogType) {
+    ATLogTypeNone = 0,
+    ATLogTypeInternal = 1 << 0,
+    ATLogTypeExternal = 1 << 1,
+    ATLogTypeTemporary = 1 << 2
+};
+
 @interface ATAPI : NSObject
 
 +(NSDictionary<NSNumber*, NSString*>*)networkNameMap;
@@ -343,6 +351,7 @@ set header bidding test mode, only support incoming device idfa. setLogEnabled m
  */
 -(void) setPersonalizedAdState:(ATPersonalizedAdState)state;
 -(ATPersonalizedAdState) getPersonalizedAdState;
+
 @end
 
 
