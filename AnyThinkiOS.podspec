@@ -35,7 +35,7 @@ Pod::Spec.new do |spec|
   end
   
     spec.subspec 'AnyThinkGDTAdapter' do |ss|
-    ss.dependency 'GDTMobSDK','4.13.62'
+    ss.dependency 'GDTMobSDK','4.13.63'
     ss.ios.deployment_target = '9.0'
     ss.dependency 'AnyThinkiOS/AnyThinkSDK'
     ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkGDTAdapter.framework'
@@ -72,7 +72,7 @@ Pod::Spec.new do |spec|
   end
   
     spec.subspec 'AnyThinkKSAdapter' do |ss|
-    ss.dependency 'KSAdSDK','3.3.21'
+    ss.dependency 'KSAdSDK','3.3.23'
     ss.dependency 'SDWebImage'
     ss.dependency 'MJExtension'
     ss.dependency 'AFNetworking'
