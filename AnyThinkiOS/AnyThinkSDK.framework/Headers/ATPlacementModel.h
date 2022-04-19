@@ -31,8 +31,10 @@ typedef enum : NSUInteger {
 
 typedef enum : NSUInteger {
     ATLoadingApiUnknown,
-    ATLoadingApiTypeOld,
-    ATLoadingApiTypeNew,
+    ATLoadingApiTypeDefault, // Default load
+    ATLoadingApiTypeAuto, // Automatic load, note: It is not shared with the default load, as long as the automatic load is used, the default load cannot be initiated
+    ATLoadingApiTypeSuccessRetry, // Retry load after successful callback
+    ATLoadingApiTypeFailRetry // Retry load after failure callback
 } ATLoadingApiType;
 
 typedef NS_ENUM(NSInteger, ATAdFormat) {
@@ -107,6 +109,7 @@ extern NSString *const kATPlacementModelCustomDataKey;
 @property(nonatomic, readonly) NSTimeInterval unitPacing;
 @property(nonatomic, readonly) BOOL wifiAutoSwitch;
 @property(nonatomic, readonly) BOOL autoloadingEnabled;
+@property(nonatomic, readonly) NSArray<ATUnitGroupModel*>* allUnitGroups;
 @property(nonatomic, readonly) NSArray<ATUnitGroupModel*>* unitGroups;
 @property(nonatomic, readonly) NSArray<ATUnitGroupModel*>* headerBiddingUnitGroups;
 @property(nonatomic, readonly) NSArray<ATUnitGroupModel*>* S2SHeaderBiddingUnitGroups;
@@ -114,12 +117,14 @@ extern NSString *const kATPlacementModelCustomDataKey;
 @property(nonatomic, readonly) NSArray<ATUnitGroupModel*>* inhouseUnitGroups;
 @property(nonatomic, readonly) NSArray<ATUnitGroupModel*>* bksUnitGroups;
 @property(nonatomic, readonly) NSArray<ATUnitGroupModel*>* bottomListUnitGroups;
-@property(nonatomic, strong) NSArray <ATUnitGroupModel*>* directOfferHeaderBiddingUnitGroups;
+@property(nonatomic, readonly) NSArray<ATUnitGroupModel*>* directOfferHeaderBiddingUnitGroups;
 
 @property(nonatomic, readonly) NSTimeInterval bottomRreqts;     // bottomAd dalay request time
 
-@property(nonatomic, readonly) NSTimeInterval headerBiddingRequestTimeout;
-@property(nonatomic, readonly) NSTimeInterval headerBiddingRequestTolerateInterval;
+@property(nonatomic, readonly) NSTimeInterval headerBiddingRequestLongTimeout;
+
+@property(nonatomic, readonly) NSTimeInterval headerBiddingRequestShortTimeout;
+
 @property(nonatomic, readonly) NSString *S2SBidRequestAddress;
 @property(nonatomic, readonly) NSString *waterFallBidRequestAddress;
 
@@ -163,7 +168,7 @@ extern NSString *const kATPlacementModelCustomDataKey;
 
 @property(nonatomic, readonly) NSDictionary* olApiSettingDict;
 
-@property(nonatomic, readonly) NSInteger waterfallCheckTime;
+@property(nonatomic, readonly) NSInteger waterfallFillTime;
 
 @property(nonatomic, readonly) NSString *currency;
 @property(nonatomic, readonly) NSString *exchangeRate;
@@ -173,6 +178,8 @@ extern NSString *const kATPlacementModelCustomDataKey;
 
 // v5.7.10
 @property(nonatomic, readonly) NSString *campaign;
+
+
 
 -(Class) adManagerClass;
 
@@ -212,5 +219,6 @@ extern NSString *const kATPlacementModelCustomDataKey;
 @property(nonatomic) ATLoadingApiType loadingApiType;
 
 @property(nonatomic, assign) BOOL isExistHBAdSource;
+@property(nonatomic, assign) BOOL loadFailRetrySwitch;
 
 @end

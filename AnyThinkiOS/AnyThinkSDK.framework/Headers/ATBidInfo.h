@@ -18,6 +18,12 @@
 #define kATBiddingBiddingFailedByExcludedCode -8
 #define kATBiddingBiddingFailedIntegrationErrorCode -9
 
+typedef NS_ENUM(NSInteger, ATHBAdvanceRequestType) {
+    ATHBAdvanceRequestUnknownType = 0,
+    ATHBAdvanceRequestYesType,
+    ATHBAdvanceRequestNOType,
+};
+
 @interface ATBidInfo : ATModel
 @property(nonatomic, copy) NSDictionary *bidResult;
 @property(nonatomic, readonly) NSDate *expireDate;
@@ -36,6 +42,7 @@
 @property(nonatomic, readonly) NSString *nURL;
 @property(nonatomic, readonly) NSString *bURL;
 @property(nonatomic, readonly) NSString *bURLWin;
+@property(nonatomic, readwrite) NSTimeInterval bidTime;
 @property(nonatomic, readwrite) BOOL bidPriceSmallerlast;
 @property(nonatomic, readwrite) BOOL bidResultIsFailed;
 @property(nonatomic, readwrite) NSError *error;
@@ -43,8 +50,15 @@
 @property(nonatomic, readonly, getter=isExpired) BOOL expired;
 @property(nonatomic, readonly, getter=isSendNotif) BOOL sendNotif;
 @property(nonatomic, readonly, getter=isNoPrice) BOOL noPrice;
+// for load success retry send tk&da auto_req
+@property(nonatomic, readwrite) BOOL isLoadSuccessRetry;
+
+@property(nonatomic, assign) ATHBAdvanceRequestType HBAdvanceRequestType;
+
 +(instancetype) bidInfoWithPlacementID:(NSString*)placementID unitGroupUnitID:(NSString*)unitGroupUnitID adapterClassString:(NSString *)adapterClassString token:(NSString*)token price:(NSString*)price currencyType:(ATBiddingCurrencyType)currencyType expirationInterval:(NSTimeInterval)expirationInterval customObject:(id)customObject;
+
 -(instancetype) initWithDictionary:(NSDictionary*)dictionary placementID:(NSString*)placementID unitGroupUnitID:(NSString*)unitGroupUnitID adapterClassString:(NSString *)adapterClassString currencyType:(ATBiddingCurrencyType)currencyType expirationInterval:(NSTimeInterval)expirationInterval;
+
 -(void) invalidate;
 -(void) hasBeenSendNotif;
 -(NSDictionary *) serializationToDictionary;
