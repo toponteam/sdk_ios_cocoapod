@@ -8,20 +8,14 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AnyThinkKlevinAdapter'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of AnyThinkKlevinAdapter.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.version          = '0.1.1'
+  s.summary          = '#{s.name} used for mediation with the TopOn SDK'
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+     TopOn SDK for developer
                        DESC
 
-  s.homepage         = 'https://github.com/bo/AnyThinkKlevinAdapter'
+  s.homepage = 'https://github.com/CocoaPods/Specs/search?o=desc&q=#{s.name}&s=indexed'
   s.author = { 'topon' => 'developer@toponad.com' }
   s.license = { :type => "MIT", :file => "#{s.name}-#{s.version}/LICENSE" }
 
@@ -35,13 +29,10 @@ TODO: Add long description of the pod here.
 
   # s.source_files = 'AnyThinkKlevinAdapter/Classes/**/*'
   s.source = {
-    # :http => "https://topon-sdk-release.oss-cn-hangzhou.aliyuncs.com/SDK_Release/iOS_test/v5.9.32/iOS/iOS-mediation/#{s.name}-#{s.version}.zip",
-    # :http => "https://topon-sdk-release.oss-cn-hangzhou.aliyuncs.com/SDK_Release/iOS_test/#{s.version}/iOS/iOS-mediation/#{s.name}-#{s.version}.zip",
-    :http => "https://topon-sdk-release.oss-cn-hangzhou.aliyuncs.com/SDK_Release/iOS_test/v5.9.32/iOS/iOS-mediation/#{s.name}-5.9.32.zip",
+    :http => "https://topon-sdk-release.oss-cn-hangzhou.aliyuncs.com/Temp/v5.9.32/iOS/iOS-mediation/#{s.name}-#{s.version}.zip",
     :type => 'zip'
   }
-  s.vendored_frameworks = "#{s.name}-5.9.32/#{s.name}.framework"
-  # s.vendored_frameworks = "#{s.name}-#{s.version}/#{s.name}.framework"
+  s.vendored_frameworks = "#{s.name}-#{s.version}/#{s.name}.framework"
 
   s.dependency 'AnyThinkiOS','5.9.30'
   s.dependency 'AnyThinkKlevinSDK','2.4.1'

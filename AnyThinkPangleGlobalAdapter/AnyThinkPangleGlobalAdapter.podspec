@@ -8,14 +8,14 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AnyThinkPangleGlobalAdapter'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of AnyThinkPangleGlobalAdapter.'
+  s.version          = '0.1.1'
+  s.summary          = '#{s.name} used for mediation with the TopOn SDK'
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+     TopOn SDK for developer
                        DESC
 
-  s.homepage         = 'https://github.com/bo/AnyThinkPangleGlobalAdapter'
+  s.homepage = 'https://github.com/CocoaPods/Specs/search?o=desc&q=#{s.name}&s=indexed'
   s.author = { 'topon' => 'developer@toponad.com' }
   s.license = { :type => "MIT", :file => "#{s.name}-#{s.version}/LICENSE" }
 
@@ -29,12 +29,11 @@ TODO: Add long description of the pod here.
 
   # s.source_files = 'AnyThinkApplovinAdapter/Classes/**/*'
   s.source = {
-    :http => "http://topon-sdk-release.oss-cn-hangzhou.aliyuncs.com/SDK_Release/iOS_test/v5.9.32/iOS/iOS-mediation/AnyThinkPangleAdapter-5.9.32.zip",
-    :http => "http://topon-sdk-release.oss-cn-hangzhou.aliyuncs.com/SDK_Release/iOS_test/v5.9.32/iOS/iOS-mediation/AnyThinkTTAdapter-5.9.32.zip",
+    :http => "http://topon-sdk-release.oss-cn-hangzhou.aliyuncs.com/Temp/v5.9.32/iOS/iOS-mediation/AnyThinkPangleAdapter-#{s.version}.zip",
+    :http => "http://topon-sdk-release.oss-cn-hangzhou.aliyuncs.com/Temp/v5.9.32/iOS/iOS-mediation/AnyThinkTTAdapter-#{s.version}.zip",
     :type => 'zip'
   }
-  s.vendored_frameworks ='AnyThinkPangleAdapter-5.9.32/AnyThinkPangleAdapter.framework','AnyThinkTTAdapter-5.9.32/AnyThinkTTAdapter.framework'
-  # s.vendored_frameworks = "#{s.name}-#{s.version}/#{s.name}.framework"
+  s.vendored_frameworks ='AnyThinkPangleAdapter-#{s.version}/AnyThinkPangleAdapter.framework','AnyThinkTTAdapter-#{s.version}/AnyThinkTTAdapter.framework'
 
   s.dependency 'AnyThinkiOS','5.9.30'
   s.dependency 'Ads-CN-Beta','4.3.0.2'

@@ -220,8 +220,10 @@ Pod::Spec.new do |spec|
   #   spec.subspec 'AnyThinkPangleGlobalAdapter' do |ss|
   #   ss.dependency 'Ads-CN-Beta','4.3.0.2'
   #   ss.dependency 'Ads-CN-Beta/International','4.3.0.2'
+  
   #   # ss.dependency 'Ads-CN','3.9.0.4'
   #   # ss.dependency 'Ads-CN/International','3.9.0.4'
+  
   #   ss.ios.deployment_target = '9.0'
   #   ss.dependency 'AnyThinkiOS/AnyThinkSDK'
   #   ss.vendored_frameworks = 'AnyThinkiOS/AnyThinkPangleAdapter.framework','AnyThinkiOS/AnyThinkTTAdapter.framework'
