@@ -8,8 +8,18 @@
 
 #ifndef ATBannerAdapter_h
 #define ATBannerAdapter_h
+
 @class ATBanner;
+
 @protocol ATBannerAdapter<ATAdAdapter>
-+(void) showBanner:(ATBanner*)banner inView:(UIView*)view presentingViewController:(UIViewController*)viewController;
+
+/// Show the banner ad
+/// @param banner - banner object
+/// @param view - container view
+/// @param viewController - container vc
++ (void)showBanner:(ATBanner *)banner
+            inView:(UIView *)view
+presentingViewController:(UIViewController *)viewController;
+
 @end
 #endif /* ATBannerAdapter_h */

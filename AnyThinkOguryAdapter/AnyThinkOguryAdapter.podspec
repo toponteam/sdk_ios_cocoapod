@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AnyThinkOguryAdapter'
-  s.version          = '0.1.1'
+  s.version          = '5.9.32'
   s.summary          = '#{s.name} used for mediation with the TopOn SDK'
 
   s.description      = <<-DESC

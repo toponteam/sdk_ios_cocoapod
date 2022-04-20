@@ -7,8 +7,9 @@
 //
 
 #import <AnyThinkSDK/AnyThinkSDK.h>
+
 extern NSString *const kATSplashExtraCountdownKey;
-extern NSString *const kATSplashExtraTolerateTimeoutKey;
+extern NSString *const kATSplashExtraTolerateTimeoutKey; //Timeout duration
 extern NSString *const kATSplashExtraHideSkipButtonFlagKey;
 extern NSString *const kATSplashExtraBackgroundImageKey;
 extern NSString *const kATSplashExtraBackgroundColorKey;
@@ -20,63 +21,71 @@ extern NSString *const kATSplashExtraShowDirectionKey;//Supported by KS Splash, 
 extern NSString *const kATSplashExtraCountdownIntervalKey;
 
 extern NSString *const kATSplashExtraPlacementIDKey;
-extern NSString *const kATSplashExtraNetworkFirmID;
-extern NSString *const kATSplashExtraAdSourceIDKey;
-//#pragma mark - Mintegral
-//extern NSString *const kATSplashExtraMintegralAppKey;
-//extern NSString *const kATSplashExtraMintegralAppID;
-//extern NSString *const kATSplashExtraMintegralPlacementID;
-//extern NSString *const kATSplashExtraMintegralUnitID;
-//#pragma mark - GDT
-//extern NSString *const kATSplashExtraGDTAppID;
-//extern NSString *const kATSplashExtraGDTUnitID;
-//#pragma mark - TT
-//extern NSString *const kATSplashExtraAppID;
-//extern NSString *const kATSplashExtraSlotID;
-//extern NSString *const kATSplashExtraPersonalizedTemplateFlag;
-//extern NSString *const kATSplashExtraZoomOutKey;
-//#pragma mark - Baidu
-//extern NSString *const kATSplashExtraBaiduAppID;
-//extern NSString *const kATSplashExtraBaiduAdPlaceID;
-//#pragma mark - Sigmob
-//extern NSString *const kATSplashExtraSigmobAppKey;
-//extern NSString *const kATSplashExtraSigmobAppID;
-//extern NSString *const kATSplashExtraSigmobPlacementID;
-//#pragma mark - Admob
-//extern NSString *const kATSplashExtraAdmobAppID;
-//extern NSString *const kATSplashExtraAdmobUnitID;
-//extern NSString *const kATSplashExtraAdmobOrientation;
-//#pragma mark - KuaiShou
-//extern NSString *const kATSplashExtraKSAppID ;
-//extern NSString *const kATSplashExtraKSPosID;
-//
-//extern NSString *const kATAdLoadingExtraSplashAdSizeKey;
-//extern NSString *const kATSplashExtraRootViewControllerKey;
-//
-//#pragma mark - Klevin
-//extern NSString *const kATSplashExtraKlevinPosID;
-//extern NSString *const kATSplashExtraKlevinAppID;
-
-//extern NSString *const kATSplashExtraConfigKey;
-
+extern NSString *const kATSplashExtraNetworkFirmID; //Ad platform FirmID
+extern NSString *const kATSplashExtraAdSourceIDKey; //Ad source ID
+ 
 @protocol ATSplashDelegate;
+
 @interface ATAdManager (Splash)
-- (void)loadADWithPlacementID:(NSString *)placementID extra:(NSDictionary *)extra delegate:(id<ATSplashDelegate>)delegate containerView:(UIView *)containerView;
-- (void)loadADWithPlacementID:(NSString *)placementID extra:(NSDictionary *)extra delegate:(id<ATSplashDelegate>)delegate containerView:(UIView *)containerView defaultAdSourceConfig:(NSString *)defaultAdSourceConfig;
 
-- (void)checkAdSourceList:(NSString*)placementID;
-- (void)showSplashWithPlacementID:(NSString*)placementID window:(UIWindow*)window delegate:(id<ATSplashDelegate>)delegate;
+/// Called when load ad
+/// @param placementID - the placementId string of the Ad that display.
+/// @param extra - local configuration parameter
+/// @param delegate - delegate object
+/// @param containerView - Bottom view
+- (void)loadADWithPlacementID:(NSString *)placementID
+                        extra:(NSDictionary *)extra
+                     delegate:(id<ATSplashDelegate>)delegate
+                containerView:(UIView *)containerView;
 
-// v5.7.61+
-- (void)showSplashWithPlacementID:(NSString*)placementID window:(UIWindow*)window extra:(NSDictionary *)extra delegate:(id<ATSplashDelegate>)delegate;
+/// Called when load ad
+/// @param defaultAdSourceConfig - default ad sourceConfig string, only used to solve the first screen loading timeout
+/// Note: The default ad load timeout is 5s
+- (void)loadADWithPlacementID:(NSString *)placementID
+                        extra:(NSDictionary *)extra
+                     delegate:(id<ATSplashDelegate>)delegate
+                containerView:(UIView *)containerView
+        defaultAdSourceConfig:(NSString *)defaultAdSourceConfig;
 
-- (void)showSplashWithPlacementID:(NSString*)placementID window:(UIWindow*)window windowScene:(UIWindowScene *)windowScene delegate:(id<ATSplashDelegate>)delegate API_AVAILABLE(ios(13.0));
+/// Called when Display Splash ads
+/// @param window window where ads are displayed
+- (void)showSplashWithPlacementID:(NSString *)placementID
+                           window:(UIWindow *)window
+                         delegate:(id<ATSplashDelegate>)delegate;
+/// v5.7.61+
+- (void)showSplashWithPlacementID:(NSString *)placementID
+                           window:(UIWindow *)window
+                            extra:(NSDictionary *)extra
+                         delegate:(id<ATSplashDelegate>)delegate;
+/// available ios 13.0
+- (void)showSplashWithPlacementID:(NSString *)placementID
+                           window:(UIWindow *)window
+                      windowScene:(UIWindowScene *)windowScene
+                         delegate:(id<ATSplashDelegate>)delegate API_AVAILABLE(ios(13.0));
+
+/// check whether the splash ad is ready
+/// v5.7.06+
 - (BOOL)splashReadyForPlacementID:(NSString *)placementID;
-- (BOOL)splashReadyForPlacementID:(NSString *)placementID sendTK:(BOOL)send;
 
-- (ATCheckLoadModel*)checkSplashLoadStatusForPlacementID:(NSString *)placementID;
+/// check whether the splash ad is ready
+/// @param send - whether send tk
+- (BOOL)splashReadyForPlacementID:(NSString *)placementID
+                           sendTK:(BOOL)send;
+
+/// Get the status object of the current ad slot ATCheckLoadModel
+- (ATCheckLoadModel *)checkSplashLoadStatusForPlacementID:(NSString *)placementID;
+
+/// Query all cached information of the ad slot
 - (NSArray<NSDictionary *> *)getSplashValidAdsForPlacementID:(NSString *)placementID;
 
-- (void)entrySplashScenarioWithPlacementID:(NSString *)placementID scene:(NSString *)scene;
+/// Get various parameters of the advertising platform
+- (void)checkAdSourceList:(NSString*)placementID;
+
+
+/// Enter the current ad slot cache status statistics in the business scenario.
+/// @param scene - ad Scenario
+/// v5.7.91+
+- (void)entrySplashScenarioWithPlacementID:(NSString *)placementID
+                                     scene:(NSString *)scene;
 
 @end

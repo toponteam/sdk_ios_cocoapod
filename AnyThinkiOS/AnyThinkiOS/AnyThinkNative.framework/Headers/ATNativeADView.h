@@ -16,8 +16,8 @@ typedef NS_ENUM(NSInteger, ATNativeAdRenderType) {
 };
 
 typedef NS_ENUM(NSInteger, ATNativeAdType) {
-    ATNativeAdTypeFeed = 1,
-    ATNativeAdTypePaster = 2
+    ATNativeAdTypeFeed = 1, //In-feed Ads (Native Ads)
+    ATNativeAdTypePaster = 2 //Patch Ads
 };
 
 typedef NS_ENUM(NSInteger, ATPlayerStatus) {

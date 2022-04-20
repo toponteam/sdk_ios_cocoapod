@@ -10,22 +10,51 @@
 #define ATInterstitialDelegate_h
 #import <AnyThinkSDK/AnyThinkSDK.h>
 
-extern NSString *const kATInterstitialDelegateExtraNetworkIDKey;
-extern NSString *const kATInterstitialDelegateExtraAdSourceIDKey;
+extern NSString *const kATInterstitialDelegateExtraNetworkIDKey; // Network Firm Id of Interstitial
+extern NSString *const kATInterstitialDelegateExtraAdSourceIDKey; // ad source ID of Interstitial
+extern NSString *const kATInterstitialDelegateExtraAdSourceIsHeaderBidding; // Whether the ad source is head bidding,1: yes, 2: no
+extern NSString *const kATInterstitialDelegateExtraPrice; // Get Estimate eCPM
+extern NSString *const kATInterstitialDelegateExtraPriority; // the sort of the current Interstitial ad source in WaterFall
+
 extern NSString *const kATInterstitialDelegateExtraIsHeaderBidding DEPRECATED_MSG_ATTRIBUTE("The kATInterstitialDelegateExtraIsHeaderBidding class will be obsolete, please use kATInterstitialDelegateExtraAdSourceIsHeaderBidding");
-extern NSString *const kATInterstitialDelegateExtraAdSourceIsHeaderBidding;
-extern NSString *const kATInterstitialDelegateExtraPrice;
-extern NSString *const kATInterstitialDelegateExtraPriority;
+
 @protocol ATInterstitialDelegate<ATAdLoadingDelegate>
 
--(void) interstitialDidShowForPlacementID:(NSString*)placementID extra:(NSDictionary*)extra;
--(void) interstitialFailedToShowForPlacementID:(NSString*)placementID error:(NSError*)error extra:(NSDictionary*)extra;
--(void) interstitialDidStartPlayingVideoForPlacementID:(NSString*)placementID extra:(NSDictionary*)extra;
--(void) interstitialDidEndPlayingVideoForPlacementID:(NSString*)placementID extra:(NSDictionary*)extra;
--(void) interstitialDidFailToPlayVideoForPlacementID:(NSString*)placementID error:(NSError*)error extra:(NSDictionary*)extra;
--(void) interstitialDidCloseForPlacementID:(NSString*)placementID extra:(NSDictionary*)extra;
--(void) interstitialDidClickForPlacementID:(NSString*)placementID extra:(NSDictionary*)extra;
--(void) interstitialDeepLinkOrJumpForPlacementID:(NSString*)placementID extra:(NSDictionary*)extra result:(BOOL)success;
+/// Interstitial ad displayed successfully
+- (void)interstitialDidShowForPlacementID:(NSString *)placementID
+                                    extra:(NSDictionary *)extra;
+
+/// Interstitial ad display failed
+- (void)interstitialFailedToShowForPlacementID:(NSString *)placementID
+                                         error:(NSError*)error
+                                         extra:(NSDictionary *)extra;
+
+/// Interstitial video ad playback start
+- (void)interstitialDidStartPlayingVideoForPlacementID:(NSString *)placementID
+                                                 extra:(NSDictionary *)extra;
+
+/// Interstitial playback end
+- (void)interstitialDidEndPlayingVideoForPlacementID:(NSString *)placementID
+                                               extra:(NSDictionary *)extra;
+
+/// Interstitial playback fail
+- (void)interstitialDidFailToPlayVideoForPlacementID:(NSString *)placementID
+                                               error:(NSError*)error
+                                               extra:(NSDictionary *)extra;
+
+/// Interstitial ad closed
+- (void)interstitialDidCloseForPlacementID:(NSString *)placementID
+                                     extra:(NSDictionary *)extra;
+
+/// Interstitial ad clicked
+- (void)interstitialDidClickForPlacementID:(NSString *)placementID
+                                     extra:(NSDictionary *)extra;
+
+/// Whether the click jump on the interstitial advertisement is in the form of Deeplink
+/// currently only returns for TopOn Adx advertisements
+- (void)interstitialDeepLinkOrJumpForPlacementID:(NSString *)placementID
+                                           extra:(NSDictionary *)extra
+                                          result:(BOOL)success;
 
 
 @end

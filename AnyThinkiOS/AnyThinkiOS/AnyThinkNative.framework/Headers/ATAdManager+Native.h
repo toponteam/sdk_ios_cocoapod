@@ -104,27 +104,55 @@ typedef NS_ENUM(NSInteger, ATGDTNativeAdType) {
 @end
 
 @interface ATAdManager (Native)
--(BOOL) nativeAdReadyForPlacementID:(NSString*)placementID;
+
 /**
  * This method uses the renderingViewClass you specify in the configuration to create an instance and:
  1) returns it(for networks Facebook, Inmobi, Mintegral, Admob, Flurry, Applovin) or
  2) adds it to a superView and returns the super view instead(for network Mopub).
  * To retrieve the instance of the class you specify as the rendering view class, cast the returned view to ATNativeADView and call its embededAdView method(the view returned might not be of class ATNativeADView).
  */
-- (__kindof UIView*) retriveAdViewWithPlacementID:(NSString*)placementID configuration:(ATNativeADConfiguration*)configuration;
-- (__kindof UIView*) retriveAdViewWithPlacementID:(NSString*)placementID configuration:(ATNativeADConfiguration*)configuration scene:(NSString *)scene;
+/// Get Native ad view
+/// @param placementID - TopOn's ad placement id
+/// @param configuration - Configuration parameter
+- (__kindof UIView *)retriveAdViewWithPlacementID:(NSString *)placementID
+                                    configuration:(ATNativeADConfiguration *)configuration;
 
-- (ATNativeAdOffer*) getNativeAdOfferWithPlacementID:(NSString*)placementID;
-- (ATNativeAdOffer*) getNativeAdOfferWithPlacementID:(NSString*)placementID scene:(NSString *)scene;
+/// Get Native Ad View
+/// @param placementID - TopOn's ad placement id
+/// @param configuration - Configuration parameter
+/// @param scene - Scene id
+- (__kindof UIView *)retriveAdViewWithPlacementID:(NSString *)placementID
+                                    configuration:(ATNativeADConfiguration *)configuration
+                                            scene:(NSString *)scene;
 
-- (ATCheckLoadModel*)checkNativeLoadStatusForPlacementID:(NSString*)placementID;
+/// Get Native creative
+- (ATNativeAdOffer *)getNativeAdOfferWithPlacementID:(NSString *)placementID;
 
-// v5.7.53+
+/// Get Native creative
+/// @param placementID - TopOn's ad placement id
+/// @param scene - scene id
+- (ATNativeAdOffer *)getNativeAdOfferWithPlacementID:(NSString *)placementID
+                                               scene:(NSString *)scene;
+
+/// check whether the native ad is ready
+- (BOOL)nativeAdReadyForPlacementID:(NSString *)placementID;
+
+/// Get the status object of the current ad slot ATCheckLoadModel
+/// v5.7.06+
+- (ATCheckLoadModel *)checkNativeLoadStatusForPlacementID:(NSString *)placementID;
+
+/// Query all cached information of the ad slot
+/// v5.7.53+
 - (NSArray<NSDictionary *> *)getNativeValidAdsForPlacementID:(NSString *)placementID;
 
 
-- (void) setBaiduTemplateRenderingAttribute:(id<ATBaiduTemplateRenderingAttributeDelegate> )baiduTemplateRenderingAttribute;
+- (void)setBaiduTemplateRenderingAttribute:(id<ATBaiduTemplateRenderingAttributeDelegate>)baiduTemplateRenderingAttribute;
 
-- (void)entryNativeScenarioWithPlacementID:(NSString *)placementID scene:(NSString *)scene;
+
+///  Enter the current ad slot cache status statistics in the business scenario.
+/// @param scene - ad Scenario
+/// v5.7.91+
+- (void)entryNativeScenarioWithPlacementID:(NSString *)placementID
+                                     scene:(NSString *)scene;
 
 @end

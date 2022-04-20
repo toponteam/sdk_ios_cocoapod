@@ -24,15 +24,20 @@ typedef NS_ENUM(NSInteger, ATUnitGroupFinishType) {
 @interface ATWaterfallWrapper:NSObject
 -(void) finish;
 -(void) fill;
+-(void) hasBeenShow;
 //-(void) callback;
 -(ATUnitGroupModel*) filledUnitGroupWithMaximumPrice;
+-(ATUnitGroupModel*) filledUnitGroupPriceWithExpectedIndex:(NSInteger)index;
 - (ATUnitGroupModel *)requestingUnitGroupMaxPriceWithFilteredUnitID:(NSString *)unitID;
 @property(nonatomic) NSInteger numberOfCachedOffers;
 @property(nonatomic, readonly, getter=isFilled) BOOL filled;
 //@property(nonatomic, readonly, getter=isCallbacked) BOOL callbacked;
 @property(nonatomic) BOOL headerBiddingFired;
 @property(nonatomic) BOOL headerBiddingFailed;
+@property(nonatomic) BOOL hasBeenShowInWaterfall;
 @property(nonatomic, readonly) dispatch_queue_t access_queue;
+
+@property(nonatomic, assign) BOOL isFillTimeout;
 
 @end
 
@@ -42,12 +47,17 @@ typedef NS_ENUM(NSInteger, ATUnitGroupFinishType) {
 -(void) finishUnitGroup:(ATUnitGroupModel*)unitGroup withType:(ATUnitGroupFinishType)type;
 -(void) addUnitGroup:(ATUnitGroupModel*)unitGroup;
 -(void) insertUnitGroup:(ATUnitGroupModel*)unitGroup price:(NSString *)price;
--(void) insertUnitGroup:(ATUnitGroupModel*)unitGroup price:(NSString *)price filtered:(BOOL)filtered;
 
 -(ATUnitGroupModel*) firstPendingNonHBUnitGroupWithNetworkFirmID:(NSInteger)nwFirmID;
 -(ATUnitGroupModel*) unitGroupWithUnitID:(NSString*)unitID;
 -(ATUnitGroupModel*) unitGroupWithMaximumPrice;
 -(ATUnitGroupModel*) unitGroupWithMinimumPrice;
+
+-(ATUnitGroupModel*) advanceUnitGroupWithMaximumPrice;
+-(void) advanceRequestUnitGroup:(ATUnitGroupModel*)unitGroup;
+-(void) advanceRequestFillUnitGroup:(ATUnitGroupModel*)unitGroup;
+
+
 -(BOOL)canContinueLoading:(BOOL)waitForSentRequests;
 -(void) enumerateTimeoutUnitGroupWithBlock:(void(^)(ATUnitGroupModel*unitGroup))block;
 @property(nonatomic, strong) NSMutableArray<ATUnitGroupModel*>* unitGroups;
@@ -55,9 +65,14 @@ typedef NS_ENUM(NSInteger, ATUnitGroupFinishType) {
 @property(nonatomic, readonly) ATWaterfallType type;
 @property(nonatomic, readonly, getter=isLoading) BOOL loading;
 
-- (NSMutableArray<ATUnitGroupModel *> *)getWaterfallUnitGroups;
+@property(nonatomic, strong) NSMutableArray <ATUnitGroupModel*>*advanceSendUGArray;
+
+- (NSMutableArray<ATUnitGroupModel *> *)getWaterfallAllUnitGroups;
+- (NSMutableArray<ATUnitGroupModel *> *)getWaterfallAllNotRequestUnitGroups;
 
 - (NSInteger)getEqualPriceRequestsQueuedWithSpacing:(NSInteger)divisionSpacing;
+
+- (void)removeFinishedRequestObject:(ATUnitGroupModel *)unitGroup;
 
 
 @end
