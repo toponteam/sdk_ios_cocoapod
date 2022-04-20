@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AnyThinkFacebookAdapter'
-  s.version          = '5.9.32.1'
+  s.version          = '5.9.51'
   s.summary          = '#{s.name} used for mediation with the TopOn SDK'
 
   s.description      = <<-DESC
@@ -30,12 +30,12 @@ Pod::Spec.new do |s|
 
   # s.source_files = 'AnyThinkFacebookAdapter/Classes/**/*'
   s.source = {
-    :http => "https://topon-sdk-release.oss-cn-hangzhou.aliyuncs.com/Temp/v5.9.32/iOS/AnyThink_mediation/#{s.name}-#{s.version}.zip",
+    :http => "https://topon-sdk-release.oss-cn-hangzhou.aliyuncs.com/Temp/v5.9.51/iOS/AnyThink_mediation/#{s.name}-#{s.version}.zip",
     :type => 'zip'
   }
   s.vendored_frameworks = "#{s.name}-#{s.version}/#{s.name}.framework"
 
-  s.dependency 'AnyThinkiOS','5.9.30'
-  s.dependency 'FBAudienceNetwork','6.9.0'
+  s.dependency 'AnyThinkiOS','5.9.40'
+  s.dependency 'FBAudienceNetwork','6.9.1'
   
 end
