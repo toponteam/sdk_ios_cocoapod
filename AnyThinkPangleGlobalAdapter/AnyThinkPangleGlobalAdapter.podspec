@@ -17,7 +17,7 @@ TODO: Add long description of the pod here.
 
   s.homepage         = 'https://github.com/bo/AnyThinkPangleGlobalAdapter'
   s.author = { 'topon' => 'developer@toponad.com' }
-  s.license = { :type => "MIT", :file => "AnyThinkiOS/LICENSE" }
+  s.license = { :type => "MIT", :file => "#{s.name}-#{s.version}/LICENSE" }
 
   s.ios.deployment_target = '9.0'
   s.static_framework = true
@@ -29,14 +29,11 @@ TODO: Add long description of the pod here.
 
   # s.source_files = 'AnyThinkApplovinAdapter/Classes/**/*'
   s.source = {
-    # :http => "https://topon-sdk-release.oss-cn-hangzhou.aliyuncs.com/SDK_Release/iOS_test/v5.9.32/iOS/iOS-mediation/#{s.name}-#{s.version}.zip",
-    # :http => "https://topon-sdk-release.oss-cn-hangzhou.aliyuncs.com/SDK_Release/iOS_test/#{s.version}/iOS/iOS-mediation/#{s.name}-#{s.version}.zip",
     :http => "http://topon-sdk-release.oss-cn-hangzhou.aliyuncs.com/SDK_Release/iOS_test/v5.9.32/iOS/iOS-mediation/AnyThinkPangleAdapter-5.9.32.zip",
     :http => "http://topon-sdk-release.oss-cn-hangzhou.aliyuncs.com/SDK_Release/iOS_test/v5.9.32/iOS/iOS-mediation/AnyThinkTTAdapter-5.9.32.zip",
     :type => 'zip'
   }
   s.vendored_frameworks ='AnyThinkPangleAdapter-5.9.32/AnyThinkPangleAdapter.framework','AnyThinkTTAdapter-5.9.32/AnyThinkTTAdapter.framework'
-  # s.vendored_frameworks = "#{s.name}-5.9.32/#{s.name}.framework"
   # s.vendored_frameworks = "#{s.name}-#{s.version}/#{s.name}.framework"
 
   s.dependency 'AnyThinkiOS','5.9.30'
