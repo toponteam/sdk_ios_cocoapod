@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
 
   # s.source_files = 'AnyThinkFacebookAdapter/Classes/**/*'
   s.source = {
-    :http => "https://topon-sdk-release.oss-cn-hangzhou.aliyuncs.com/Temp/v5.9.32/iOS/iOS-mediation/#{s.name}-#{s.version}.zip",
+    :http => "https://topon-sdk-release.oss-cn-hangzhou.aliyuncs.com/Temp/v5.9.32/iOS/ios-mediation/#{s.name}-#{s.version}.zip",
     :type => 'zip'
   }
   s.vendored_frameworks = "#{s.name}-#{s.version}/#{s.name}.framework"
