@@ -35,6 +35,6 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = "#{s.name}-#{s.version}/#{s.name}.framework"
 
   s.dependency 'AnyThinkiOS','5.9.40'
-  s.dependency 'FBAudienceNetwork','6.9.0'
+  s.dependency 'FBAudienceNetwork','6.9.1'
   
 end
