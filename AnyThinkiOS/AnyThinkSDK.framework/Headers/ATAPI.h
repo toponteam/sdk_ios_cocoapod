@@ -9,26 +9,26 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-extern NSString *const kATADDelegateExtraECPMLevelKey;
-extern NSString *const kATADDelegateExtraSegmentIDKey;
-extern NSString *const kATADDelegateExtraScenarioIDKey;
-extern NSString *const kATADDelegateExtraChannelKey;
-extern NSString *const kATADDelegateExtraSubChannelKey;
-extern NSString *const kATADDelegateExtraCustomRuleKey;
-extern NSString *const kATADDelegateExtraIDKey;
-extern NSString *const kATADDelegateExtraAdunitIDKey;
-extern NSString *const kATADDelegateExtraPublisherRevenueKey;
-extern NSString *const kATADDelegateExtraCurrencyKey;
-extern NSString *const kATADDelegateExtraCountryKey;
-extern NSString *const kATADDelegateExtraFormatKey;
-extern NSString *const kATADDelegateExtraPrecisionKey;
-extern NSString *const kATADDelegateExtraNetworkTypeKey;
-extern NSString *const kATADDelegateExtraNetworkPlacementIDKey;
-extern NSString *const kATADDelegateExtraScenarioRewardNameKey;
-extern NSString *const kATADDelegateExtraScenarioRewardNumberKey;
+extern NSString *const kATADDelegateExtraECPMLevelKey; // the eCPM level of the ad source
+extern NSString *const kATADDelegateExtraSegmentIDKey; //segment ID
+extern NSString *const kATADDelegateExtraScenarioIDKey; // Advertising Scene ID,Only Rewarded Video and Interstitial support
+extern NSString *const kATADDelegateExtraChannelKey; // Channel Information
+extern NSString *const kATADDelegateExtraSubChannelKey; // sub-channel information
+extern NSString *const kATADDelegateExtraCustomRuleKey; // Json string of the Placement + App dimension custom rule
+extern NSString *const kATADDelegateExtraIDKey; // a unique ID generated for each impression
+extern NSString *const kATADDelegateExtraAdunitIDKey; // TopOn placement ID
+extern NSString *const kATADDelegateExtraPublisherRevenueKey; // impression revenue
+extern NSString *const kATADDelegateExtraCurrencyKey; // currency unit, for example: "USD"
+extern NSString *const kATADDelegateExtraCountryKey; // country code, for example: "CN"
+extern NSString *const kATADDelegateExtraFormatKey; // ad source types
+extern NSString *const kATADDelegateExtraPrecisionKey; // eCPM precision
+extern NSString *const kATADDelegateExtraNetworkTypeKey; // Network Type
+extern NSString *const kATADDelegateExtraNetworkPlacementIDKey; // the ad placement ID of a third-party Ads Network
+extern NSString *const kATADDelegateExtraScenarioRewardNameKey; // reward name of the ad Scenario,Only Rewarded Video support
+extern NSString *const kATADDelegateExtraScenarioRewardNumberKey; // number of reward for the ad Scenario，Only Rewarded Video support
 extern NSString *const kATADDelegateExtraPlacementRewardNameKey;
 extern NSString *const kATADDelegateExtraPlacementRewardNumberKey;
-extern NSString *const kATADDelegateExtraExtInfoKey;
+extern NSString *const kATADDelegateExtraExtInfoKey; // additional information of Topon Adx & OnlineAPI Offer,output as Json string
 extern NSString *const kATADDelegateExtraOfferIDKey;
 extern NSString *const kATADDelegateExtraCreativeIDKey;
 extern NSString *const kATADDelegateExtraIsDeeplinkKey;
@@ -140,23 +140,23 @@ extern NSString *const kATCustomDataChannelKey;//string
 extern NSString *const kATCustomDataSubchannelKey;//string
 extern NSString *const kATCustomDataSegmentIDKey;//int
 
-extern NSString *const kATDeviceDataInfoOSVersionNameKey;
-extern NSString *const kATDeviceDataInfoOSVersionCodeKey;
-extern NSString *const kATDeviceDataInfoPackageNameKey;
-extern NSString *const kATDeviceDataInfoAppVersionNameKey;
-extern NSString *const kATDeviceDataInfoAppVersionCodeKey;
-extern NSString *const kATDeviceDataInfoBrandKey;
-extern NSString *const kATDeviceDataInfoModelKey;
-extern NSString *const kATDeviceDataInfoScreenKey;
-extern NSString *const kATDeviceDataInfoNetworkTypeKey;
-extern NSString *const kATDeviceDataInfoMNCKey;
-extern NSString *const kATDeviceDataInfoMCCKey;
-extern NSString *const kATDeviceDataInfoLanguageKey;
-extern NSString *const kATDeviceDataInfoTimeZoneKey;
-extern NSString *const kATDeviceDataInfoUserAgentKey;
-extern NSString *const kATDeviceDataInfoOrientKey;
-extern NSString *const kATDeviceDataInfoIDFAKey;
-extern NSString *const kATDeviceDataInfoIDFVKey;
+extern NSString *const kATDeviceDataInfoOSVersionNameKey; //System version name
+extern NSString *const kATDeviceDataInfoOSVersionCodeKey; //System version code
+extern NSString *const kATDeviceDataInfoPackageNameKey; //Application package name
+extern NSString *const kATDeviceDataInfoAppVersionNameKey; //Application version name
+extern NSString *const kATDeviceDataInfoAppVersionCodeKey; //Application version code
+extern NSString *const kATDeviceDataInfoBrandKey; //Phone brands
+extern NSString *const kATDeviceDataInfoModelKey; //Phone model
+extern NSString *const kATDeviceDataInfoScreenKey; //Screen Resolution
+extern NSString *const kATDeviceDataInfoNetworkTypeKey; //Network Type
+extern NSString *const kATDeviceDataInfoMNCKey; //Mobile Network Code
+extern NSString *const kATDeviceDataInfoMCCKey; //Mobile Country Code
+extern NSString *const kATDeviceDataInfoLanguageKey; //Language
+extern NSString *const kATDeviceDataInfoTimeZoneKey; //Time zone
+extern NSString *const kATDeviceDataInfoUserAgentKey; //User Agent
+extern NSString *const kATDeviceDataInfoOrientKey; //Screen orientation
+extern NSString *const kATDeviceDataInfoIDFAKey; //idfa
+extern NSString *const kATDeviceDataInfoIDFVKey; //idfv
 
 extern NSString *const kATAdLoadingExtraBUAdLoadTypeKey;
 
@@ -199,66 +199,93 @@ typedef NS_OPTIONS(NSInteger, ATLogType) {
     ATLogTypeNone = 0,
     ATLogTypeInternal = 1 << 0,
     ATLogTypeExternal = 1 << 1,
-    ATLogTypeTemporary = 1 << 2
+    ATLogTypeTemporary = 1 << 2,
+    ATLogTypeProcess = 1 << 3
 };
 
 @interface ATAPI : NSObject
 
-+(NSDictionary<NSNumber*, NSString*>*)networkNameMap;
-+(void) setLogEnabled:(BOOL)logEnabled;
-+(void) integrationChecking;
-+(instancetype)sharedInstance;
-+(BOOL) getMPisInit;
-+(void) setMPisInit:(BOOL)MPisInit;
 
-+ (void)testModeInfo;
+/// singleton object
++ (instancetype)sharedInstance;
 
--(void) setLocationLongitude:(double)longitude dimension:(double)dimension;
+/// Initialize SDK
+/// @param appID - appid string
+/// @param appKey appkey string
+/// @param error - see what's the matter.
+- (BOOL)startWithAppID:(NSString *)appID
+                appKey:(NSString *)appKey
+                 error:(NSError**)error;
 
--(void) setWXStatus:(BOOL)isInstallWX;
 
-+ (void) setInitializationType:(int)type;
+/// map network firm id list
++ (NSDictionary<NSNumber*, NSString*>*)networkNameMap;
 
-/*
- only for adx，onlineApi，MyOffer  banner&splash adLogo，NO by default
- */
-+(void) setAdLogoVisible:(BOOL)adLogoVisible;
-/*
- only for pangle，Territory_CN by default
- */
+/// Whether the network platform integration integrity information is normal
++ (void)integrationChecking;
+
+// get MoPub init status
++ (BOOL)getMPisInit;
+
+/// Set MoPub init status
+/// @param MPisInit - init status
++ (void)setMPisInit:(BOOL)MPisInit;
+
+/// set location longitude
+- (void)setLocationLongitude:(double)longitude dimension:(double)dimension;
+
+/// set whether WX is installed
+/// @param isInstallWX - install status
+- (void)setWXStatus:(BOOL)isInstallWX;
+
++ (void)setInitializationType:(int)type;
+
+/// only for adx，onlineApi，MyOffer  banner&splash adLogo，NO by default
++ (void)setAdLogoVisible:(BOOL)adLogoVisible;
+
+/// only for pangle，Territory_CN by default
 + (void)setNetworkTerritory:(ATNetworkTerritory)territory;
-/**
- * Inspect the error parameter to see what's the matter.
- */
--(BOOL) startWithAppID:(NSString*)appID appKey:(NSString*)appKey error:(NSError**)error;
 
-/**
- * consentString might be nil.
- * This method is thread-safe.
- */
--(void) setDataConsentSet:(ATDataConsentSet)dataConsentSet consentString:(NSDictionary<NSString*, NSString*>*)consentString;
-/**
- * Whether the device is located in data protected area.
- */
--(BOOL)inDataProtectionArea;
+/// consentString might be nil.
+/// This method is thread-safe.
+- (void)setDataConsentSet:(ATDataConsentSet)dataConsentSet
+            consentString:(NSDictionary<NSString*, NSString*>*)consentString;
 
--(void) getUserLocationWithCallback:(void(^)(ATUserLocation location))callback;
+/// Whether the device is located in data protected area.
+- (BOOL)inDataProtectionArea;
 
-- (void) getAreaSuccess:(void(^)(NSString *areaCodeStr))success
-                failure: (void(^)(NSError *error))failure;
+/// get user location
+/// @param callback - location type
+- (void)getUserLocationWithCallback:(void(^)(ATUserLocation location))callback;
 
-- (void) setUserDataArea:(ATAreaCode)areaCode;
+/// get Area
+/// @param success - arear string
+/// @param failure - error message
+- (void)getAreaSuccess:(void(^)(NSString *areaCodeStr))success
+               failure: (void(^)(NSError *error))failure;
 
 
--(NSString*)psID;
+/// get ps id
+- (NSString *)psID;
+
+/// Log enabled
+/// @param logEnabled - log status
++ (void)setLogEnabled:(BOOL)logEnabled;
+
+/// print test info log
+/// include idfa,idfv
++ (void)testModeInfo;
     
-
 /**
  * Show the data consent dialog using the specified constroller as the presenting view controller.
  * viewController might be nil, for which the root view controller of the window will be used instead.
  */
--(void) presentDataConsentDialogInViewController:(UIViewController*)viewController dismissalCallback:(void(^)(void))dismissCallback;
--(void) presentDataConsentDialogInViewController:(UIViewController*)viewController loadingFailureCallback:(void(^)(NSError *error))loadingFailureCallback dismissalCallback:(void(^)(void))dismissCallback;
+- (void)presentDataConsentDialogInViewController:(UIViewController *)viewController
+                               dismissalCallback:(void(^)(void))dismissCallback;
+
+- (void)presentDataConsentDialogInViewController:(UIViewController *)viewController
+                          loadingFailureCallback:(void(^)(NSError *error))loadingFailureCallback
+                               dismissalCallback:(void(^)(void))dismissCallback;
 /**
  * Defaults to forbidden;
  * Thread-safe.
@@ -311,47 +338,61 @@ typedef NS_OPTIONS(NSInteger, ATLogType) {
             kATNetworkNameUnityAds:@YES
  *          }
  */
-@property(nonatomic) NSDictionary *networkConsentInfo;
-@property(nonatomic, readonly) ATDataConsentSet dataConsentSet;
-@property(nonatomic, readonly) NSDictionary<NSString*, NSString*>* consentStrings;
-@property(nonatomic, readonly) NSString *appID;
-@property(nonatomic, readonly) NSString *appKey;
+@property (nonatomic) NSDictionary *networkConsentInfo;
+@property (nonatomic,readonly) ATDataConsentSet dataConsentSet;
+@property (nonatomic,readonly) NSDictionary<NSString*, NSString*>* consentStrings;
+@property (nonatomic,readonly) NSString *appID;
+@property (nonatomic,readonly) NSString *appKey;
 
 /*
  channel & customData has to be set before init
  */
-@property(nonatomic) NSString *channel;
-@property(nonatomic) NSString *subchannel;
-@property(nonatomic) NSDictionary *customData;
+@property (nonatomic) NSString *channel;
+@property (nonatomic) NSString *subchannel;
+@property (nonatomic) NSDictionary *customData;
 
-@property(nonatomic, readonly, class) NSDate *firstLaunchDate;
--(void) setCustomData:(NSDictionary *)customData forPlacementID:(NSString*)placementID;
--(NSDictionary*) customDataForPlacementID:(NSString*)placementID;
--(NSString*)version;
-/*
-set exlude appleid list for sdk to filter offers
-*/
--(void) setExludeAppleIdArray:(NSArray *)appleIdArray;
--(NSArray*) exludeAppleIdArray;
+@property (nonatomic,readonly,class) NSDate *firstLaunchDate;
 
-/*
-set denied Upload Info list for sdk to Control report
-*/
--(void) setDeniedUploadInfoArray:(NSArray *)uploadInfoArray;
--(NSArray*) deniedUploadInfoArray;
--(BOOL) isContainsForDeniedUploadInfoArray:(NSString *)key;
 
-/*
-set header bidding test mode, only support incoming device idfa. setLogEnabled must be turned on before use
-*/
-+(void) setHeaderBiddingTestModeWithDeviceID:(NSString *)idfa;
+/// set custom data for the ad placement
+/// @param customData - custom data
+/// @param placementID - placement id
+- (void)setCustomData:(NSDictionary *)customData
+       forPlacementID:(NSString *)placementID;
 
-/**
- Set personalized recommendation state
- @param state 1 is to close personalized recommendation, other values or not set to open
- */
--(void) setPersonalizedAdState:(ATPersonalizedAdState)state;
--(ATPersonalizedAdState) getPersonalizedAdState;
+/// get custom data
+- (NSDictionary *)customDataForPlacementID:(NSString *)placementID;
+
+/// get SDK version
+- (NSString *)version;
+
+/// set exlude appleid list for sdk to filter offers
+- (void)setExludeAppleIdArray:(NSArray *)appleIdArray;
+
+/// get exlude appleid list
+- (NSArray *)exludeAppleIdArray;
+
+/// set denied Upload Info list for sdk to Control report
+- (void)setDeniedUploadInfoArray:(NSArray *)uploadInfoArray;
+
+/// get denied Upload Info list
+- (NSArray *)deniedUploadInfoArray;
+
+/// Determine whether the Denied key is included
+/// @param key - key string
+- (BOOL)isContainsForDeniedUploadInfoArray:(NSString *)key;
+
+/// set header bidding test mode,only support incoming device idfa.
+/// setLogEnabled must be turned on before use
++ (void)setHeaderBiddingTestModeWithDeviceID:(NSString *)idfa;
+
+/// set personalized recommendation state
+/// @param state - 1 is to close personalized recommendation, other values or not set to open
+- (void)setPersonalizedAdState:(ATPersonalizedAdState)state;
+
+/// get personalized recommendation state
+- (ATPersonalizedAdState)getPersonalizedAdState;
+
 
 @end
 

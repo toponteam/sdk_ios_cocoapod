@@ -60,25 +60,61 @@ typedef NS_ENUM(NSInteger, ATBiddingLossType) {
 };
 
 @protocol ATAdAdapter<NSObject>
+
 @property (nonatomic,copy) void (^metaDataDidLoadedBlock)(void);
 /*
  * Create a rewarded instance for download event and FOR DOWNLOAD EVENT ONLY.
  */
 //+(id<ATAd>) placeholderAdWithPlacementModel:(ATPlacementModel*)placementModel requestID:(NSString*)requestID unitGroup:(ATUnitGroupModel*)unitGroup finalWaterfall:(ATWaterfall*)finalWaterfall;
-+(id<ATAd>) readyFilledAdWithPlacementModel:(ATPlacementModel*)placementModel requestID:(NSString*)requestID priority:(NSInteger)priority unitGroup:(ATUnitGroupModel*)unitGroup finalWaterfall:(ATWaterfall*)finalWaterfall localInfo:(NSDictionary *)localInfo;
-+(ATMyOfferOfferModel*) resourceReadyMyOfferForPlacementModel:(ATPlacementModel*)placementModel unitGroupModel:(ATUnitGroupModel*)unitGroupModel info:(NSDictionary*)info;
-+(BOOL) adReadyForInfo:(NSDictionary*)info;
--(instancetype) initWithNetworkCustomInfo:(NSDictionary *)serverInfo localInfo:(NSDictionary *)localInfo;
--(void) loadADWithInfo:(NSDictionary *)serverInfo localInfo:(NSDictionary *)localInfo completion:(void (^)(NSArray<NSDictionary*> *assets, NSError *error))completion;
-+(void) bidRequestWithPlacementModel:(ATPlacementModel*)placementModel unitGroupModel:(ATUnitGroupModel*)unitGroupModel info:(NSDictionary*)info completion:(void(^)(ATBidInfo *bidInfo, NSError *error))completion;
++ (id<ATAd>)readyFilledAdWithPlacementModel:(ATPlacementModel *)placementModel
+                                  requestID:(NSString *)requestID
+                                   priority:(NSInteger)priority
+                                  unitGroup:(ATUnitGroupModel *)unitGroup
+                             finalWaterfall:(ATWaterfall *)finalWaterfall
+                                  localInfo:(NSDictionary *)localInfo;
+
++ (ATMyOfferOfferModel *)resourceReadyMyOfferForPlacementModel:(ATPlacementModel *)placementModel
+                                               unitGroupModel:(ATUnitGroupModel *)unitGroupModel
+                                                         info:(NSDictionary *)info;
++ (BOOL)adReadyForInfo:(NSDictionary *)info;
+
+
+/// Initializing adapter
+/// @param serverInfo - dictionary from server
+/// @param localInfo - dictionary from local custom data
+- (instancetype)initWithNetworkCustomInfo:(NSDictionary *)serverInfo
+                                localInfo:(NSDictionary *)localInfo;
+
+
+/// implement the function to load ad
+/// @param serverInfo - dictionary from server
+/// @param localInfo - dictionary from local custom data
+- (void)loadADWithInfo:(NSDictionary *)serverInfo
+             localInfo:(NSDictionary *)localInfo
+            completion:(void (^)(NSArray<NSDictionary*> *assets, NSError *error))completion;
+
+
+/// implement custom header binding,must implement this class methods
+/// @param completion - When header bidding is completed, this callback needs to be executed, and the data or errors obtained by bidding need to be passed to Topon SDK
++ (void)bidRequestWithPlacementModel:(ATPlacementModel *)placementModel
+                      unitGroupModel:(ATUnitGroupModel *)unitGroupModel
+                                info:(NSDictionary *)info
+                          completion:(void(^)(ATBidInfo *bidInfo, NSError *error))completion;
+
 @optional
+
 //+(void) inhouseRequestInfoWithCompletion:(void(^)(NSDictionary *bidResult))completion;
 
-+(void)headerBiddingParametersWithUnitGroupModel:(ATUnitGroupModel*)model extra:(NSDictionary *)extra completion:(void(^)(NSDictionary *headerBiddingParams))completion;
++ (void)headerBiddingParametersWithUnitGroupModel:(ATUnitGroupModel *)model
+                                           extra:(NSDictionary *)extra
+                                      completion:(void(^)(NSDictionary *headerBiddingParams))completion;
+
 //+(ATInHouseBidRequest*)inHouseBiddingRequestWithPlacementModel:(ATPlacementModel*)placementModel unitGroupModel:(ATUnitGroupModel*)unitGroupModel extra:(NSDictionary *)extra;
 
+
+
 +(void) sendWinnerNotifyWithCustomObject:(id)customObject secondPrice:(NSString*)price;
-+(void) sendLossNotifyWithCustomObject:(id)customObject lossType:(ATBiddingLossType)lossType;
++ (void)sendLossNotifyWithCustomObject:(nonnull id)customObject lossType:(ATBiddingLossType)lossType winPrice:(nonnull NSString *)price;
 
 @end
 #endif /* ATAdAdapter_h */
