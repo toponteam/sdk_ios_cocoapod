@@ -12,50 +12,23 @@
 #import "ATRewardedVideo.h"
 
 @interface ATRewardedVideoCustomEvent : ATAdCustomEvent
+-(void) trackRewardedVideoAdPlayEventWithError:(NSError*)error;
+-(void) trackRewardedVideoAdCloseRewarded:(BOOL)rewarded;
+-(void) trackRewardedVideoAdVideoStart;
+-(void) trackRewardedVideoAdVideoEnd;
+-(void) trackRewardedVideoAdClick;
+-(void) trackRewardedVideoAdShow;
+-(void) trackRewardedVideoAdLoadFailed:(NSError*)error;
+-(void) trackRewardedVideoAdLoaded:(id)adObject adExtra:(NSDictionary *)adExtra;
+-(void) trackRewardedVideoAdRewarded;
+-(void) trackRewardedVideoAdDeeplinkOrJumpResult:(BOOL)success;
 
-/// callback to developer when play failed
-/// @param error - play error message
-- (void)trackRewardedVideoAdPlayEventWithError:(NSError *)error;
+-(NSDictionary*)delegateExtra;
 
-/// callback to developer when ad is closed
-/// @param rewarded - reward or not
-- (void)trackRewardedVideoAdCloseRewarded:(BOOL)rewarded;
-
-/// callback to developer when end to play
-- (void)trackRewardedVideoAdVideoEnd;
-
-/// callback to developer when ad is clicked
-- (void)trackRewardedVideoAdClick;
-
-/// callback to developer when start to play
-- (void)trackRewardedVideoAdVideoStart;
-- (void)trackRewardedVideoAdShow;
-
-/// callback to developer when ad is load failed
-/// @param error - error message
-- (void)trackRewardedVideoAdLoadFailed:(NSError *)error;
-
-/// callback to developer when ad is loaded
-/// @param adObject - ad object
-/// @param adExtra - extra data
-- (void)trackRewardedVideoAdLoaded:(id)adObject adExtra:(NSDictionary *)adExtra;
-
-/// callback to developer when rewarded
-- (void)trackRewardedVideoAdRewarded;
-
-///  Whether the click jump of ad is in the form of Deeplink
-/// @param success - success status
-- (void)trackRewardedVideoAdDeeplinkOrJumpResult:(BOOL)success;
-
-- (NSDictionary *)delegateExtra;
-
-- (instancetype)initWithInfo:(NSDictionary *)serverInfo
-                   localInfo:(NSDictionary *)localInfo;
-
-@property (nonatomic,weak) id<ATRewardedVideoDelegate> delegate;
-@property (nonatomic,strong) ATRewardedVideo *rewardedVideo;
-@property (nonatomic,readonly) NSString *unitID;
-@property (nonatomic) NSString *userID;
-@property (nonatomic,assign) NSInteger priorityIndex;
-
+-(instancetype) initWithInfo:(NSDictionary*)serverInfo localInfo:(NSDictionary *)localInfo;
+@property(nonatomic, weak) id<ATRewardedVideoDelegate> delegate;
+@property(nonatomic, strong) ATRewardedVideo *rewardedVideo;
+@property(nonatomic, readonly) NSString *unitID;
+@property(nonatomic) NSString *userID;
+@property(nonatomic, assign) NSInteger priorityIndex;
 @end

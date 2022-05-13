@@ -1,0 +1,6 @@
+framework module AnyThinkMaxAdapter {
+  umbrella header "AnyThinkMaxAdapter.h"
+
+  export *
+  module * { export * }
+}

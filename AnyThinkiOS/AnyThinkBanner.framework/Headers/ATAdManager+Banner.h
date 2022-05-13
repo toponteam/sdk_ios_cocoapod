@@ -7,7 +7,6 @@
 //
 
 #import <AnyThinkSDK/AnyThinkSDK.h>
-
 //Supported by Nend banner only
 extern NSString *const kATBannerLoadingExtraParameters;
 extern NSString *const kATAdLoadingExtraBannerAdSizeKey;//defaults to 320 * 50
@@ -18,41 +17,17 @@ extern NSString *const kATAdLoadingExtraAdmobBannerSizeKey;//Admob Adaptive widt
 extern NSString *const kATAdLoadingExtraAdmobAdSizeFlagsKey;//Admob AdSize flags
 
 @class ATBannerView;
-
 @interface ATAdManager (Banner)
+-(BOOL) bannerAdReadyForPlacementID:(NSString*)placementID;
+-(BOOL) bannerAdReadyForPlacementID:(NSString*)placementID sendTK:(BOOL)send;
+/*
+ nil will be returned if you try to show banner ad for the placementID if it's not ready.
+ */
+- (nullable ATBannerView*)retrieveBannerViewForPlacementID:(NSString*)placementID;
+- (nullable ATBannerView*)retrieveBannerViewForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra DEPRECATED_ATTRIBUTE;
+- (nullable ATBannerView*)retrieveBannerViewForPlacementID:(NSString*)placementID scene:(NSString *)scene;
 
-
-/// check whether the splash ad is ready
-/// v5.7.06+
-- (BOOL)bannerAdReadyForPlacementID:(NSString *)placementID;
-
-/// check whether the splash ad is ready
-/// @param send - whether send tk
-- (BOOL)bannerAdReadyForPlacementID:(NSString *)placementID
-                             sendTK:(BOOL)send;
-
-/// Get the banner ad view
-/// note: nil will be returned if banner ad is not ready.
-- (nullable ATBannerView *)retrieveBannerViewForPlacementID:(NSString *)placementID;
-
-/// Get the banner ad view
-/// @param placementID - TopOn's ad placement id
-/// @param extra -  Local configuration parameter
-/// note: nil will be returned if banner ad is not ready.
-- (nullable ATBannerView *)retrieveBannerViewForPlacementID:(NSString *)placementID
-                                                      extra:(NSDictionary *)extra DEPRECATED_ATTRIBUTE;
-
-/// Get the banner ad view
-/// @param placementID - TopOn's ad placement id
-/// @param scene - Scene id
-/// note: nil will be returned if banner ad is not ready.
-- (nullable ATBannerView *)retrieveBannerViewForPlacementID:(NSString *)placementID
-                                                      scene:(NSString *)scene;
-
-/// Get the status object of the current ad slot ATCheckLoadModel
-- (ATCheckLoadModel *)checkBannerLoadStatusForPlacementID:(NSString *)placementID;
-
-/// Query all cached information of the ad slot
+- (ATCheckLoadModel*)checkBannerLoadStatusForPlacementID:(NSString*)placementID;
 - (NSArray<NSDictionary *> *)getBannerValidAdsForPlacementID:(NSString *)placementID;
 
 @end

@@ -48,10 +48,6 @@ extern NSString *const kATAdStorageExtraUnitGroupInfoReadyFlagKey;
 extern NSString *const kATAdStorageExtraFinalWaterfallKey;
 extern NSString *const kATAdStorageExtraAdapterClassKey;
 
-extern NSString *const kATReadyToShowNotification;
-extern NSString *const kATReadyToShowNotificationUserInfoPlacementModel;
-extern NSString *const kATReadyToShowNotificationUserInfoRequestID;
-
 typedef NS_ENUM(NSInteger, ATAdManagerReadyAPICaller) {
     ATAdManagerReadyAPICallerReady = 0,
     ATAdManagerReadyAPICallerShow = 1

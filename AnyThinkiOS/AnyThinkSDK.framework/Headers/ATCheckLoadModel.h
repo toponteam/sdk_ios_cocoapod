@@ -12,14 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ATCheckLoadModel : NSObject
 
-/// whether the current ad slot is loading an ad
 @property(nonatomic) BOOL isLoading;
-
-/// whether there is an ad that can be displayed
 @property(nonatomic) BOOL isReady;
-
-/// Get the ad cache information with the highest priority of the current ad slot
-@property (nonatomic,readwrite) NSDictionary *adOfferInfo;
+@property(nonatomic, readwrite) NSDictionary *adOfferInfo;
 
 @end
 

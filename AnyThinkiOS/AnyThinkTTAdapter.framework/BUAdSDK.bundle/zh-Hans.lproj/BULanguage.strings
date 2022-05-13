@@ -32,12 +32,11 @@
 "ContinueWatching" = "继续观看";
 "CanbeTurnedOffAfter" = "%ds后可关闭";
 "CanbeSkipAfter" = "%ds后可跳过";
-"Get" = "立即下载";
-"View" = "立即查看";
+"Get" = "下载";
+"View" = "查看";
 "ContinuePlaying" = "继续试玩";
 "GetRewardAfterPlaying" = "试玩后才可领取奖励";
 "ViewDetail" = "查看详情";
 "CommitScore" = "%@个评分";
 "AdsClosed" = "广告已关闭";
-"PrivacyPolicy" = "隐私政策";
 // Icon

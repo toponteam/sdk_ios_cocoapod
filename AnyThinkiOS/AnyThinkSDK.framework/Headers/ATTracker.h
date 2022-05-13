@@ -17,13 +17,11 @@ typedef NS_ENUM(NSInteger, ATRefreshType){
     ATRefreshTypeLoadFailed,
     ATRefreshTypeNotReady,
     ATRefreshTypeShowStart,
-    ATRefreshTypeShowFailed,
-    ATRefreshTypeLoadFailedRetry
+    ATRefreshTypeShowFailed
 } ;
 
 extern NSString *const kATTrackerExtraErrorKey;
 extern NSString *const kATTrackerExtraAgainLookFlagKey;
-extern NSString *const kATTrackerExtraLoadSuccessRetryFlagKey;
 extern NSString *const kATTrackerExtraAutoloadFlagKey;
 extern NSString *const kATTrackerExtraSDKCalledFlagKey;
 extern NSString *const kATTrackerExtraSDKNotCalledReasonKey;

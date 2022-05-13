@@ -52,7 +52,6 @@
 +(NSString *) priceForUnitGroup:(ATUnitGroupModel*)unitGroupModel;
 +(NSString *) priceForUnitGroup:(ATUnitGroupModel*)unitGroupModel placementID:(NSString*)placementID requestID:(NSString*)requestID;
 +(NSString *) getPriceToSendHBNotifiForUnitGroup:(ATUnitGroupModel*)unitGroupModel;
-+(NSString *) priceForBidInfo:(ATBidInfo*)bidInfo;
 
 -(BOOL) checkAdxBidInfoExpireForUnitGroupModel:(ATUnitGroupModel*)unitGroupModel;
 -(ATBidInfo*) getBidInfoCachedForPlacementID:(NSString*)placementID unitGroup:(ATUnitGroupModel*)unitGroup;

@@ -82,6 +82,5 @@ typedef NS_ENUM(NSInteger, ATShowAutoLoadType) {
 /// ad type：0 Native, 1 Rewarded, 2 Banner, 3 Interstitial, 4 Splash
 @property(nonatomic, assign) NSInteger adType;
 
-@property(nonatomic, assign) BOOL isHBAdvanceRequest;
 
 @end

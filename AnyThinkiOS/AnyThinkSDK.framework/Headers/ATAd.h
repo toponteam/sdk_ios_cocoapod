@@ -13,7 +13,7 @@
 @class ATWaterfall;
 @protocol ATAd<NSObject>
 -(instancetype) initWithPriority:(NSInteger) priority placementModel:(ATPlacementModel*)placementModel requestID:(NSString*)requestID assets:(NSDictionary*)assets unitGroup:(ATUnitGroupModel*)unitGroup finalWaterfall:(ATWaterfall*)finalWaterfall;
--(void) renewAdWithPlacementModel:(ATPlacementModel*)placementModel requestID:(NSString*)requestID;
+-(void) renewAdWithPriority:(NSInteger)priority placementModel:(ATPlacementModel*)placementModel unitGroup:(ATUnitGroupModel*)unitGroup requestID:(NSString*)requestID;
 @property(nonatomic, readonly) ATPlacementModel *placementModel;
 @property(nonatomic, readonly) ATUnitGroupModel *unitGroup;
 @property(nonatomic) NSMutableArray<NSDictionary*> *unitGroupInfos;

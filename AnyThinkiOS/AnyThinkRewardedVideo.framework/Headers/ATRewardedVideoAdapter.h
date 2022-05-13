@@ -15,23 +15,8 @@
 #import <UIKit/UIKit.h>
 
 @protocol ATRewardedVideoAdapter<ATAdAdapter>
-
 @optional
-
-/// check if network ads is ready
-/// @param customObject - custom ad object
-/// @param info - dictionary from server
-+ (BOOL)adReadyWithCustomObject:(id)customObject
-                           info:(NSDictionary *)info;
-
-
-/// show rewarded video ad
-/// @param rewardedVideo - RewardedVideo Object
-/// @param viewController - current ViewController
-/// @param delegate - delegate object
-+(void) showRewardedVideo:(ATRewardedVideo*)rewardedVideo
-         inViewController:(UIViewController*)viewController
-                 delegate:(id<ATRewardedVideoDelegate>)delegate;
-
++(BOOL) adReadyWithCustomObject:(id)customObject info:(NSDictionary*)info;
++(void) showRewardedVideo:(ATRewardedVideo*)rewardedVideo inViewController:(UIViewController*)viewController delegate:(id<ATRewardedVideoDelegate>)delegate;
 @end
 #endif /* ATRewardedVideoAdapter_h */
