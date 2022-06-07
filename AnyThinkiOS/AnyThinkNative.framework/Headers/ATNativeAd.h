@@ -26,6 +26,8 @@
 @property(nonatomic, readonly) NSArray *imageList;
 @property(nonatomic, readonly) NSInteger videoDuration;
 
+@property(nonatomic, readonly) CGFloat nativeExpressAdViewHeight;
+
 /**
  * For some ads, this property does not always determines whether the ad is a video ad or not; however, to do this, you can always use the corresponding ad view's isVideoContents method instead.
  */
