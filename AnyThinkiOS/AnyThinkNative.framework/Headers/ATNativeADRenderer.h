@@ -54,6 +54,12 @@
 - (ATNativeAdType)getNativeAdType;
 
 - (ATNativeAdRenderType)getCurrentNativeAdRenderType;
+/**
+ * track Impression
+ */
+- (void)trackImpression;
+
+- (void)cleanOfferCache;
 
 /**
  This reference to the associated AD view should be kept as a weak one, for an AD view strongly keeps its render.

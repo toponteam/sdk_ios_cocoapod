@@ -55,7 +55,7 @@ typedef NS_ENUM(NSInteger, ATUnitGroupFinishType) {
 @property(nonatomic, readonly) ATWaterfallType type;
 @property(nonatomic, readonly, getter=isLoading) BOOL loading;
 
-- (NSMutableArray<ATUnitGroupModel *> *)getWaterfallUnitGroups;
+- (NSMutableArray<ATUnitGroupModel *> *)getWaterfallAllUnitGroups;
 
 - (NSInteger)getEqualPriceRequestsQueuedWithSpacing:(NSInteger)divisionSpacing;
 

@@ -119,6 +119,10 @@ typedef NS_ENUM(NSInteger, ATStartAppNativeAdImageSize) {
  * The native ad render type
  */
 - (ATNativeAdRenderType)getCurrentNativeAdRenderType;
+/**
+ * track Impression
+ */
+- (void)trackImpression;
 
 - (void)recordCustomPlayerStatus:(ATPlayerStatus)status currentTime:(NSTimeInterval)time;
 
